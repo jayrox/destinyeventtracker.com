@@ -8,6 +8,11 @@
 </div>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script>
+  $( window ).resize(function() {
+    w = $("#container").width();
+    h = $("#container").height();
+    $( "#dims" ).text( "w: "+w+" h: "+h );
+    });
   $( document ).ready(function() {
     w = $("#container").width();
     h = $("#container").height();
