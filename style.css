@@ -1,5 +1,5 @@
 body, #main {
-  background-color: #000000;
+  background-color: #000002;
   color: white;
   height: 100%;
   width: 100%;
@@ -8,4 +8,12 @@ body, #main {
 #main {
 
   
+}
+
+#bar_background {
+  background-color: #161416;
+}
+
+#bar_filler {
+  background-color: #1E31FB;
 }
