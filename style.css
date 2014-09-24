@@ -8,6 +8,7 @@ html, body, #main {
 body {
   background-color: #000002;
   color: white;
+  font-weight: bold;
 }
 
 #main {
