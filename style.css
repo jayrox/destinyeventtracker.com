@@ -23,3 +23,14 @@ body {
 #bar_filler {
   background-color: #1E31FB;
 }
+
+.cent {
+  height:50px;
+  width:50px;
+  margin-left: -150px;
+  margin-top: -150px;
+  margin:auto;
+  position:absolute;
+  top:50%;
+  left:50%;
+  }
