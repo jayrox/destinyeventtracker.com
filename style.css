@@ -2,3 +2,9 @@ body {
   background-color: #000000;
   color: white;
 }
+
+#container {
+  height:100%;
+  width:100%;
+  border:1px solid black;
+}
