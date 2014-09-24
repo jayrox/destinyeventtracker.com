@@ -1,4 +1,4 @@
-body {
+body, #main {
   background-color: #000000;
   color: white;
   height: 100%;
@@ -6,7 +6,6 @@ body {
 }
 
 #main {
-  height:100%;
-  width:100%;
-  border:1px solid white;
+
+  
 }
