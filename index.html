@@ -25,8 +25,8 @@
 	      d_offset = 0;
 	      d_duration = 300;
 	      if (e_val.type == 1) {
-	      	d_offset = 0; //e_val.intervals.0.start;
-	      	d_duration = 300; //e_val.intervals.0.end - e_val.intervals.0.start;
+	      	d_offset = e_val.intervals[0].start;
+	      	d_duration = e_val.intervals[0].end - e_val.intervals[0].start;
 	      	console.log(e_val.intervals);
 	      }
 	      bar +='  <div class="bar" data-offset="'+d_offset+'" data-duration="'+d_duration+'">';
