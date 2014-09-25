@@ -30,8 +30,9 @@
 	      }
 	      bar_description = "";
 	      $.each( e_val.subEvents, function( se_key, se_val ) {
-		bar_description += se_val;	      	
+		bar_description += se_val + ", ";	      	
 	      });
+	      bar_description = bar_description.substring(0, bar_description.length - 2);
 	      bar +='  <div class="bar" data-offset="'+d_offset+'" data-duration="'+d_duration+'">';
  	      bar +='    <span class="bar_location">'+e_val.name+'</span>';
 	      bar +='    <span class="bar_description">'+bar_description+'</span>';
