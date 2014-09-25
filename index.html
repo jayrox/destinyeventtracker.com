@@ -71,7 +71,7 @@
 	setInterval(updateAllEvents, 30 * 1000);
 	});
 	
-	$('.bar').click(function(event){
+	$('div.bar > span').click(function(event){
 		var isDim = $(event.target).is('.bar');
 		console.log(isDim);
 		if(isDim){ //make sure I am a dim element
