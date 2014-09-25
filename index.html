@@ -71,9 +71,11 @@
 	setInterval(updateAllEvents, 30 * 1000);
 	});
 	
-	$('.bar').on('click', function () {
-		console.log(this);
-    		$(this).children('.bar_description').toggle();
+	$('.bar').click(function(event){
+		var isDim = $(event.target).is('.bar');
+		if(isDim){ //make sure I am a dim element
+			$('.bar_description', this).toggle(); // p00f
+		}
 	});
 	</script>
 	</body>
