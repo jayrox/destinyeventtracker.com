@@ -9,14 +9,13 @@ html, body {
 body {
   background-color: #000002;
   color: white;
-  font-weight: bold;
 }
 
 #main {
 
 }
 
-#header {
+#header, .bar_header {
   font-weight: 800;
   padding: 20px;
 }
