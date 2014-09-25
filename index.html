@@ -13,13 +13,7 @@
 	  <div id="header">
 	  	Destiny Event Tracker
 	  </div>
-	  <div id="bar_container">
-	  <div class="bar">
- 	  	<span class="bar_location">Skywatch</span>
-	  	<span class="bar_description">Defend Warsat</span>
-	  	<span class="bar_timer">10 min</span>
-	  </div>
-	  </div>
+	  <div id="bar_container"></div>
 	</div>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>	
 	<script>
@@ -27,14 +21,14 @@
 	  var bars = [];
 	  $.each( data, function( key, val ) {
 	    bar = '<div class="bar_group" id="'+val.name+'">';
-	    bar +='<span class="bar_header">'+val.name+'</span>';
+	    bar +='  <span class="bar_header">'+val.name+'</span>';
 	    bar +='</div';
 	    bars.push( bar );
-	    $.each( val.events, function( ekey, eval ) {  
+	    $.each( val.events, function( e_key, e_val ) {  
 	      bar_html = '<div class="bar">';
- 	      bar_html +='  <span class="bar_location">Skywatch</span>';
-	      bar_html +='  <span class="bar_description">Defend Warsat</span>';
-	      bar_html +='  <span class="bar_timer">10 min</span>';
+ 	      bar_html +='  <span class="bar_location">'+e_val.name+'</span>';
+	      bar_html +='  <span class="bar_description">'+e_val.name+'</span>';
+	      bar_html +='  <span class="bar_timer">'+e_val.name+'</span>';
 	      bar_html +='</div>';
 	      bars.push( bar_html );
 	    });
