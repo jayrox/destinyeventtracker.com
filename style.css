@@ -41,7 +41,12 @@ body {
 }
 
 #bar_filler {
-  background-color: #1E31FB;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #1E31FB;
 }
 
 .cent {
