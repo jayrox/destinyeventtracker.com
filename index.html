@@ -74,6 +74,7 @@
 	});
 	$(document).on("click", 'div.bar_header, div.bar_header > span', function(e) {
 		$('div.bar', this).toggleClass("hide", 1000, "easeOutSine");
+		console.log(this);
 	});
 	</script>
 	</body>
