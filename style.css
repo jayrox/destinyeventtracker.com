@@ -28,6 +28,18 @@ body {
   background-color: #161416;
 }
 
+.bar_location {
+  
+}
+
+.bar_description {
+  
+}
+
+.bar_timer {
+  float:right;
+}
+
 #bar_filler {
   background-color: #1E31FB;
 }
