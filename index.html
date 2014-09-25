@@ -73,6 +73,9 @@
 	$(document).on("click", 'div.bar, div.bar > span', function(e) {
 		$('.bar_description', this).toggleClass("show", 1000, "easeOutSine");
 	});
+	$(document).on("click", 'div.bar_group', function(e) {
+		$('div.bar', this).toggleClass("show", 1000, "easeOutSine");
+	});
 	</script>
 	</body>
 </html>
