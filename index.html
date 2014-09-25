@@ -22,16 +22,15 @@
 	  $.each( data, function( key, val ) {
 	    bar = '<div class="bar_group" id="'+val.name+'">';
 	    bar +='  <span class="bar_header">'+val.name+'</span>';
+	    $.each( val.events, function( e_key, e_val ) {  
+	      bar +='  <div class="bar">';
+ 	      bar +='    <span class="bar_location">'+e_val.name+'</span>';
+	      bar +='    <span class="bar_description">'+e_val.name+'</span>';
+	      bar +='    <span class="bar_timer">'+e_val.name+'</span>';
+	      bar +='  </div>';
+	    });
 	    bar +='</div';
 	    bars.push( bar );
-	    $.each( val.events, function( e_key, e_val ) {  
-	      bar_html = '<div class="bar">';
- 	      bar_html +='  <span class="bar_location">'+e_val.name+'</span>';
-	      bar_html +='  <span class="bar_description">'+e_val.name+'</span>';
-	      bar_html +='  <span class="bar_timer">'+e_val.name+'</span>';
-	      bar_html +='</div>';
-	      bars.push( bar_html );
-	    });
 	    console.log(key);
 	    console.log(val);
 	  });
