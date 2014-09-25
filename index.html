@@ -17,8 +17,8 @@
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>	
 	<script>
 	  $.getJSON( "timers.json", function( data ) {
-	  var bars = [];
 	  $.each( data, function( key, val ) {
+	    var bars = [];
 	    bar ='  <span class="bar_header">'+val.name+'</span>';
 	    $.each( val.events, function( e_key, e_val ) {
 	      // Build time offsets and duration for timer
