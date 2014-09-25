@@ -55,18 +55,86 @@
 	    }).appendTo( "#bar_container" );
 	  });
 	});
+	
 	$(function() {
-	function updateAllEvents() {
-		$('#bar_container').each(function() {
-			var box = $(this);
-			var countDown = box.find('.countdown');
-			var progressBar = box.find('.progress-bar');
-			var eventOffsetData = parseInt(box.data('offset'));
-			var eventDurationData = parseInt(box.data('duration'));
-		});
-	}
-	updateAllEvents();    
-	setInterval(updateAllEvents, 30 * 1000);
+	    function updateAllEvents() {
+	        $('.bar').each(function() {
+	            var box = $(this);
+	            var countDown = box.find('.bar_timer');
+	            var eventOffsetData = parseInt(box.data('offset'));
+	            //var eventRepeatData = parseInt(box.data('repeat'));
+	            var eventDurationData = parseInt(box.data('duration'));
+	            var eventHappening = false;
+	
+	            // eventStart represents the closest start time
+	            // get the start of the current hour
+	            // add when the event starts
+	            var eventStart = moment().startOf('hour').add(eventOffsetData, 'm');
+	            var eventComplete = moment(eventStart);
+	            eventComplete.add(eventDurationData, 'm');
+	            
+	            //while(eventComplete < moment()) {
+	            //    eventStart.add(eventRepeatData, 'm');
+	            //    eventComplete.add(eventRepeatData, 'm');
+	            //}
+	            
+	            var percent = Math.round((((60 - eventStart.diff(moment(), 'minutes')) / 60) * 100));
+	            
+	            console.log(eventStart.format('h:mm'));
+	            console.log(eventComplete.format('h:mm'));
+	            console.log('-----');
+	            
+	            if((eventStart < moment()) && (moment() < eventComplete)) {
+	                eventHappening = true;
+	            } else {
+	                eventHappening = false;
+	            }
+	            
+	            if (eventHappening) {
+	                countDown.html( "In progress" );
+	                percent = 100;
+	                //box remove dark, use red 
+	            } else {
+	                countDown.html( eventStart.fromNow() );
+	            }
+	            
+	            //progressBar.width(percent + "%");
+	            //$(this).data('percent', percent);
+	        });
+	        
+	        /*
+	        // Sort earth
+	        $('.info-box.earth').sort(function(a, b){
+	            var percentA = parseInt($(a).data('percent'));
+	            var percentB = parseInt($(b).data('percent'));
+	            return percentB - percentA;
+	        }).appendTo(".earthWrapper");
+	        
+	        // Sort moon
+	        $('.info-box.moon').sort(function(a, b){
+	            var percentA = parseInt($(a).data('percent'));
+	            var percentB = parseInt($(b).data('percent'));
+	            return percentB - percentA;
+	        }).appendTo(".moonWrapper");
+	        
+	        // Sort venus
+	        $('.info-box.venus').sort(function(a, b){
+	            var percentA = parseInt($(a).data('percent'));
+	            var percentB = parseInt($(b).data('percent'));
+	            return percentB - percentA;
+	        }).appendTo(".venusWrapper");
+	        
+	        // Sort mars
+	        $('.info-box.mars').sort(function(a, b){
+	            var percentA = parseInt($(a).data('percent'));
+	            var percentB = parseInt($(b).data('percent'));
+	            return percentB - percentA;
+	        }).appendTo(".marsWrapper");
+	        */
+	    }
+	
+	    updateAllEvents();    
+	    setInterval(updateAllEvents, 30 * 1000);
 	});
 	
 	$(document).on("click", 'div.bar, div.bar > span', function(e) {
