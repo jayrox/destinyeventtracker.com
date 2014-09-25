@@ -21,8 +21,12 @@
 	  $.each( data, function( key, val ) {
 	    bar = '<div class="bar_group" id="'+val.name+'">';
 	    bar +='  <span class="bar_header">'+val.name+'</span>';
-	    $.each( val.events, function( e_key, e_val ) {  
-	      bar +='  <div class="bar">';
+	    $.each( val.events, function( e_key, e_val ) {
+	      if val.type == 1 {
+	      	d_offset = e_val.intervals.0.start;
+	      	d_duration = e_val.intervals.0.end - e_val.intervals.0.start;
+	      }
+	      bar +='  <div class="bar" data-offset="'+d_offset+'" data-duration="'+d_duration+'">';
  	      bar +='    <span class="bar_location">'+e_val.name+'</span>';
 	      bar +='    <span class="bar_description">'+e_val.name+'</span>';
 	      bar +='    <span class="bar_timer">'+e_val.name+'</span>';
@@ -38,6 +42,19 @@
 	    "class": "my-new-list",
 	    html: bars.join( "" )
 	  }).appendTo( "#bar_container" );
+	});
+	$(function() {
+	function updateAllEvents() {
+		$('#bar_container').each(function() {
+			var box = $(this);
+			var countDown = box.find('.countdown');
+			var progressBar = box.find('.progress-bar');
+			var eventOffsetData = parseInt(box.data('offset'));
+			var eventRepeatData = parseInt(box.data('repeat'));
+			var eventDurationData = parseInt(box.data('duration'));
+		});
+		updateAllEvents();    
+		setInterval(updateAllEvents, 30 * 1000);
 	});
 	</script>
 	</body>
