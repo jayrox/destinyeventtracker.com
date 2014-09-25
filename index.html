@@ -70,12 +70,11 @@
 	});
 	
 	$(document).on("click", 'div.bar, div.bar > span', function(e) {
-		$('.bar_description', this).toggleClass("show", 1000, "easeOutSine");
+		$('.bar_description', this).toggleClass("show");
 	});
 	
 	$(document).on("click", 'span.bar_header', function(e) {
-		$(this).siblings('div.bar').toggleClass("hide", 1000, "easeOutSine");
-		console.log(this);
+		$(this).siblings('div.bar').toggleClass("hide");
 	});
 	</script>
 	</body>
