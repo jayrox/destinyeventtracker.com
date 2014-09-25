@@ -30,14 +30,14 @@ body {
 }
 
 .bar {
-  background: #000000; /* Old browsers */
-  background: -moz-linear-gradient(left,  #000000 -1%, #4186fc 10%, #4186fc 65%, #000000 66%, #000000 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(-1%,#000000), color-stop(10%,#4186fc), color-stop(65%,#4186fc), color-stop(66%,#000000), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  #000000 -1%,#4186fc 10%,#4186fc 65%,#000000 66%,#000000 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  #000000 -1%,#4186fc 10%,#4186fc 65%,#000000 66%,#000000 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  #000000 -1%,#4186fc 10%,#4186fc 65%,#000000 66%,#000000 100%); /* IE10+ */
-  background: linear-gradient(to right,  #000000 -1%,#4186fc 10%,#4186fc 65%,#000000 66%,#000000 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+  background: #3A3A3A; /* Old browsers */
+  background: -moz-linear-gradient(left,  #000000 -1%, #4186fc 10%, #4186fc 65%, #000000 66%, #3A3A3A 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(-1%,#000000), color-stop(10%,#4186fc), color-stop(65%,#4186fc), color-stop(66%,#000000), color-stop(100%,#3A3A3A)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #000000 -1%,#4186fc 10%,#4186fc 65%,#000000 66%,#3A3A3A 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #000000 -1%,#4186fc 10%,#4186fc 65%,#000000 66%,#3A3A3A 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #000000 -1%,#4186fc 10%,#4186fc 65%,#000000 66%,#3A3A3A 100%); /* IE10+ */
+  background: linear-gradient(to right,  #000000 -1%,#4186fc 10%,#4186fc 65%,#000000 66%,#3A3A3A 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#3A3A3A',GradientType=1 ); /* IE6-9 */
 }
 
 .bar_location {
