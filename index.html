@@ -26,8 +26,8 @@
 	  $.getJSON( "timers.json", function( data ) {
 	  var bar_groups = [];
 	  $.each( data, function( key, val ) {
-	    bar_group = '<div class="bar_group" id="'+key.name+'">';
-	    bar_group +='<span class="bar_header">'+key.name+'</span>';
+	    bar_group = '<div class="bar_group" id="'+val.name+'">';
+	    bar_group +='<span class="bar_header">'+val.name+'</span>';
 	    bar_group +='</div';
 	    bar_groups.push( bar_group );
 	    /*
