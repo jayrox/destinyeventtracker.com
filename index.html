@@ -19,9 +19,9 @@
 	  $.getJSON( "timers.json", function( data ) {
 	  var bars = [];
 	  $.each( data, function( key, val ) {
+	    $.each( val.events, function( e_key, e_val ) {
 	    bar = '<div class="bar_group" id="'+val.name+'">';
 	    bar +='  <span class="bar_header">'+val.name+'</span>';
-	    $.each( val.events, function( e_key, e_val ) {
 	      // Build time offsets and duration for timer
 	      d_offset = 0;
 	      d_duration = 300;
@@ -47,7 +47,7 @@
 	      bar +='    <span class="bar_timer">'+timer+'</span>';
 	      bar +='  </div>';
 	    });
-	    bar +='</div';
+	    bar +='</div>';
 	    bars.push( bar );
 	    console.log(val);
 	  });
