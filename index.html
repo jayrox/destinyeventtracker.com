@@ -22,6 +22,8 @@
 	    bar = '<div class="bar_group" id="'+val.name+'">';
 	    bar +='  <span class="bar_header">'+val.name+'</span>';
 	    $.each( val.events, function( e_key, e_val ) {
+	      d_offset = 0;
+	      d_duration = 300;
 	      if (e_val.type == 1) {
 	      	d_offset = 0; //e_val.intervals.0.start;
 	      	d_duration = 300; //e_val.intervals.0.end - e_val.intervals.0.start;
