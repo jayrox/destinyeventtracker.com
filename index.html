@@ -72,9 +72,9 @@
 	            // eventStart represents the closest start time
 	            // get the start of the current hour
 	            // add when the event starts
-	            var eventStart = moment().startOf('hour').add(eventOffsetData, 'm');
+	            var eventStart = moment().startOf('hour').add(eventOffsetData, 's');
 	            var eventComplete = moment(eventStart);
-	            eventComplete.add(eventDurationData, 'm');
+	            eventComplete.add(eventDurationData, 's');
 	            
 	            //while(eventComplete < moment()) {
 	            //    eventStart.add(eventRepeatData, 'm');
