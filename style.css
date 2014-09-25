@@ -27,6 +27,7 @@ body {
   padding: 1em;
   background-color: #3A3A3A;
   margin-bottom: 1em;
+  position: relative;
 }
 
 .bar {
@@ -49,8 +50,9 @@ body {
 }
 
 .bar_timer {
-  float: right;
-  margin-top: -1.11em;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .cent {
