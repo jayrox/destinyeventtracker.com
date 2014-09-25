@@ -23,8 +23,8 @@
 	    bar +='  <span class="bar_header">'+val.name+'</span>';
 	    $.each( val.events, function( e_key, e_val ) {
 	      if (e_val.type == 1) {
-	      	d_offset = e_val.intervals.0.start;
-	      	d_duration = e_val.intervals.0.end - e_val.intervals.0.start;
+	      	//d_offset = e_val.intervals.0.start;
+	      	//d_duration = e_val.intervals.0.end - e_val.intervals.0.start;
 	      }
 	      bar +='  <div class="bar" data-offset="'+d_offset+'" data-duration="'+d_duration+'">';
  	      bar +='    <span class="bar_location">'+e_val.name+'</span>';
