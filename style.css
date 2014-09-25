@@ -46,6 +46,7 @@ body {
 
 .bar_description {
   display: block;
+  display: none;
 }
 
 .bar_timer {
