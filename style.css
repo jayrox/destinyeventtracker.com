@@ -27,6 +27,17 @@ body {
   background-color: #161416;
 }
 
+.bar {
+  background: #1e31fb; /* Old browsers */
+  background: -moz-linear-gradient(left,  #1e31fb -1%, #1e31fb 57%, #bcbcbc 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(-1%,#1e31fb), color-stop(57%,#1e31fb), color-stop(100%,#bcbcbc)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #1e31fb -1%,#1e31fb 57%,#bcbcbc 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #1e31fb -1%,#1e31fb 57%,#bcbcbc 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #1e31fb -1%,#1e31fb 57%,#bcbcbc 100%); /* IE10+ */
+  background: linear-gradient(to right,  #1e31fb -1%,#1e31fb 57%,#bcbcbc 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e31fb', endColorstr='#bcbcbc',GradientType=1 ); /* IE6-9 */
+}
+
 .bar_location {
   
 }
@@ -38,15 +49,6 @@ body {
 .bar_timer {
   float:right;
   margin-top: -1em;
-}
-
-#bar_filler {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 50%;
-    height: 100%;
-    background-color: #1E31FB;
 }
 
 .cent {
