@@ -12,7 +12,7 @@ body {
 }
 
 #main {
-
+  padding: 1em;
   
 }
 
@@ -24,7 +24,7 @@ body {
 .bar {
   border: 1px solid #dddddd;
   height: 70px;
-  margin: 10px 10px 10px 30px;
+  padding: 1em;
   background-color: #161416;
 }
 
