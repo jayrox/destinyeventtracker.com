@@ -24,30 +24,27 @@
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>	
 	<script>
 	  $.getJSON( "timers.json", function( data ) {
-	  var bar_groups = [];
+	  var bars = [];
 	  $.each( data, function( key, val ) {
-	    bar_group = '<div class="bar_group" id="'+val.name+'">';
-	    bar_group +='<span class="bar_header">'+val.name+'</span>';
-	    bar_group +='</div';
-	    bar_groups.push( bar_group );
-	    /*
-	    var events = [];
-	    $.each( key.events, function( ekey, eval ) {  
+	    bar = '<div class="bar_group" id="'+val.name+'">';
+	    bar +='<span class="bar_header">'+val.name+'</span>';
+	    bar +='</div';
+	    bars.push( bar_group );
+	    $.each( val.events, function( ekey, eval ) {  
 	      bar_html = '<div class="bar">';
  	      bar_html +='  <span class="bar_location">Skywatch</span>';
 	      bar_html +='  <span class="bar_description">Defend Warsat</span>';
 	      bar_html +='  <span class="bar_timer">10 min</span>';
 	      bar_html +='</div>';
-	      events.push( bar_html );
+	      bars.push( bar_html );
 	    });
-	    */
 	    console.log(key);
 	    console.log(val);
 	  });
 	 
 	  $( "<div/>", {
 	    "class": "my-new-list",
-	    html: bar_groups.join( "" )
+	    html: bars.join( "" )
 	  }).appendTo( "#bar_container" );
 	});
 	</script>
