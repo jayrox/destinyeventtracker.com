@@ -70,6 +70,10 @@
 	updateAllEvents();    
 	setInterval(updateAllEvents, 30 * 1000);
 	});
+	
+	$('.bar').on('click', function () {
+    		$(this).children('.bar_description').toggle();
+	});
 	</script>
 	</body>
 </html>
