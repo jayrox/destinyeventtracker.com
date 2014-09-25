@@ -24,12 +24,13 @@
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>	
 	<script>
 	  $.getJSON( "timers.json", function( data ) {
-	  var groups = [];
+	  var bar_groups = [];
 	  $.each( data, function( key, val ) {
 	    bar_group = '<div class="bar_group" id="'+key.name+'">';
 	    bar_group +='<span class="bar_header">'+key.name+'</span>';
 	    bar_group +='</div';
-	    groups.push( bar_group );
+	    bar_groups.push( bar_group );
+	    /*
 	    var events = [];
 	    $.each( key.events, function( ekey, eval ) {  
 	      bar_html = '<div class="bar">';
@@ -39,13 +40,14 @@
 	      bar_html +='</div>';
 	      events.push( bar_html );
 	    });
+	    */
 	    console.log(key);
 	    console.log(val);
 	  });
 	 
 	  $( "<div/>", {
 	    "class": "my-new-list",
-	    html: groups.join( "" )
+	    html: bar_groups.join( "" )
 	  }).appendTo( "#bar_container" );
 	});
 	</script>
