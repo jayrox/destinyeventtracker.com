@@ -72,7 +72,8 @@
 	$(document).on("click", 'div.bar, div.bar > span', function(e) {
 		$('.bar_description', this).toggleClass("show", 1000, "easeOutSine");
 	});
-	$(document).on("click", 'div.bar_header, div.bar_header > span', function(e) {
+	
+	$(document).on("click", 'span.bar_header', function(e) {
 		$('div.bar', this).toggleClass("hide", 1000, "easeOutSine");
 		console.log(this);
 	});
