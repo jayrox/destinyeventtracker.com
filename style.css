@@ -59,6 +59,10 @@ body {
   display: block;
 }
 
+.show {
+  display: none;
+}
+
 .cent {
   height: 200px;
   width: 200px;
