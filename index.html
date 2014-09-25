@@ -49,12 +49,12 @@
 	    bar +='</div>';
 	    bars.push( bar );
 	    console.log(val);
-	    $( "<div/>", {
-	      class: 'bar_group',
-	      id: val.name,
-	      html: bars.join( "" )
-	    }).appendTo( "#bar_container" );
 	  });
+	  $( "<div/>", {
+	    class: 'bar_group',
+	    id: val.name,
+	    html: bars.join( "" )
+	  }).appendTo( "#bar_container" );
 	});
 	$(function() {
 	function updateAllEvents() {
