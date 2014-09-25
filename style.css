@@ -21,7 +21,7 @@ body {
   padding: 20px;
 }
 
-.bar_group {
+.bar_group, .bar_header {
   width: 100%;
 }
 
