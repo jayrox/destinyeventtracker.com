@@ -55,8 +55,8 @@ body {
   right: 10px;
 }
 
-.hide {
-  display:none;
+.show {
+  display: block;
 }
 
 .cent {
