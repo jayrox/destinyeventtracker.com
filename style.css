@@ -18,9 +18,8 @@ body {
 
 .bar {
   border: 1px solid #dddddd;
-}
-
-#bar_background {
+  height: 70px;
+  padding: 10px;
   background-color: #161416;
 }
 
