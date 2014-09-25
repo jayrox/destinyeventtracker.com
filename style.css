@@ -16,6 +16,10 @@ body {
   
 }
 
+.bar {
+  border: 1px solid #dddddd;
+}
+
 #bar_background {
   background-color: #161416;
 }
