@@ -26,13 +26,13 @@
 	  $.getJSON( "timers.json", function( data ) {
 	  var items = [];
 	  $.each( data, function( key, val ) {
-	    html = "<div class=\"bar\">
- 	  	<span class=\"bar_location\">Skywatch</span>
-	  	<span class=\"bar_description\">Defend Warsat</span>
-	  	<span class=\"bar_timer\">10 min</span>
-	        </div>";
+	    var bar_html = '<div class="bar">
+ 	  	<span class="bar_location">Skywatch</span>
+	  	<span class="bar_description">Defend Warsat</span>
+	  	<span class="bar_timer">10 min</span>
+	        </div>';
 	    //items.push( "<li id='" + key + "'>" + val + "</li>" );
-	    items.push( html );
+	    items.push( bar_html );
 	    console.log(key);
 	    console.log(val);
 	  });
