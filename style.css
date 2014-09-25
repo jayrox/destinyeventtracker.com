@@ -24,7 +24,7 @@ body {
 .bar {
   border: 1px solid #dddddd;
   height: 70px;
-  padding: 10px 10px 10px 20px;
+  margin: 10px 10px 10px 20px;
   background-color: #161416;
 }
 
@@ -33,11 +33,12 @@ body {
 }
 
 .bar_description {
-  
+  display: block;
 }
 
 .bar_timer {
   float:right;
+  margin-top: -1em;
 }
 
 #bar_filler {
