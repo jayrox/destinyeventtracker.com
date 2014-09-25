@@ -73,6 +73,7 @@
 	
 	$('.bar').click(function(event){
 		var isDim = $(event.target).is('.bar');
+		console.log(isDim);
 		if(isDim){ //make sure I am a dim element
 			$('.bar_description', this).toggle(); // p00f
 		}
