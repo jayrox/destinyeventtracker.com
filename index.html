@@ -74,7 +74,7 @@
 	});
 	
 	$(document).on("click", 'span.bar_header', function(e) {
-		$('span.bar_header', this).siblings('div.bar').toggleClass("hide", 1000, "easeOutSine");
+		$(this).siblings('div.bar').toggleClass("hide", 1000, "easeOutSine");
 		console.log(this);
 	});
 	</script>
