@@ -22,21 +22,29 @@
 	    bar = '<div class="bar_group" id="'+val.name+'">';
 	    bar +='  <span class="bar_header">'+val.name+'</span>';
 	    $.each( val.events, function( e_key, e_val ) {
+	      // Build time offsets and duration for timer
 	      d_offset = 0;
 	      d_duration = 300;
 	      if (e_val.type == 1) {
 	      	d_offset = e_val.intervals[0].start;
 	      	d_duration = e_val.intervals[0].end - e_val.intervals[0].start;
 	      }
+	      
+	      // Create description
 	      bar_description = "";
 	      $.each( e_val.subEvents, function( se_key, se_val ) {
 		bar_description += se_val + ", ";	      	
 	      });
+	      
+	      // FIXME: Placeholder
+	      timer = "in 10 mins";
+	      
+	      // Build bar item
 	      bar_description = bar_description.substring(0, bar_description.length - 2);
 	      bar +='  <div class="bar" data-offset="'+d_offset+'" data-duration="'+d_duration+'">';
  	      bar +='    <span class="bar_location">'+e_val.name+'</span>';
 	      bar +='    <span class="bar_description">'+bar_description+'</span>';
-	      bar +='    <span class="bar_timer">'+e_val.name+'</span>';
+	      bar +='    <span class="bar_timer">'+timer+'</span>';
 	      bar +='  </div>';
 	    });
 	    bar +='</div';
