@@ -26,12 +26,18 @@
 	  $.getJSON( "timers.json", function( data ) {
 	  var items = [];
 	  $.each( data, function( key, val ) {
-	    items.push( "<li id='" + key + "'>" + val + "</li>" );
+	    html = "<div class=\"bar\">
+ 	  	<span class=\"bar_location\">Skywatch</span>
+	  	<span class=\"bar_description\">Defend Warsat</span>
+	  	<span class=\"bar_timer\">10 min</span>
+	        </div>";
+	    //items.push( "<li id='" + key + "'>" + val + "</li>" );
+	    items.push( html );
 	    console.log(key);
 	    console.log(val);
 	  });
 	 
-	  $( "<ul/>", {
+	  $( "<div/>", {
 	    "class": "my-new-list",
 	    html: items.join( "" )
 	  }).appendTo( "#bar_container" );
