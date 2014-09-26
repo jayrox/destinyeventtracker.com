@@ -136,7 +136,7 @@
 	}
 
 	$( document ).ready(function() {
-		updateAllEvents();    
+		setInterval(updateAllEvents, 1 * 1000);  
 	});
 	
 	$(document).on("click", 'div.bar, div.bar > span', function(e) {
