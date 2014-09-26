@@ -21,6 +21,7 @@
 	  $.each( data, function( key, val ) {
 	    var bars = [];
 	    bar ='  <span class="bar_header">'+val.name+'</span>';
+	    bar+='  <div id="'+val.name.toLowerCase()+'wrapper">";
 	    $.each( val.events, function( e_key, e_val ) {
 	      // Build time offsets and duration for timer
 	      d_offset = d_offset2 = 0;
@@ -42,13 +43,13 @@
 	      
 	      // Build bar item
 	      bar_description = bar_description.substring(0, bar_description.length - 2);
-	      bar +='  <div class="bar" data-offset="'+d_offset+'" data-duration="'+d_duration+'" data-offset2="'+d_offset2+'" data-duration2="'+d_duration2+'">';
+	      bar +='  <div class="bar" data-offset="'+d_offset+'" data-duration="'+d_duration+'" data-offset2="'+d_offset2+'" data-duration2="'+d_duration2+'" data-percent="">';
  	      bar +='    <span class="bar_location">'+e_val.name+'</span>';
 	      bar +='    <span class="bar_description">'+bar_description+'</span>';
 	      bar +='    <span class="bar_timer">&nbsp;</span>';
 	      bar +='  </div>';
 	    });
-	    bar +='</div>';
+	    bar +='</div></div>';
 	    bars.push( bar );
 	    $( "<div/>", {
 	      class: 'bar_group',
@@ -73,8 +74,6 @@
 	            var eventDuration2Data = parseInt(box.data('duration2'));
 	            var eventHappening = false;
 	            
-	            console.log(eventOffsetData+" "+eventDurationData+" "+eventOffset2Data+" "+eventDuration2Data+" "+eventRepeatData);
-
 		    if (eventOffsetData == 0 && eventDurationData == 0) {
 		    	console.log("continue");
 		    	return;
@@ -112,8 +111,7 @@
 	                countDown.html( eventStart.fromNow() );
 	            }
 	            
-	            //progressBar.width(percent + "%");
-	            //$(this).data('percent', percent);
+	            $(this).data('percent', percent);
 	            $(box).css('background', '#4186fc');
   		    $(box).css('background', '-moz-linear-gradient(left,  #4186fc 0%, #4186fc '+percent+'%, #3a3a3a '+(percent+1)+'%, #3a3a3a 100%');
   		    $(box).css('background', '-webkit-gradient(linear, left top, right top, color-stop(0%,#4186fc), color-stop('+percent+'%,#4186fc), color-stop('+(percent+1)+'%,#3a3a3a), color-stop(100%,#3a3a3a)');
