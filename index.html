@@ -22,7 +22,7 @@
 	    var bars = [];
 	    var planetname = val.name;
 	    bar ='  <span class="bar_header">'+planetname+'</span>';
-	    bar+='  <div id="'+planetname.toLowerCase()+'wrapper">';
+	    bar+='  <div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
 	    $.each( val.events, function( e_key, e_val ) {
 	      // Build time offsets and duration for timer
 	      d_offset = d_offset2 = 0;
@@ -122,35 +122,16 @@
 	  		$(box).css('background', 'progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#4186fc\', endColorstr=\'#3a3a3a\',GradientType=1');
 		});
 			
-		/*
-		// Sort earth
-		$('.info-box.earth').sort(function(a, b){
-			var percentA = parseInt($(a).data('percent'));
-			var percentB = parseInt($(b).data('percent'));
-			return percentB - percentA;
-		}).appendTo(".earthWrapper");
-		
-		// Sort moon
-		$('.info-box.moon').sort(function(a, b){
-			var percentA = parseInt($(a).data('percent'));
-			var percentB = parseInt($(b).data('percent'));
-			return percentB - percentA;
-		}).appendTo(".moonWrapper");
-		
-		// Sort venus
-		$('.info-box.venus').sort(function(a, b){
-			var percentA = parseInt($(a).data('percent'));
-			var percentB = parseInt($(b).data('percent'));
-			return percentB - percentA;
-		}).appendTo(".venusWrapper");
-		
-		// Sort mars
-		$('.info-box.mars').sort(function(a, b){
-			var percentA = parseInt($(a).data('percent'));
-			var percentB = parseInt($(b).data('percent'));
-			return percentB - percentA;
-		}).appendTo(".marsWrapper");
-		*/
+		// Sort Planets
+		$('.planetWrapper').each( function() {
+			$(this).children('.bar').sort(function (a, b) {
+				var percentA = parseInt($(a).data('percent'));
+				var percentB = parseInt($(b).data('percent'));
+				//console.log(percentB - percentA);
+				return percentB - percentA;
+			}).appendTo($(this));
+		});
+        
 		setInterval(updateAllEvents, 30 * 1000);
 	}
 
