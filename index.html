@@ -66,7 +66,10 @@
 	            var eventOffsetData = parseInt(box.data('offset'));
 	            var eventDurationData = parseInt(box.data('duration'));
 	            var eventOffset2Data = parseInt(box.data('offset2'));
-	            var eventRepeatData = eventOffset2Data - eventOffsetData;
+	            var eventRepeatData = 3600;
+	            if (eventOffset2Data > eventOffsetData) {
+	            	eventRepeatData = eventOffset2Data - eventOffsetData;
+	            }
 	            var eventDuration2Data = parseInt(box.data('duration2'));
 	            var eventHappening = false;
 	            
@@ -85,6 +88,8 @@
 	            var eventStart = moment().startOf('hour').add(eventOffsetData, 's');
 	            var eventComplete = moment(eventStart);
 	            eventComplete.add(eventDurationData, 's');
+	            
+	            i
 	            
 	            while(eventComplete < moment()) {
 	                eventStart.add(eventRepeatData, 's');
