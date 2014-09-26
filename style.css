@@ -36,6 +36,7 @@ body {
   position: relative;
 }
 
+<!--
 .bar {
   background: #4186fc;
   background: -moz-linear-gradient(left,  #4186fc 0%, #4186fc 65%, #3a3a3a 66%, #3a3a3a 100%);
@@ -46,6 +47,7 @@ body {
   background: linear-gradient(to right,  #4186fc 0%,#4186fc 65%,#3a3a3a 66%,#3a3a3a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4186fc', endColorstr='#3a3a3a',GradientType=1 );
 }
+-->
 
 .bar_location {
   
