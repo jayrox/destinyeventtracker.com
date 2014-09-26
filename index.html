@@ -113,6 +113,7 @@
 	            }
 	            
 	            $(box).data('percent', percent);
+	            console.log($box.data());
 	            $(box).css('background', '#4186fc');
   		    $(box).css('background', '-moz-linear-gradient(left,  #4186fc 0%, #4186fc '+percent+'%, #3a3a3a '+(percent+1)+'%, #3a3a3a 100%');
   		    $(box).css('background', '-webkit-gradient(linear, left top, right top, color-stop(0%,#4186fc), color-stop('+percent+'%,#4186fc), color-stop('+(percent+1)+'%,#3a3a3a), color-stop(100%,#3a3a3a)');
