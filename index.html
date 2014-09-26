@@ -60,7 +60,8 @@
 	  });
 	});
 	
-	$(function() {
+	$( document ).ready(function() {
+	//$(function() {
 	    function updateAllEvents() {
 	        $('.bar').each(function() {
 	            var box = $(this);
@@ -166,9 +167,6 @@
 		$(this).siblings('div.bar').toggleClass("hide");
 	});
 	
-	$( document ).ready(function() {
-		updateAllEvents();   
-	});
 	</script>
 	</body>
 </html>
