@@ -36,19 +36,6 @@ body {
   position: relative;
 }
 
-<!--
-.bar {
-  background: #4186fc;
-  background: -moz-linear-gradient(left,  #4186fc 0%, #4186fc 65%, #3a3a3a 66%, #3a3a3a 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#4186fc), color-stop(65%,#4186fc), color-stop(66%,#3a3a3a), color-stop(100%,#3a3a3a));
-  background: -webkit-linear-gradient(left,  #4186fc 0%,#4186fc 65%,#3a3a3a 66%,#3a3a3a 100%);
-  background: -o-linear-gradient(left,  #4186fc 0%,#4186fc 65%,#3a3a3a 66%,#3a3a3a 100%);
-  background: -ms-linear-gradient(left,  #4186fc 0%,#4186fc 65%,#3a3a3a 66%,#3a3a3a 100%);
-  background: linear-gradient(to right,  #4186fc 0%,#4186fc 65%,#3a3a3a 66%,#3a3a3a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4186fc', endColorstr='#3a3a3a',GradientType=1 );
-}
--->
-
 .bar_location {
   
 }
