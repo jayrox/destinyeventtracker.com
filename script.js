@@ -36,7 +36,12 @@ $.getJSON( "timers.json", function( data ) {
 
 			// Build bar item
 			bar_description = bar_description.substring(0, bar_description.length - 2);
-			bar +='<div class="bar" data-offset="'+d_offset+'" data-duration="'+d_duration+'" data-offset2="'+d_offset2+'" data-duration2="'+d_duration2+'" data-type="'+d_type+'" data-percent="">';
+			bar +='<div class="bar" data-offset="'+d_offset
+			    +'" data-duration="'+d_duration
+			    +'" data-offset2="'+d_offset2
+			    +'" data-duration2="'+d_duration2
+			    +'" data-type="'+d_type
+			    +'" data-percent="">';
 			bar +='	<span class="bar_location">'+e_val.name+'</span>';
 			bar +='	<span class="bar_description">'+bar_description+'</span>';
 			bar +='	<span class="bar_timer">&nbsp;</span>';
