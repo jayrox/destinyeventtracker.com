@@ -133,5 +133,5 @@ function updateAllEvents() {
 		}).appendTo($(this));
 	});
 
-	setInterval(updateAllEvents, 30 * 1000);
+	setTimeout(updateAllEvents,30 * 1000);
 }
