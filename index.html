@@ -20,8 +20,9 @@
 	  $.getJSON( "timers.json", function( data ) {
 	  $.each( data, function( key, val ) {
 	    var bars = [];
-	    bar ='  <span class="bar_header">'+val.name+'</span>';
-	    bar+='  <div id="'+val.name.toLowerCase()+'wrapper">";
+	    var planetname = val.name
+	    bar ='  <span class="bar_header">'+planetname+'</span>';
+	    bar+='  <div id="'+planetname.toLowerCase()+'wrapper">";
 	    $.each( val.events, function( e_key, e_val ) {
 	      // Build time offsets and duration for timer
 	      d_offset = d_offset2 = 0;
