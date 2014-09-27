@@ -115,15 +115,6 @@ function updateAllEvents() {
 
 		$(box).data('percent', percent);
 		$(box).children(".bar_progress").css("width", percent+"%");
-  		/*
-  		$(box).css('background', '-moz-linear-gradient(left,  #4186fc 0%, #4186fc '+percent+'%, #3a3a3a '+(percent+1)+'%, #3a3a3a 100%');
-  		$(box).css('background', '-webkit-gradient(linear, left top, right top, color-stop(0%,#4186fc), color-stop('+percent+'%,#4186fc), color-stop('+(percent+1)+'%,#3a3a3a), color-stop(100%,#3a3a3a)');
-  		$(box).css('background', '-webkit-linear-gradient(left,  #4186fc 0%,#4186fc '+percent+'%,#3a3a3a '+(percent+1)+'%,#3a3a3a 100%');
-  		$(box).css('background', '-o-linear-gradient(left,  #4186fc 0%,#4186fc '+percent+'%,#3a3a3a '+(percent+1)+'%,#3a3a3a 100%');
-  		$(box).css('background', '-ms-linear-gradient(left,  #4186fc 0%,#4186fc '+percent+'%,#3a3a3a '+(percent+1)+'%,#3a3a3a 100%');
-  		$(box).css('background', 'linear-gradient(to right,  #4186fc 0%,#4186fc '+percent+'%,#3a3a3a '+(percent+1)+'%,#3a3a3a 100%');
-  		$(box).css('background', 'progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#4186fc\', endColorstr=\'#3a3a3a\',GradientType=1');
-  		*/
 	});
 
 	// Sort Planets
