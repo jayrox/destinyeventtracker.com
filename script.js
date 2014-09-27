@@ -42,9 +42,11 @@ $.getJSON( "timers.json", function( data ) {
 			    +'" data-duration2="'+d_duration2
 			    +'" data-type="'+d_type
 			    +'" data-percent="">';
-			bar +='	<span class="bar_location">'+e_val.name+'</span>';
-			bar +='	<span class="bar_description">'+bar_description+'</span>';
-			bar +='	<span class="bar_timer">&nbsp;</span>';
+			bar +=' <div class="progress">';
+			bar +='	 <span class="bar_location">'+e_val.name+'</span>';
+			bar +='	 <span class="bar_description">'+bar_description+'</span>';
+			bar +='	 <span class="bar_timer">&nbsp;</span>';
+			bar +=' </div>';
 			bar +='</div>';
 		});
 		bar +='</div></div>';
@@ -113,7 +115,8 @@ function updateAllEvents() {
 		}
 
 		$(box).data('percent', percent);
-		$(box).css('background', '#4186fc');
+		$(box).children(".progress").css("width", percent+"%");
+  		/*
   		$(box).css('background', '-moz-linear-gradient(left,  #4186fc 0%, #4186fc '+percent+'%, #3a3a3a '+(percent+1)+'%, #3a3a3a 100%');
   		$(box).css('background', '-webkit-gradient(linear, left top, right top, color-stop(0%,#4186fc), color-stop('+percent+'%,#4186fc), color-stop('+(percent+1)+'%,#3a3a3a), color-stop(100%,#3a3a3a)');
   		$(box).css('background', '-webkit-linear-gradient(left,  #4186fc 0%,#4186fc '+percent+'%,#3a3a3a '+(percent+1)+'%,#3a3a3a 100%');
@@ -121,6 +124,7 @@ function updateAllEvents() {
   		$(box).css('background', '-ms-linear-gradient(left,  #4186fc 0%,#4186fc '+percent+'%,#3a3a3a '+(percent+1)+'%,#3a3a3a 100%');
   		$(box).css('background', 'linear-gradient(to right,  #4186fc 0%,#4186fc '+percent+'%,#3a3a3a '+(percent+1)+'%,#3a3a3a 100%');
   		$(box).css('background', 'progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#4186fc\', endColorstr=\'#3a3a3a\',GradientType=1');
+  		*/
 	});
 
 	// Sort Planets
