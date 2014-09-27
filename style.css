@@ -91,31 +91,36 @@ body {
 
 @-moz-keyframes pulse {
     50% {
-        background-color: #aaa;
+        /*background-color: #aaa;*/
+        opacity: 0.5;
     }
 }
 
 @-ms-keyframes pulse {
     50% {
-        background-color: #aaa;
+        /*background-color: #aaa;*/
+        opacity: 0.5;
     }
 }
 
 @-o-keyframes pulse {
     50% {
-        background-color: #aaa;
+        /*background-color: #aaa;*/
+        opacity: 0.5;
     }
 }
 
 @-webkit-keyframes pulse {
     50% {
-        background-color: #aaa;
+        /*background-color: #aaa;*/
+        opacity: 0.5;
     }
 }
 
 @keyframes pulse {
     50% {
-        background-color: #aaa;
+        /*background-color: #aaa;*/
+        opacity: 0.5;
     }
 }
 
