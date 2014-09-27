@@ -28,6 +28,10 @@ body {
   padding: 20px;
 }
 
+#bar_menu {
+  display: none;
+}
+
 .bar_group, .bar_header {
   width: 100%;
   display: block;
