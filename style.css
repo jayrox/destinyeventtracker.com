@@ -91,31 +91,31 @@ body {
 
 @-moz-keyframes pulse {
     50% {
-        background-color: #bbb;
+        background-color: #aaa;
     }
 }
 
 @-ms-keyframes pulse {
     50% {
-        background-color: #bbb;
+        background-color: #aaa;
     }
 }
 
 @-o-keyframes pulse {
     50% {
-        background-color: #bbb;
+        background-color: #aaa;
     }
 }
 
 @-webkit-keyframes pulse {
     50% {
-        background-color: #bbb;
+        background-color: #aaa;
     }
 }
 
 @keyframes pulse {
     50% {
-        background-color: #bbb;
+        background-color: #aaa;
     }
 }
 
@@ -124,23 +124,5 @@ body {
 }
 
 .bar_progress.active {
-    -moz-animation-name: pulse;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-duration: 4s;
-    
-    -ms-animation-name: pulse;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-duration: 4s;
-    
-    -o-animation-name: pulse;
-    -o-animation-iteration-count: infinite;
-    -o-animation-duration: 4s;
-    
-    -webkit-animation-name: pulse;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 4s;
-    
-    animation-name: pulse;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
+  animation: pulse 2s infinite;
 }
