@@ -46,10 +46,12 @@ body {
 }
 
 .bar_location {
+  position: relative;
 }
 
 .bar_description {
   display: none;
+  position: relative;
 }
 
 .bar_timer {
