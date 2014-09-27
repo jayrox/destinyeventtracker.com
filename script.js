@@ -42,7 +42,7 @@ $.getJSON( "timers.json", function( data ) {
 			    +'" data-duration2="'+d_duration2
 			    +'" data-type="'+d_type
 			    +'" data-percent="">';
-			bar +=' <div class="progress">';
+			bar +=' <div class="bar_progress">';
 			bar +='	 <span class="bar_location">'+e_val.name+'</span>';
 			bar +='	 <span class="bar_description">'+bar_description+'</span>';
 			bar +='	 <span class="bar_timer">&nbsp;</span>';
@@ -115,7 +115,7 @@ function updateAllEvents() {
 		}
 
 		$(box).data('percent', percent);
-		$(box).children(".progress").css("width", percent+"%");
+		$(box).children(".bar_progress").css("width", percent+"%");
   		/*
   		$(box).css('background', '-moz-linear-gradient(left,  #4186fc 0%, #4186fc '+percent+'%, #3a3a3a '+(percent+1)+'%, #3a3a3a 100%');
   		$(box).css('background', '-webkit-gradient(linear, left top, right top, color-stop(0%,#4186fc), color-stop('+percent+'%,#4186fc), color-stop('+(percent+1)+'%,#3a3a3a), color-stop(100%,#3a3a3a)');
