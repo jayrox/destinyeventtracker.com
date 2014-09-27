@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Destiny Event Tracker</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" href="dropit.css" type="text/css" />
 		<meta http-equiv="refresh" content="3600">
 		<!--
 		Complete source code for destinyeventtracker.com can be found:
@@ -17,11 +18,13 @@
 		<div id="header">
 			Destiny Event Tracker
 		</div>
+		<div id="bar_menu"></div>
 		<div id="bar_container"></div>
 	</div>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="/moment.js"></script>
 	<script src="/script.js"></script>
+	<script src="/dropit.js"></script>
 	<script>
 		$( document ).ready(function() {
 			setTimeout(updateAllEvents, 1000);
