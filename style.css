@@ -124,5 +124,5 @@ body {
 }
 
 .bar_progress.active {
-  animation: pulse 2s infinite;
+  animation: pulse 1s 2s infinite;
 }
