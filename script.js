@@ -101,8 +101,10 @@ function updateAllEvents() {
 
 		if((eventStart < moment()) && (moment() < eventComplete)) {
 			eventHappening = true;
+			$(box).children(".bar_progress").addClass('active');
 		} else {
 			eventHappening = false;
+			$(box).children(".bar_progress").removeClass('active');
 		}
 
 		if (eventHappening) {
