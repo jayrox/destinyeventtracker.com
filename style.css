@@ -91,41 +91,36 @@ body {
 
 @-moz-keyframes pulse {
     50% {
-        /*background-color: #aaa;*/
-        opacity: 0.5;
+        opacity: 0.4;
     }
 }
 
 @-ms-keyframes pulse {
     50% {
-        /*background-color: #aaa;*/
-        opacity: 0.5;
+        opacity: 0.4;
     }
 }
 
 @-o-keyframes pulse {
     50% {
-        /*background-color: #aaa;*/
-        opacity: 0.5;
+        opacity: 0.4;
     }
 }
 
 @-webkit-keyframes pulse {
     50% {
-        /*background-color: #aaa;*/
-        opacity: 0.5;
+        opacity: 0.4;
     }
 }
 
 @keyframes pulse {
     50% {
-        /*background-color: #aaa;*/
-        opacity: 0.5;
+        opacity: 0.4;
     }
 }
 
 .bar_progress {
-    -webkit-transition: background-color 0.5s ease-out;
+    -webkit-transition: opacity 0.5s ease-out;
 }
 
 .bar_progress.active {
