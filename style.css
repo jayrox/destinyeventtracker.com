@@ -36,6 +36,13 @@ body {
   position: relative;
 }
 
+.bar_progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
 .bar_location {
   
 }
