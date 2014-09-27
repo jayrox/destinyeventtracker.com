@@ -127,5 +127,5 @@ function updateAllEvents() {
 		}).appendTo($(this));
 	});
 
-	//setTimeout(updateAllEvents,30 * 1000);
+	setTimeout(updateAllEvents,30 * 1000);
 }
