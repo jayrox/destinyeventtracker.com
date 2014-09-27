@@ -42,11 +42,10 @@ $.getJSON( "timers.json", function( data ) {
 			    +'" data-duration2="'+d_duration2
 			    +'" data-type="'+d_type
 			    +'" data-percent="">';
-			bar +=' <div class="bar_progress">';
-			bar +='	 <span class="bar_location">'+e_val.name+'</span>';
-			bar +='	 <span class="bar_description">'+bar_description+'</span>';
-			bar +='	 <span class="bar_timer">&nbsp;</span>';
-			bar +=' </div>';
+			bar +=' <div class="bar_progress"></div>';
+			bar +='	<span class="bar_location">'+e_val.name+'</span>';
+			bar +='	<span class="bar_description">'+bar_description+'</span>';
+			bar +='	<span class="bar_timer">&nbsp;</span>';
 			bar +='</div>';
 		});
 		bar +='</div></div>';
