@@ -7,7 +7,7 @@ $.getJSON( "timers.json", function( data ) {
 		bar+='	<div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
 		
 		menu_item = '<li data-planet="'+planetname.toLowerCase()+'">'
-			  + '<input type="checkbox" id="'+planetname.toLowerCase()+'check" checked/>'
+			  + '<input type="checkbox" id="'+planetname.toLowerCase()+'check" class="cb" checked/>'
 			  + '<label for="'+planetname.toLowerCase()+'check">'
 			  + planetname
 			  + '</label>'
@@ -175,8 +175,8 @@ function updateAllEvents() {
 $(document).ready(function() {
 	$('.menu').dropit();
     
-	$('input[type="checkbox"]').checking();
-	$('input[type="checkbox"]').bind('change', function() {
+	$('.cb').checking();
+	$('.cb').bind('change', function() {
 		$(this).checking();
 	});
 	
