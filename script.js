@@ -67,7 +67,7 @@ $.getJSON( "timers.json", function( data ) {
 		// Push bars to ui
 		$( "<div/>", {
 			class: 'bar_group',
-			id: val.name,
+			id: val.name.toLowerCase(),
 			html: bars.join( "" )
 		}).appendTo( "#bar_container" );
 	});
@@ -159,15 +159,18 @@ function updateAllEvents() {
 }
 
 (function($) {
-    $.fn.checking = function() {
-        if (this.prop('checked')) {
-            console.log("checked: "+$(this).data('planet'));
-        }
-        else {
-            console.log("unchecked: "+$(this).data('planet'));
-        }
-
-    };
+	$.fn.checking = function() {
+	if (this.prop('checked')) {
+		planet = $(this).data('planet');
+		console.log("checked: "+planet);
+		$('#'+planet).show();
+	} else {
+		planet = $(this).data('planet');
+		console.log("unchecked: "+planet);
+		$('#'+planet).hide();
+	}
+	
+	};
 })(jQuery);
 
 $(document).ready(function() {
