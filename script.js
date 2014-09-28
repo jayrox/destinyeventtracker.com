@@ -1,7 +1,7 @@
 $.getJSON( "timers.json", function( data ) {
+	var menu = [];
 	$.each( data, function( key, val ) {
 		var bars = [];
-		var menu = [];
 		var planetname = val.name;
 		bar ='	<span class="bar_header">'+planetname+'</span>';
 		bar+='	<div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
