@@ -6,8 +6,8 @@ $.getJSON( "timers.json", function( data ) {
 		bar ='	<span class="bar_header">'+planetname+'</span>';
 		bar+='	<div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
 		
-		menu_item = '<li data-planet="'+planetname.toLowerCase()+'">'
-			  + '<input type="checkbox" id="'+planetname.toLowerCase()+'check" class="cb" checked/>'
+		menu_item = '<li>'
+			  + '<input type="checkbox" id="'+planetname.toLowerCase()+'check" data-planet="'+planetname.toLowerCase()+'" checked/>'
 			  + '<label for="'+planetname.toLowerCase()+'check">'
 			  + planetname
 			  + '</label>'
@@ -75,7 +75,7 @@ $.getJSON( "timers.json", function( data ) {
 		class: "dropit-submenu",
 		html: menu.join( "" )
 	}).appendTo( "ul.menu > li" );
-	console.log(menu);
+	//console.log(menu);
 });
 	
 function updateAllEvents() {
