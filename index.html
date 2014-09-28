@@ -43,6 +43,14 @@
 		$(document).on("click", 'span.bar_header', function(e) {
 			$(this).siblings('div.planetWrapper').toggleClass("hide");
 		});
+
+		$('.cb').checking();
+		$(document).on("change", 'input[type="checkbox"]', function(e) {
+		//$('.cb').bind('change', function() {
+			$(this).checking();
+			console.log("changed");
+		});
+
 	</script>
 	</body>
 </html>
