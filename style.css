@@ -176,7 +176,7 @@ body {
 
 .menu ul { display: none; } /* Hide before plugin loads */
 .menu ul.dropit-submenu {
-    background-color: #fff;
+    background-color: #000;
     border: 1px solid #b2b2b2;
     padding: 6px 0;
     margin: 3px 0 0 1px;
@@ -196,6 +196,6 @@ body {
 }
 .menu ul.dropit-submenu input:hover {
     background: #248fc1;
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
