@@ -175,8 +175,8 @@ function updateAllEvents() {
 $(document).ready(function() {
 	$('.menu').dropit();
     
-	$('input[type=checkbox]').checking();
-	$('input[type=checkbox]').bind('change', function() {
+	$('input[type="checkbox"]').checking();
+	$('input[type="checkbox"]').bind('change', function() {
 		$(this).checking();
 	});
 	
