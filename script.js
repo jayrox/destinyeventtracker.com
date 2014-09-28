@@ -1,9 +1,15 @@
 $.getJSON( "timers.json", function( data ) {
 	$.each( data, function( key, val ) {
 		var bars = [];
+		var menu = [];
 		var planetname = val.name;
 		bar ='	<span class="bar_header">'+planetname+'</span>';
 		bar+='	<div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
+		
+		menu_item = '<li data-planet="'++planetname.toLowerCase()+'">'+planetname+'</li>';
+		// Push new menu item to list
+		menu.push( menu_item );
+		
 		$.each( val.events, function( e_key, e_val ) {
 			// Build time offsets and duration for timer
 			d_offset = d_offset2 = 0;
@@ -60,6 +66,9 @@ $.getJSON( "timers.json", function( data ) {
 			html: bars.join( "" )
 		}).appendTo( "#bar_container" );
 	});
+	$( "<ul/>", {
+		html: menu.join( "" )
+	}).appendTo( "ul.menu" );
 });
 	
 function updateAllEvents() {
