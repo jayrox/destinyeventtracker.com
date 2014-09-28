@@ -158,7 +158,26 @@ function updateAllEvents() {
 	setTimeout(updateAllEvents,30 * 1000);
 }
 
+(function($) {
+    $.fn.checking = function() {
+        if (this.prop('checked')) {
+            console.log(this);
+            console.log("checked");
+        }
+        else {
+            console.log(this);
+            console.log("unchecked");
+        }
+
+    };
+})(jQuery);
+
 $(document).ready(function() {
-    $('.menu').dropit();
-    $('input').prop('checked') ? console.log("checked") : console.log("unchecked");
+	$('.menu').dropit();
+    
+	$('input[type=checkbox]').checking();
+	$('input[type=checkbox]').bind('change', function() {
+		$(this).checking();
+	});
+	
 });
