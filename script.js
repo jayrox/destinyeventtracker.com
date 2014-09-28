@@ -68,7 +68,8 @@ $.getJSON( "timers.json", function( data ) {
 	});
 	$( "<ul/>", {
 		html: menu.join( "" )
-	}).appendTo( "ul.menu" );
+	}).appendTo( "ul.menu > li" );
+	console.log(menu);
 });
 	
 function updateAllEvents() {
