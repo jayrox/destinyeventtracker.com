@@ -93,7 +93,7 @@ function updateAllEvents() {
 		var eventHappening = false;
 
 		if (eventOffsetData == 0 && eventDurationData == 0) {
-			console.log("continue");
+			//console.log("continue");
 			return;
 		}
 		// eventStart represents the closest start time
