@@ -7,7 +7,7 @@ $.getJSON( "timers.json", function( data ) {
 		bar+='	<div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
 		
 		menu_item = '<li data-planet="'+planetname.toLowerCase()+'">'
-			  + '<input type="checkbox" id="'+planetname.toLowerCase()+'check"/>'
+			  + '<input type="checkbox" id="'+planetname.toLowerCase()+'check" checked/>'
 			  + '<label for="'+planetname.toLowerCase()+'check">'
 			  + planetname
 			  + '</label>'
