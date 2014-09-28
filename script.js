@@ -70,7 +70,7 @@ $.getJSON( "timers.json", function( data ) {
 		// Push bars to ui
 		$( "<div/>", {
 			class: 'bar_group',
-			id: val.name.toLowerCase(),
+			id: planetlnsp,
 			html: bars.join( "" )
 		}).appendTo( "#bar_container" );
 	});
