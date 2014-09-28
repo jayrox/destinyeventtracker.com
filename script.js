@@ -174,10 +174,4 @@ function updateAllEvents() {
 
 $(document).ready(function() {
 	$('.menu').dropit();
-    
-	$('.cb').checking();
-	$('.cb').bind('change', function() {
-		$(this).checking();
-	});
-	
 });
