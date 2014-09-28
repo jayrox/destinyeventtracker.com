@@ -6,7 +6,12 @@ $.getJSON( "timers.json", function( data ) {
 		bar ='	<span class="bar_header">'+planetname+'</span>';
 		bar+='	<div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
 		
-		menu_item = '<li data-planet="'+planetname.toLowerCase()+'">'+planetname+'</li>';
+		menu_item = '<li data-planet="'+planetname.toLowerCase()+'">'
+			  + '<input type="checkbox" id="'+planetname.toLowerCase()+'check"/>'
+			  + '<label for="'+planetname.toLowerCase()+'check">'
+			  + planetname
+			  + '</label>'
+			  + '</li>';
 		// Push new menu item to list
 		menu.push( menu_item );
 		
