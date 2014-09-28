@@ -3,12 +3,15 @@ $.getJSON( "timers.json", function( data ) {
 	$.each( data, function( key, val ) {
 		var bars = [];
 		var planetname = val.name;
+		var planetlnsp = planetname.toLowerCase();
+		    planetlnsp = planetlnsp.replace(/\s/g, '');
+
 		bar ='	<span class="bar_header">'+planetname+'</span>';
-		bar+='	<div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
+		bar+='	<div id="'+planetlnsp+'" class="planetWrapper">';
 		
 		menu_item = '<li>'
-			  + '<input type="checkbox" id="'+planetname.toLowerCase()+'check" data-planet="'+planetname.toLowerCase()+'" checked/>'
-			  + '<label for="'+planetname.toLowerCase()+'check">'
+			  + '<input type="checkbox" id="'+planetlnsp+'check" data-planet="'+planetlnsp+'" checked/>'
+			  + '<label for="'+planetlnsp+'check">'
 			  + planetname
 			  + '</label>'
 			  + '</li>';
