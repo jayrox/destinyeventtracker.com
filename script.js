@@ -109,11 +109,11 @@ function updateAllEvents() {
 		}
 
 		var percent = Math.round((((60 - eventStart.diff(moment(), 'minutes')) / 60) * 100));
-		console.log("percent: "+percent);
+		//console.log("percent: "+percent);
 
-		console.log(eventStart.format('h:mm'));
-		console.log(eventComplete.format('h:mm'));
-		console.log('-----');
+		//console.log(eventStart.format('h:mm'));
+		//console.log(eventComplete.format('h:mm'));
+		//console.log('-----');
 		
 		// 2 minute warning
 		var eventWarning = moment(eventStart).subtract(120, 's');
