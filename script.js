@@ -6,7 +6,7 @@ $.getJSON( "timers.json", function( data ) {
 		bar ='	<span class="bar_header">'+planetname+'</span>';
 		bar+='	<div id="'+planetname.toLowerCase()+'" class="planetWrapper">';
 		
-		menu_item = '<li data-planet="'++planetname.toLowerCase()+'">'+planetname+'</li>';
+		menu_item = '<li data-planet="'+planetname.toLowerCase()+'">'+planetname+'</li>';
 		// Push new menu item to list
 		menu.push( menu_item );
 		
