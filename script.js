@@ -161,12 +161,10 @@ function updateAllEvents() {
 (function($) {
     $.fn.checking = function() {
         if (this.prop('checked')) {
-            console.log(this);
-            console.log("checked");
+            console.log("checked: "+$(this).data('planet'));
         }
         else {
-            console.log(this);
-            console.log("unchecked");
+            console.log("unchecked: "+$(this).data('planet'));
         }
 
     };
