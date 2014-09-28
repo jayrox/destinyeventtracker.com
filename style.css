@@ -188,7 +188,7 @@ body {
             box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
 }          
 .menu ul.dropit-submenu input {
-    display: block;
+    display: inline-block;
     font-size: 14px;
     line-height: 25px;
     color: #7a868e;
