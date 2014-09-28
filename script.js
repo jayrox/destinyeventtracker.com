@@ -67,6 +67,7 @@ $.getJSON( "timers.json", function( data ) {
 		}).appendTo( "#bar_container" );
 	});
 	$( "<ul/>", {
+		class: "dropit-submenu",
 		html: menu.join( "" )
 	}).appendTo( "ul.menu > li" );
 	console.log(menu);
