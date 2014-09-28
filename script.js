@@ -151,3 +151,7 @@ function updateAllEvents() {
 
 	setTimeout(updateAllEvents,30 * 1000);
 }
+
+$(document).ready(function() {
+    $('.menu').dropit();
+});
