@@ -187,14 +187,14 @@ body {
        -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
             box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
 }          
-.menu ul.dropit-submenu a {
+.menu ul.dropit-submenu input {
     display: block;
     font-size: 14px;
     line-height: 25px;
     color: #7a868e;
     padding: 0 18px;
 }
-.menu ul.dropit-submenu a:hover {
+.menu ul.dropit-submenu input:hover {
     background: #248fc1;
     color: #fff;
     text-decoration: none;
