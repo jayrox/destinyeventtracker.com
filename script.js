@@ -160,4 +160,5 @@ function updateAllEvents() {
 
 $(document).ready(function() {
     $('.menu').dropit();
+    $('input').prop('checked') ? console.log("checked") : console.log("unchecked");
 });
