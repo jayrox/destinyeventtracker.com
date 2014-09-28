@@ -98,6 +98,16 @@ function updateAllEvents() {
 		console.log(eventStart.format('h:mm'));
 		console.log(eventComplete.format('h:mm'));
 		console.log('-----');
+		
+		// 2 minute warning
+		var eventWarning = moment(eventStart).subtract(120, 's');
+		var eventWarningEnd = moment(eventStart).subtract(0, 's');
+		
+		if((eventWarning < moment()) && (moment() < eventWarningEnd)) {
+			$(box).children(".bar_progress").addClass('warning');
+		} else {
+			$(box).children(".bar_progress").removeClass('warning');
+		}
 
 		if((eventStart < moment()) && (moment() < eventComplete)) {
 			eventHappening = true;
