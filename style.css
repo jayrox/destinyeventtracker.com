@@ -181,6 +181,9 @@ body {
 	background-color: #4186fc;
 }
 
+.bar_pink {
+	background-color: DeepPink;
+}
 
 .menu ul { display: none; } /* Hide before plugin loads */
 .menu ul.dropit-submenu {
