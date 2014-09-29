@@ -130,8 +130,6 @@ function updateAllEvents() {
 			return;
 		}
 		
-		moment().zone(0);
-		
 		// Hourly
 		if (eventTypeData == 1 ) {
 			console.log("type: 1");
@@ -151,15 +149,15 @@ function updateAllEvents() {
 			// eventStart represents the closest start time
 			// get the start of the current hour
 			// add when the event starts
-			var eventStart = moment().startOf('hour').add(eventOffsetData, 's');
-			var eventComplete = moment(eventStart);
+			var eventStart = moment().utc().startOf('hour').add(eventOffsetData, 's');
+			var eventComplete = moment(eventStart).utc();
 			eventComplete.add(eventDurationData, 's');
 	
-			while(eventComplete < moment()) {
+			while(eventComplete < moment().utc()) {
 				eventStart.add(eventRepeatData, 's');
 				eventComplete.add(eventRepeatData, 's');
 			}
-			var percent = Math.round((((60 - eventStart.diff(moment(), 'minutes')) / 60) * 100));
+			var percent = Math.round((((60 - eventStart.diff(moment().utc(), 'minutes')) / 60) * 100));
 		}
 		
 		// Daily
@@ -176,17 +174,17 @@ function updateAllEvents() {
 			// eventStart represents the closest start time
 			// get the start of the current hour
 			// add when the event starts
-			var eventStart = moment().startOf('day').add(eventOffsetData, 's');
+			var eventStart = moment().utc().startOf('day').add(eventOffsetData, 's');
 			console.log("start: "+eventStart);
-			var eventComplete = moment(eventStart);
+			var eventComplete = moment(eventStart).utc();
 			console.log("complete: "+eventComplete);
 			eventComplete.add(eventDurationData, 's');
 	
-			while(eventComplete < moment()) {
+			while(eventComplete < moment().utc()) {
 				eventStart.add(eventRepeatData, 's');
 				eventComplete.add(eventRepeatData, 's');
 			}
-			var percent = Math.round((((1440 - eventStart.diff(moment(), 'minutes')) / 1440) * 100));
+			var percent = Math.round((((1440 - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
 		}
 		
 		console.log("percent: "+percent);
@@ -196,17 +194,17 @@ function updateAllEvents() {
 		console.log('-----');
 		
 		// 2 minute warning
-		var eventWarning = moment(eventStart).subtract(120, 's');
-		var eventWarningEnd = moment(eventStart).subtract(0, 's');
+		var eventWarning = moment(eventStart).utc().subtract(120, 's');
+		var eventWarningEnd = moment(eventStart).utc().subtract(0, 's');
 		
-		if((eventWarning < moment()) && (moment() < eventWarningEnd)) {
+		if((eventWarning < moment().utc()) && (moment().utc() < eventWarningEnd)) {
 			$(box).children(".bar_progress").addClass('warning');
 		} else {
 			$(box).children(".bar_progress").removeClass('warning');
 		}
 
 		// Active
-		if((eventStart < moment()) && (moment() < eventComplete)) {
+		if((eventStart < moment().utc()) && (moment().utc() < eventComplete)) {
 			eventHappening = true;
 			$(box).children(".bar_progress").addClass('active');
 		} else {
