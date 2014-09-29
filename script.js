@@ -132,6 +132,7 @@ function updateAllEvents() {
 		
 		// Hourly
 		if (eventTypeData == 1 ) {
+			console.log("type: 1");
 			var eventOffsetData = parseInt(box.data('offset'));
 			var eventDurationData = parseInt(box.data('duration'));
 			var eventOffset2Data = parseInt(box.data('offset2'));
