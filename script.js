@@ -176,6 +176,8 @@ function updateAllEvents() {
 				console.log("start 2: "+eventStart);
 				//var days = eventDayStartData2 - 7;
 			}
+			
+			if ( days == 0 ) days = 7;
 			days = Math.abs(days);
 			console.log("days: "+days);
 
