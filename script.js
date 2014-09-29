@@ -189,9 +189,9 @@ function updateAllEvents() {
 		
 		console.log("percent: "+percent);
 
-		console.log(eventStart.format('h:mm'));
-		console.log(eventComplete.format('h:mm'));
-		console.log('-----');
+		//console.log(eventStart.format('h:mm'));
+		//console.log(eventComplete.format('h:mm'));
+		//console.log('-----');
 		
 		// 2 minute warning
 		var eventWarning = moment(eventStart).utc().subtract(120, 's');
@@ -215,7 +215,6 @@ function updateAllEvents() {
 		if (eventHappening) {
 			countDown.html( "In progress" );
 			percent = 100;
-			//box remove dark, use red 
 		} else {
 			countDown.html( eventStart.fromNow() );
 		}
