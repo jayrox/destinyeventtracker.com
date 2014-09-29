@@ -167,12 +167,12 @@ function updateAllEvents() {
 			var eventOffsetData2 = parseInt(box.data('timeend'));
 			console.log(eventOffsetData2);
 			
-			var days = (7 - eventDayStartData) + 1;
+			var days = eventDayStartData;
 			var eventStart = moment().utc().startOf('week').add(eventDayStartData, 'd').add(eventOffsetData, 's');
 			if ( moment().utc() > eventStart )
 			{
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
-				var days = (7 - eventDayStartData2) + 1;
+				var days = eventDayStartData2;
 			}
 			console.log("days: "+days);
 
