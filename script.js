@@ -173,10 +173,12 @@ function updateAllEvents() {
 		planet = $(this).data('planet');
 		console.log("checked: "+planet);
 		$('#'+planet).show();
+		$.cookie(planet, true, { expires: 365, path: '/' });
 	} else {
 		planet = $(this).data('planet');
 		console.log("unchecked: "+planet);
 		$('#'+planet).hide();
+		$.cookie(planet, false, { expires: 365, path: '/' });
 	}
 	
 	};
