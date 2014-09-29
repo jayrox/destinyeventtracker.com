@@ -55,16 +55,22 @@ $.getJSON( "timers.json", function( data ) {
 			$.each( e_val.subEvents, function( se_key, se_val ) {
 				bar_description += se_val + ", ";
 			});
+			bar_description = bar_description.substring(0, bar_description.length - 2);
 
 			// Build bar item
-			bar_description = bar_description.substring(0, bar_description.length - 2);
+			bar_color = ".bar_blue";
+			colorCookie = $.cookie('color');
+			if ( typeof colorCookie != 'undefined' ) {
+				bar_color = colorCookie;
+			}
+			
 			bar +='<div class="bar" data-offset="'+d_offset
 			    +'" data-duration="'+d_duration
 			    +'" data-offset2="'+d_offset2
 			    +'" data-duration2="'+d_duration2
 			    +'" data-type="'+d_type
 			    +'" data-percent="">';
-			bar +=' <div class="bar_progress"></div>';
+			bar +=' <div class="bar_progress" class="'+bar_color+'"></div>';
 			bar +='	<span class="bar_location">'+e_val.name+'</span>';
 			bar +='	<span class="bar_description">'+bar_description+'</span>';
 			bar +='	<span class="bar_timer">&nbsp;</span>';
