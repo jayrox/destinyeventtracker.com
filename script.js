@@ -174,6 +174,7 @@ function updateAllEvents() {
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
 				//var days = eventDayStartData2 - 7;
 			}
+			days = Math.abs(days);
 			console.log("days: "+days);
 
 			var eventComplete = moment(eventStart).utc();
