@@ -130,6 +130,8 @@ function updateAllEvents() {
 			return;
 		}
 		
+		moment().zone(0);
+		
 		// Hourly
 		if (eventTypeData == 1 ) {
 			console.log("type: 1");
@@ -144,7 +146,6 @@ function updateAllEvents() {
 			var eventHappening = false;
 	
 			if (eventOffsetData == 0 && eventDurationData == 0) {
-				//console.log("continue");
 				return;
 			}
 			// eventStart represents the closest start time
@@ -190,9 +191,9 @@ function updateAllEvents() {
 		
 		console.log("percent: "+percent);
 
-		//console.log(eventStart.format('h:mm'));
-		//console.log(eventComplete.format('h:mm'));
-		//console.log('-----');
+		console.log(eventStart.format('h:mm'));
+		console.log(eventComplete.format('h:mm'));
+		console.log('-----');
 		
 		// 2 minute warning
 		var eventWarning = moment(eventStart).subtract(120, 's');
