@@ -132,7 +132,6 @@ function updateAllEvents() {
 		
 		// Hourly
 		if (eventTypeData == 1 ) {
-			console.log("type: 1");
 			var eventOffsetData = parseInt(box.data('offset'));
 			var eventDurationData = parseInt(box.data('duration'));
 			var eventOffset2Data = parseInt(box.data('offset2'));
@@ -162,22 +161,16 @@ function updateAllEvents() {
 		
 		// Daily
 		if (eventTypeData == 3 ) {
-			console.log("type: 3");
 			var eventOffsetData = parseInt(box.data('offset'));
 			var eventDurationData = parseInt(box.data('duration'));
 			var eventRepeatData = 24*3600;
 			var eventHappening = false;
 			
-			console.log("offset: "+eventOffsetData);
-			console.log("duration: "+eventDurationData);
-	
 			// eventStart represents the closest start time
 			// get the start of the current hour
 			// add when the event starts
 			var eventStart = moment().utc().startOf('day').add(eventOffsetData, 's');
-			console.log("start: "+eventStart);
 			var eventComplete = moment(eventStart).utc();
-			console.log("complete: "+eventComplete);
 			eventComplete.add(eventDurationData, 's');
 	
 			while(eventComplete < moment().utc()) {
