@@ -11,7 +11,7 @@ $.getJSON( "timers.json", function( data ) {
 		
 		planetCookie = $.cookie(planetlnsp);
 		checked = "checked";
-		if (planetCookie === false) {
+		if ( ! planetCookie ) {
 			checked = "";
 			console.log("uncheck the box");
 		}
