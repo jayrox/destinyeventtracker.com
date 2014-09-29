@@ -1,22 +1,22 @@
 html, body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.11em;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.11em;
 }
 
 body {
-  background-color: #000002;
-  color: white;
+	background-color: #000002;
+	color: white;
 
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;  
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;	
 }
 
 #main {
@@ -24,103 +24,107 @@ body {
 }
 
 #header, .bar_header {
-  font-weight: 800;
-  padding: 20px;
+	font-weight: 800;
+	padding: 20px;
 }
 
 #bar_menu ul {
-  list-style: none;
+	list-style: none;
 }
 
 .bar_group, .bar_header {
-  width: 100%;
-  display: block;
-  padding-bottom: 0;
+	width: 100%;
+	display: block;
+	padding-bottom: 0;
 }
 
 .bar {
-  border: 1px solid #262626;
-  min-height: 1.5em;
-  padding: 1em;
-  background-color: #3A3A3A;
-  margin-bottom: 1em;
-  position: relative;
+	border: 1px solid #262626;
+	min-height: 1.5em;
+	padding: 1em;
+	background-color: #3A3A3A;
+	margin-bottom: 1em;
+	position: relative;
+}
+
+.bar:hover {
+	border: 1px solid white;
 }
 
 .bar_progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #4186fc;
-  z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: #4186fc;
+	z-index: 1;
 }
 
 .bar_location {
-  position: relative;
+	position: relative;
 }
 
 .bar_description {
-  display: none;
-  position: relative;
+	display: none;
+	position: relative;
 }
 
 .bar_timer {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 }
 
 .show {
-  display: block;
+	display: block;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 .bar_header, .bar_location, .bar_description, .bar_timer {
-  z-index: 2;
+	z-index: 2;
 }
 
 .cent {
-  height: 200px;
-  width: 200px;
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 3em;
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 3em;
 }
 
 @-moz-keyframes pulse {
-    50% {
-        opacity: 0.4;
-    }
+	50% {
+		opacity: 0.4;
+	}
 }
 
 @-ms-keyframes pulse {
-    50% {
-        opacity: 0.4;
-    }
+	50% {
+		opacity: 0.4;
+	}
 }
 
 @-o-keyframes pulse {
-    50% {
-        opacity: 0.4;
-    }
+	50% {
+		opacity: 0.4;
+	}
 }
 
 @-webkit-keyframes pulse {
-    50% {
-        opacity: 0.4;
-    }
+	50% {
+		opacity: 0.4;
+	}
 }
 
 @keyframes pulse {
-    50% {
-        opacity: 0.4;
-    }
+	50% {
+		opacity: 0.4;
+	}
 }
 
 .bar_progress {
@@ -176,26 +180,26 @@ body {
 
 .menu ul { display: none; } /* Hide before plugin loads */
 .menu ul.dropit-submenu {
-    background-color: #000;
-    border: 1px solid #b2b2b2;
-    padding: 6px 0;
-    margin: 3px 0 0 1px;
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
-    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
-       -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
-            box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
-}          
+	background-color: #000;
+	border: 1px solid #b2b2b2;
+	padding: 6px 0;
+	margin: 3px 0 0 1px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
+}
 .menu ul.dropit-submenu input {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 25px;
-    color: #7a868e;
-    padding: 0 18px;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 25px;
+	color: #7a868e;
+	padding: 0 18px;
 }
 .menu ul.dropit-submenu input:hover {
-    background: #248fc1;
-    color: #000;
-    text-decoration: none;
+	background: #248fc1;
+	color: #000;
+	text-decoration: none;
 }
