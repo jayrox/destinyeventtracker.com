@@ -63,7 +63,7 @@ $.getJSON( "timers.json", function( data ) {
 			if ( typeof colorCookie != 'undefined' ) {
 				bar_color = colorCookie;
 			}
-			console.log("barcolor: "+bar_color);
+
 			bar +='<div class="bar" data-offset="'+d_offset
 			    +'" data-duration="'+d_duration
 			    +'" data-offset2="'+d_offset2
@@ -81,6 +81,7 @@ $.getJSON( "timers.json", function( data ) {
 		// Push new bar to list
 		bars.push( bar );
 
+		// Show or hide the bar based on the planet selector cookie
 		displayClass = displayPlanet ? "show" : "hide";
 
 		// Push bars to ui
@@ -94,7 +95,6 @@ $.getJSON( "timers.json", function( data ) {
 		class: "dropit-submenu",
 		html: menu.join( "" )
 	}).appendTo( "ul.menu > li" );
-	//console.log(menu);
 });
 	
 function updateAllEvents() {
@@ -144,6 +144,7 @@ function updateAllEvents() {
 			$(box).children(".bar_progress").removeClass('warning');
 		}
 
+		// Active
 		if((eventStart < moment()) && (moment() < eventComplete)) {
 			eventHappening = true;
 			$(box).children(".bar_progress").addClass('active');
@@ -169,24 +170,21 @@ function updateAllEvents() {
 		$(this).children('.bar').sort(function (a, b) {
 			var percentA = parseInt($(a).data('percent'));
 			var percentB = parseInt($(b).data('percent'));
-			//console.log(percentB - percentA);
 			return percentB - percentA;
 		}).appendTo($(this));
 	});
 
+	// Auto update bars every 30 seconds
 	setTimeout(updateAllEvents,30 * 1000);
 }
 
 (function($) {
 	$.fn.checking = function() {
+	planet = $(this).data('planet');
 	if (this.prop('checked')) {
-		planet = $(this).data('planet');
-		console.log("checked: "+planet);
 		$('#'+planet).show();
 		$.cookie(planet, true, { expires: 365, path: '/' });
 	} else {
-		planet = $(this).data('planet');
-		console.log("unchecked: "+planet);
 		$('#'+planet).hide();
 		$.cookie(planet, false, { expires: 365, path: '/' });
 	}
