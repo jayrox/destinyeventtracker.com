@@ -27,6 +27,20 @@ $.getJSON( "timers.json", function( data ) {
 		menu.push( menuItem );
 		
 		$.each( val.events, function( e_key, e_val ) {
+			// Create description
+			bar_description = "";
+			$.each( e_val.subEvents, function( se_key, se_val ) {
+				bar_description += se_val + ", ";
+			});
+			bar_description = bar_description.substring(0, bar_description.length - 2);
+
+			// Prgressbar color
+			bar_color = "bar_blue";
+			colorCookie = $.cookie('color');
+			if ( typeof colorCookie != 'undefined' ) {
+				bar_color = colorCookie;
+			}
+			
 			// Build time offsets and duration for timer
 			d_offset = d_offset2 = 0;
 			d_duration = d_duration2 = 0;
@@ -40,36 +54,44 @@ $.getJSON( "timers.json", function( data ) {
 					d_offset2 = e_val.intervals[1].start;
 					d_duration2 = e_val.intervals[1].end - d_offset2;
 				}
+				bar +='<div class="bar"'
+				    + ' data-type="'+d_type+'"'
+				    + ' data-offset="'+d_offset+'"'
+				    + ' data-duration="'+d_duration+'"'
+				    + ' data-offset2="'+d_offset2+'"'
+				    + ' data-duration2="'+d_duration2+'"'
+				    + ' data-percent=""'
+				    + '>';
 			}
 
 			// Weekly
 			if (d_type == 2) {
+				day_start = e_val.arrivalDay;
+				day_end = e_val.departureDay;
+				time_start = e_val.arrivalTime;
+				time_end = e_val.departureTime;
+				bar +='<div class="bar"'
+				    + ' data-type="'+d_type+'"'
+				    + ' data-daystart="'+day_start+'"'
+				    + ' data-dayend="'+day_end+'"'
+				    + ' data-timestart="'+time_start+'"'
+				    + ' data-timeend="'+time_end+'"'
+				    + ' data-percent=""'
+				    + '>';
 			}
 
 			// Daily
 			if (d_type == 3) {
+				bar +='<div class="bar"'
+				    + ' data-type="'+d_type+'"'
+				    + ' data-offset="0"'
+				    + ' data-duration="0"'
+				    + ' data-offset2="0"'
+				    + ' data-duration2="0"'
+				    + ' data-percent=""'
+				    + '>';
 			}
 
-			// Create description
-			bar_description = "";
-			$.each( e_val.subEvents, function( se_key, se_val ) {
-				bar_description += se_val + ", ";
-			});
-			bar_description = bar_description.substring(0, bar_description.length - 2);
-
-			// Build bar item
-			bar_color = "bar_blue";
-			colorCookie = $.cookie('color');
-			if ( typeof colorCookie != 'undefined' ) {
-				bar_color = colorCookie;
-			}
-
-			bar +='<div class="bar" data-offset="'+d_offset
-			    +'" data-duration="'+d_duration
-			    +'" data-offset2="'+d_offset2
-			    +'" data-duration2="'+d_duration2
-			    +'" data-type="'+d_type
-			    +'" data-percent="">';
 			bar +=' <div class="bar_progress '+bar_color+'"></div>';
 			bar +='	<span class="bar_location">'+e_val.name+'</span>';
 			bar +='	<span class="bar_description">'+bar_description+'</span>';
@@ -101,6 +123,12 @@ function updateAllEvents() {
 	$('.bar').each(function() {
 		var box = $(this);
 		var countDown = box.find('.bar_timer');
+		var eventTypeData = parseInt(box.data('type'));
+		if (eventTypeData != 1 ) {
+			console.log("type: "+eventTypeData+" continue;");
+			return;
+		}
+		
 		var eventOffsetData = parseInt(box.data('offset'));
 		var eventDurationData = parseInt(box.data('duration'));
 		var eventOffset2Data = parseInt(box.data('offset2'));
