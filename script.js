@@ -13,6 +13,7 @@ $.getJSON( "timers.json", function( data ) {
 		checked = "checked";
 		if ( typeof planetCookie != 'undefined' && planetCookie == false) {
 			checked = "";
+			console.log("uncheck the box");
 		}
 		console.log("planet: "+planetlnsp+" "+planetCookie+" checked: "+checked);
 		menuItem = '<li>'
