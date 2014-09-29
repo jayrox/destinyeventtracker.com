@@ -167,18 +167,22 @@ function updateAllEvents() {
 			var eventOffsetData2 = parseInt(box.data('timeend'));
 			console.log(eventOffsetData2);
 			
+			var days = (7 - eventDayStartData) + 1;
 			var eventStart = moment().utc().startOf('week').add(eventDayStartData, 'd').add(eventOffsetData, 's');
 			if ( moment().utc() > eventStart )
 			{
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
+				var days = (7 - eventDayStartData2) + 1;
 			}
+			console.log(days);
+
 			var eventComplete = moment(eventStart).utc();
 			eventComplete.add(30, 's');
 			
 			console.log(eventStart);
 			console.log(eventComplete);
 			
-			var percent = Math.round((((1440 - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
+			var percent = Math.round(((((days * 1440) - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
 		}
 
 		// Daily
