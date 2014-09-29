@@ -57,7 +57,6 @@ body {
 	top: 0;
 	left: 0;
 	height: 100%;
-	background-color: #4186fc;
 	z-index: 1;
 }
 
@@ -176,6 +175,10 @@ body {
 	animation-name: pulse;
 	animation-iteration-count: infinite;
 	animation-duration: 2s;
+}
+
+.bar_blue {
+	background-color: #4186fc;
 }
 
 
