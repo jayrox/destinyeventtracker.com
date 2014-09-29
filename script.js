@@ -82,12 +82,13 @@ $.getJSON( "timers.json", function( data ) {
 
 			// Daily
 			if (d_type == 3) {
+				d_offset = e_val.intervals[0].start;
+				d_duration = e_val.intervals[0].end - d_offset;
+
 				bar +='<div class="bar"'
 				    + ' data-type="'+d_type+'"'
-				    + ' data-offset="0"'
-				    + ' data-duration="0"'
-				    + ' data-offset2="0"'
-				    + ' data-duration2="0"'
+				    + ' data-offset="'+d_offset+'"'
+				    + ' data-duration="'+d_duration+'"'
 				    + ' data-percent=""'
 				    + '>';
 			}
@@ -124,37 +125,61 @@ function updateAllEvents() {
 		var box = $(this);
 		var countDown = box.find('.bar_timer');
 		var eventTypeData = parseInt(box.data('type'));
-		if (eventTypeData != 1 ) {
+		if (eventTypeData != 1 && eventTypeData != 3) {
 			console.log("type: "+eventTypeData+" continue;");
 			return;
 		}
 		
-		var eventOffsetData = parseInt(box.data('offset'));
-		var eventDurationData = parseInt(box.data('duration'));
-		var eventOffset2Data = parseInt(box.data('offset2'));
-		var eventRepeatData = 3600;
-		if (eventOffset2Data > eventOffsetData) {
-			eventRepeatData = eventOffset2Data - eventOffsetData;
+		// Hourly
+		if (eventTypeData == 1 ) {
+			var eventOffsetData = parseInt(box.data('offset'));
+			var eventDurationData = parseInt(box.data('duration'));
+			var eventOffset2Data = parseInt(box.data('offset2'));
+			var eventRepeatData = 3600;
+			if (eventOffset2Data > eventOffsetData) {
+				eventRepeatData = eventOffset2Data - eventOffsetData;
+			}
+			var eventDuration2Data = parseInt(box.data('duration2'));
+			var eventHappening = false;
+	
+			if (eventOffsetData == 0 && eventDurationData == 0) {
+				//console.log("continue");
+				return;
+			}
+			// eventStart represents the closest start time
+			// get the start of the current hour
+			// add when the event starts
+			var eventStart = moment().startOf('hour').add(eventOffsetData, 's');
+			var eventComplete = moment(eventStart);
+			eventComplete.add(eventDurationData, 's');
+	
+			while(eventComplete < moment()) {
+				eventStart.add(eventRepeatData, 's');
+				eventComplete.add(eventRepeatData, 's');
+			}
 		}
-		var eventDuration2Data = parseInt(box.data('duration2'));
-		var eventHappening = false;
-
-		if (eventOffsetData == 0 && eventDurationData == 0) {
-			//console.log("continue");
-			return;
+		
+		// Daily
+		if (eventTypeData == 3 ) {
+			var eventOffsetData = parseInt(box.data('offset'));
+			var eventDurationData = parseInt(box.data('duration'));
+			var eventRepeatData = 24*3600;
+			var eventHappening = false;
+	
+			// eventStart represents the closest start time
+			// get the start of the current hour
+			// add when the event starts
+			var eventStart = moment().startOf('day').add(eventOffsetData, 's');
+			var eventComplete = moment(eventStart);
+			eventComplete.add(eventDurationData, 's');
+	
+			while(eventComplete < moment()) {
+				eventStart.add(eventRepeatData, 's');
+				eventComplete.add(eventRepeatData, 's');
+			}
+			
 		}
-		// eventStart represents the closest start time
-		// get the start of the current hour
-		// add when the event starts
-		var eventStart = moment().startOf('hour').add(eventOffsetData, 's');
-		var eventComplete = moment(eventStart);
-		eventComplete.add(eventDurationData, 's');
-
-		while(eventComplete < moment()) {
-			eventStart.add(eventRepeatData, 's');
-			eventComplete.add(eventRepeatData, 's');
-		}
-
+		
 		var percent = Math.round((((60 - eventStart.diff(moment(), 'minutes')) / 60) * 100));
 		//console.log("percent: "+percent);
 
