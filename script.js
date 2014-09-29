@@ -125,11 +125,7 @@ function updateAllEvents() {
 		var box = $(this);
 		var countDown = box.find('.bar_timer');
 		var eventTypeData = parseInt(box.data('type'));
-		if (eventTypeData != 1 && eventTypeData != 3) {
-			console.log("type: "+eventTypeData+" continue;");
-			return;
-		}
-		
+
 		// Hourly
 		if (eventTypeData == 1 ) {
 			var eventOffsetData = parseInt(box.data('offset'));
@@ -158,7 +154,18 @@ function updateAllEvents() {
 			}
 			var percent = Math.round((((60 - eventStart.diff(moment().utc(), 'minutes')) / 60) * 100));
 		}
-		
+
+		// Weekly
+		if (eventTypeData == 2 ) {
+			var eventDayStartData = parseInt(box.data('daystart'));
+			var eventOffsetData = parseInt(box.data('timestart'));
+			var eventDurationData = parseInt(box.data('duration'));
+
+			var eventStart = moment().utc().startOf('week').add(eventDayStartData, 'd').add(eventOffsetData, 's');
+			console.log(eventStart);
+			return
+		}
+
 		// Daily
 		if (eventTypeData == 3 ) {
 			var eventOffsetData = parseInt(box.data('offset'));
