@@ -9,14 +9,17 @@ $.getJSON( "timers.json", function( data ) {
 		bar ='	<span class="bar_header">'+planetname+'</span>';
 		bar+='	<div id="'+planetlnsp+'" class="planetWrapper">';
 		
-		menu_item = '<li>'
+		planetCookie = $.cookie(planetlnsp);
+		console.log("planet: "+planetCookie);
+		//if ( planetCookie )
+		menuItem = '<li>'
 			  + '<input type="checkbox" id="'+planetlnsp+'check" data-planet="'+planetlnsp+'" checked/>'
 			  + '<label for="'+planetlnsp+'check">'
 			  + planetname
 			  + '</label>'
 			  + '</li>';
 		// Push new menu item to list
-		menu.push( menu_item );
+		menu.push( menuItem );
 		
 		$.each( val.events, function( e_key, e_val ) {
 			// Build time offsets and duration for timer
