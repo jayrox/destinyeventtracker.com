@@ -49,6 +49,7 @@ body {
 
 .bar:hover {
 	border: 1px solid white;
+	cursor: pointer;
 }
 
 .bar_progress {
