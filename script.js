@@ -65,7 +65,7 @@ $.getJSON( "timers.json", function( data ) {
 			}
 
 			// Weekly
-			if (d_type == 2) {
+			if ( d_type == 2) {
 				day_start = e_val.arrivalDay;
 				day_end = e_val.departureDay;
 				time_start = e_val.arrivalTime;
@@ -81,7 +81,7 @@ $.getJSON( "timers.json", function( data ) {
 			}
 
 			// Daily
-			if (d_type == 3) {
+			if ( d_type == 3) {
 				d_offset = e_val.intervals[0].start;
 				d_duration = e_val.intervals[0].end - d_offset;
 
@@ -132,13 +132,13 @@ function updateAllEvents() {
 			var eventDurationData = parseInt(box.data('duration'));
 			var eventOffset2Data = parseInt(box.data('offset2'));
 			var eventRepeatData = 3600;
-			if (eventOffset2Data > eventOffsetData) {
+			if ( eventOffset2Data > eventOffsetData ) {
 				eventRepeatData = eventOffset2Data - eventOffsetData;
 			}
 			var eventDuration2Data = parseInt(box.data('duration2'));
 			var eventHappening = false;
 	
-			if (eventOffsetData == 0 && eventDurationData == 0) {
+			if ( eventOffsetData == 0 && eventDurationData == 0 ) {
 				return;
 			}
 			// eventStart represents the closest start time
@@ -184,7 +184,7 @@ function updateAllEvents() {
 		}
 
 		// Daily
-		if (eventTypeData == 3 ) {
+		if ( eventTypeData == 3 ) {
 			var eventOffsetData = parseInt(box.data('offset'));
 			var eventDurationData = parseInt(box.data('duration'));
 			var eventRepeatData = 24*3600;
@@ -256,7 +256,7 @@ function updateAllEvents() {
 (function($) {
 	$.fn.checking = function() {
 	planet = $(this).data('planet');
-	if (this.prop('checked')) {
+	if ( this.prop('checked') ) {
 		$('#'+planet).show();
 		$.cookie(planet, true, { expires: 365, path: '/' });
 	} else {
