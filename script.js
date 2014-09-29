@@ -158,6 +158,7 @@ function updateAllEvents() {
 				eventStart.add(eventRepeatData, 's');
 				eventComplete.add(eventRepeatData, 's');
 			}
+			var percent = Math.round((((60 - eventStart.diff(moment(), 'minutes')) / 60) * 100));
 		}
 		
 		// Daily
@@ -184,10 +185,9 @@ function updateAllEvents() {
 				eventStart.add(eventRepeatData, 's');
 				eventComplete.add(eventRepeatData, 's');
 			}
-			
+			var percent = Math.round((((1440 - eventStart.diff(moment(), 'minutes')) / 1440) * 100));
 		}
 		
-		var percent = Math.round((((60 - eventStart.diff(moment(), 'minutes')) / 60) * 100));
 		console.log("percent: "+percent);
 
 		//console.log(eventStart.format('h:mm'));
