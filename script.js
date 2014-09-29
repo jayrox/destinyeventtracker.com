@@ -157,13 +157,28 @@ function updateAllEvents() {
 
 		// Weekly
 		if (eventTypeData == 2 ) {
+			console.log("type 2");
 			var eventDayStartData = parseInt(box.data('daystart'));
+			console.log(eventDayStartData);
 			var eventOffsetData = parseInt(box.data('timestart'));
-			var eventDurationData = parseInt(box.data('duration'));
-
+			console.log(eventOffsetData);
+			var eventDayStartData2 = parseInt(box.data('dayend'));
+			console.log(eventDayStartData2);
+			var eventOffsetData2 = parseInt(box.data('timeend'));
+			console.log(eventOffsetData2);
+			
 			var eventStart = moment().utc().startOf('week').add(eventDayStartData, 'd').add(eventOffsetData, 's');
+			if ( moment().utc() > eventStart )
+			{
+				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
+			}
+			var eventComplete = moment(eventStart).utc();
+			eventComplete.add(30, 's');
+			
 			console.log(eventStart);
-			return
+			console.log(eventComplete);
+			
+			var percent = Math.round((((1440 - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
 		}
 
 		// Daily
