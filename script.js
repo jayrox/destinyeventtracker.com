@@ -11,17 +11,18 @@ $.getJSON( "timers.json", function( data ) {
 		
 		planetCookie = $.cookie(planetlnsp);
 		checked = "checked";
+		displayPlanet = true;
 		if ( typeof planetCookie != 'undefined' && planetCookie == "false" ) {
 			checked = "";
-			console.log("uncheck the box");
+			displayPlanet = false;
 		}
-		console.log("planet: "+planetlnsp+" "+planetCookie+" checked: "+checked);
 		menuItem = '<li>'
 			  + '<input type="checkbox" id="'+planetlnsp+'check" data-planet="'+planetlnsp+'" '+checked+'/>'
 			  + '<label for="'+planetlnsp+'check">'
 			  + planetname
 			  + '</label>'
 			  + '</li>';
+
 		// Push new menu item to list
 		menu.push( menuItem );
 		
@@ -74,9 +75,11 @@ $.getJSON( "timers.json", function( data ) {
 		// Push new bar to list
 		bars.push( bar );
 
+		displayClass = displayPlanet ? "show" : "hide";
+
 		// Push bars to ui
 		$( "<div/>", {
-			class: 'bar_group',
+			class: 'bar_group '+displayClass,
 			id: planetlnsp,
 			html: bars.join( "" )
 		}).appendTo( "#bar_container" );
