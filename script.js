@@ -10,7 +10,7 @@ $.getJSON( "timers.json", function( data ) {
 		bar+='	<div id="'+planetlnsp+'" class="planetWrapper">';
 		
 		planetCookie = $.cookie(planetlnsp);
-		console.log("planet: "+planetCookie);
+		console.log("planet: "+planetlnsp+" "+planetCookie);
 		checked = "checked";
 		if ( typeof planetCookie != 'undefined' && planetCookie == false) {
 			checked = "";
