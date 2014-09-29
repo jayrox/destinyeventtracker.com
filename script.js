@@ -169,9 +169,11 @@ function updateAllEvents() {
 			
 			var days = eventDayStartData2 - eventDayStartData;
 			var eventStart = moment().utc().startOf('week').add(eventDayStartData, 'd').add(eventOffsetData, 's');
+			console.log("start 1: "+eventStart);
 			if ( moment().utc() > eventStart )
 			{
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
+				console.log("start 2: "+eventStart);
 				//var days = eventDayStartData2 - 7;
 			}
 			days = Math.abs(days);
@@ -184,6 +186,7 @@ function updateAllEvents() {
 			console.log(eventComplete);
 			
 			var percent = Math.round(((((days * 1440) - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
+			console.log("percent: "+percent);
 		}
 
 		// Daily
@@ -207,7 +210,7 @@ function updateAllEvents() {
 			var percent = Math.round((((1440 - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
 		}
 		
-		console.log("percent: "+percent);
+		//console.log("percent: "+percent);
 
 		//console.log(eventStart.format('h:mm'));
 		//console.log(eventComplete.format('h:mm'));
