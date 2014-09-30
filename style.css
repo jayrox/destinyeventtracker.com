@@ -192,6 +192,9 @@ body {
 	width: 60px;
 	height: 60px; 
 }
+.colorpicker li {
+	float: left;
+}
 
 .bar_christi {
 	background-color: #4EB00D;
