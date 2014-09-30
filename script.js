@@ -282,13 +282,24 @@ $(document).ready(function() {
 	$('.menu').dropit();
 });
 
-//(function($) {
-	var colors = ["bar_christi", "bar_japaneselaurel", "bar_tropicalrainforest", "bar_java", 
-	      "bar_lochmara", "bar_blueribbon", "bar_toreabay", "bar_electricviolet", 
-	      "bar_violet", "bar_pinkflamingo", "bar_razzmatazz", "bar_carmine", "bar_red", 
-	      "bar_orange", "bar_orangepeel", "bar_pickledbean", "bar_kokoda", "bar_como", 
-	      "bar_bluebayoux", "bar_dovegray", "bar_taupe"];
-	$.each( colors, function( key, val ) {
-		console.log(key+": "+val);	
-	});
-//})(jQuery);
+
+// Color Picker
+var colors = ["bar_christi", "bar_japaneselaurel", "bar_tropicalrainforest", "bar_java", 
+      "bar_lochmara", "bar_blueribbon", "bar_toreabay", "bar_electricviolet", 
+      "bar_violet", "bar_pinkflamingo", "bar_razzmatazz", "bar_carmine", "bar_red", 
+      "bar_orange", "bar_orangepeel", "bar_pickledbean", "bar_kokoda", "bar_como", 
+      "bar_bluebayoux", "bar_dovegray", "bar_taupe"];
+colorMenu = [];
+$.each( colors, function( key, color ) {
+	colorItem = '<li>'
+		  + '<input type="checkbox" id="'+color+'check" data-color="'+color+'" '+checked+'/>'
+		  + '<label for="'+color+'check" class="'+color+'">&nbsp;</label>'
+		  + '</li>';
+
+	// Push new menu item to list
+	colorMenu.push( colorItem );
+});
+$( "<ul/>", {
+	class: "dropit-submenu",
+	html: colorMenu.join( "" )
+}).appendTo( "ul.colorpicker > li" );
