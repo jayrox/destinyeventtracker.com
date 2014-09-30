@@ -226,17 +226,17 @@ body {
 }
 
 
-.input[type="checkbox"] {
+input[type=checkbox] {
 	display:none;
 }
 
-input[type="checkbox"] + label {
+input[type=checkbox] + label {
 /*Style for checkbox normal*/
 	width:16px;
 	height:16px;
 	cursor: pointer;
 }
 
-input[type=checkbox]:checked + label, label.checked{
+input[type=checkbox]:checked + label {
 	background-color: green;
 }
