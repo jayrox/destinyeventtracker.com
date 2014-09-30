@@ -158,6 +158,7 @@ function updateAllEvents() {
 
 		// Weekly
 		if (eventTypeData == 2 ) {
+			console.log("type: 2");
 			var eventDayStartData = parseInt(box.data('daystart'));
 			var eventOffsetData = parseInt(box.data('timestart'));
 			var eventDayStartData2 = parseInt(box.data('dayend'));
@@ -182,6 +183,7 @@ function updateAllEvents() {
 			console.log("start: "+eventStart);
 
 			var percent = Math.round(((((days * 1440) - eventStart.diff(moment().utc(), 'minutes')) / (days * 1440)) * 100));
+			console.log("percent: "+percent)
 		}
 
 		// Daily
