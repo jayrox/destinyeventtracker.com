@@ -285,7 +285,12 @@ var colors = ["bar_christi", "bar_japaneselaurel", "bar_tropicalrainforest", "ba
       "bar_orange", "bar_orangepeel", "bar_pickledbean", "bar_kokoda", "bar_como", 
       "bar_bluebayoux", "bar_dovegray", "bar_taupe"];
 colorMenu = [];
+colorCookie = $.cookie('color');
 $.each( colors, function( key, color ) {
+	checked = "";
+	if ( typeof colorCookie != 'undefined' && colorCookie == color ) {
+		checked = "checked";
+	}
 	colorItem = '<li>'
 		  + '<input type="checkbox" id="'+color+'check" data-color="'+color+'" '+checked+'/>'
 		  + '<label for="'+color+'check" class="'+color+'">&nbsp;</label>'
