@@ -192,7 +192,7 @@ ul.colorpicker > li > ul > li {
 	padding: 5px;
 }
 
-ul.colorpicker > li > ul > li:nth-child(3n+1) {
+ul.colorpicker > li > ul > li:nth-child(4n+1) {
 	clear: both;
 }
 
