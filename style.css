@@ -225,16 +225,17 @@ body {
 }
 
 
-.menu input[type="checkbox"] {
+.menu ul.dropit-submenu input[type="checkbox"] {
 	display:none;
 }
 
-.menu input[type="checkbox"] + label {
+.menu ul.dropit-submenu input[type="checkbox"] + label {
 /*Style for checkbox normal*/
 	width:16px;
 	height:16px;
+	cursor: pointer;
 }
 
-.menu input[type="checkbox"]:checked + label, label.checked{
- background-color: green;
+.menu ul.dropit-submenu input[type="checkbox"]:checked + label, label.checked{
+	background-color: green;
 }
