@@ -236,6 +236,6 @@ input[type="checkbox"] + label {
 	cursor: pointer;
 }
 
-li < input[type="checkbox"]:checked + label, input[type="checkbox"]:checked + label {
+input[type="checkbox"]:checked + label {
 	background-color: green !important;
 }
