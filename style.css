@@ -187,6 +187,11 @@ body {
 	animation-duration: 2s;
 }
 
+.colorpicker label {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px; 
+}
 
 .bar_christi {
 	background-color: #4EB00D;
