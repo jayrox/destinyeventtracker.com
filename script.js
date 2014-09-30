@@ -173,6 +173,8 @@ function updateAllEvents() {
 				console.log("start 2: "+eventStart);
 			}
 			
+			
+			
 			if ( days == 0 ) days = 7;
 			days = Math.abs(days);
 			console.log("days: "+days);
@@ -182,8 +184,14 @@ function updateAllEvents() {
 			
 			console.log("start: "+eventStart);
 
+			while(eventComplete < moment().utc()) {
+				eventStart.add(7, 'd');
+				eventComplete.add(7, 'd');
+			}
+
 			var percent = Math.round(((((days * 1440) - eventStart.diff(moment().utc(), 'minutes')) / (days * 1440)) * 100));
 			console.log("percent: "+percent)
+			console.log('-------');
 		}
 
 		// Daily
