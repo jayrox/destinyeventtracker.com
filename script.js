@@ -205,7 +205,7 @@ function updateAllEvents() {
 			var percent = Math.round((((1440 - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
 		}
 		
-		console.log("percent: "+percent);
+		//console.log("percent: "+percent);
 
 		//console.log(eventStart.format('h:mm'));
 		//console.log(eventComplete.format('h:mm'));
