@@ -215,6 +215,9 @@ body {
 	color: #7a868e;
 	padding: 0 18px;
 }
+.menu ul.dropit-submenu label {
+	width: 100%;
+}
 .menu ul.dropit-submenu input:hover, .menu ul.dropit-submenu label:hover {
 	background: #248fc1;
 	color: #000;
