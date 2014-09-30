@@ -6,7 +6,8 @@ $.getJSON( "timers.json", function( data ) {
 		var planetlnsp = planetname.toLowerCase();
 		    planetlnsp = planetlnsp.replace(/\s/g, '');
 
-		bar ='	<span class="bar_header" style="background: url(/media/'+planetlnsp+'.jpg) top left / 380px no-repeat">'+planetname+'</span>';
+		//bar ='	<span class="bar_header" style="background: url(/media/'+planetlnsp+'.jpg) top left / 380px no-repeat">'+planetname+'</span>';
+		bar ='	<span class="bar_header">'+planetname+'</span>';
 		bar+='	<div id="'+planetlnsp+'" class="planetWrapper">';
 		
 		planetCookie = $.cookie(planetlnsp);
