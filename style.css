@@ -187,12 +187,89 @@ body {
 	animation-duration: 2s;
 }
 
-.bar_blue {
-	background-color: #4186fc;
+
+.bar_christi {
+	background-color: #4EB00D;
 }
 
-.bar_pink {
-	background-color: DeepPink;
+.bar_japaneselaurel {
+	background-color: #007C00;
+}
+
+.bar_tropicalrainforest {
+	background-color: #007558;
+}
+
+.bar_java {
+	background-color: #22B5AD;
+}
+
+.bar_lochmara {
+	background-color: #0082D6;
+}
+
+.bar_blueribbon {
+	background-color: #1B45FB;
+}
+
+.bar_toreabay {
+	background-color: #093693;
+}
+
+.bar_electricviolet {
+	background-color: #6F00FF;
+}
+
+.bar_violet {
+	background-color: #B100FE;
+}
+
+.bar_pinkflamingo {
+	background-color: #FF65DD;
+}
+
+.bar_razzmatazz {
+	background-color: #DF0172;
+}
+
+.bar_carmine {
+	background-color: #A70016;
+}
+
+.bar_red {
+	background-color: #DF0D00;
+}
+
+.bar_orange {
+	background-color: #FF5518;
+}
+
+.bar_orangepeel {
+	background-color: #FF9A00;
+}
+
+.bar_pickledbean {
+	background-color: #6F4821;
+}
+
+.bar_kokoda {
+	background-color: #717054;
+}
+
+.bar_como {
+	background-color: #517261;
+}
+
+.bar_bluebayoux {
+	background-color: #50646F;
+}
+
+.bar_dovegray {
+	background-color: #6B6B6B;
+}
+
+.bar_taupe {
+	background-color: #4B3E35;
 }
 
 .menu ul { display: none; } /* Hide before plugin loads */
