@@ -18,8 +18,8 @@ $.getJSON( "timers.json", function( data ) {
 			displayPlanet = false;
 		}
 		menuItem = '<li>'
-			  + '<input type="checkbox" id="'+planetlnsp+'check" data-planet="'+planetlnsp+'" '+checked+'/>'
 			  + '<label for="'+planetlnsp+'check">'
+			  + '<input type="checkbox" id="'+planetlnsp+'check" data-planet="'+planetlnsp+'" '+checked+'/>'
 			  + planetname
 			  + '</label>'
 			  + '</li>';
