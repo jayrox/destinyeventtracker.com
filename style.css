@@ -215,6 +215,7 @@ body {
 	font-size: 1.5em;
 	line-height: 2em;
 	color: #7a868e;
+	padding: 0 1em;
 }
 
 .menu ul.dropit-submenu label {
@@ -238,4 +239,5 @@ input[type="checkbox"] + label {
 
 input[type="checkbox"]:checked + label {
 	background-color: #ccc !important;
+	color: black;
 }
