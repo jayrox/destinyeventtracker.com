@@ -220,6 +220,7 @@ body {
 
 .menu ul.dropit-submenu label {
 	width: 100%;
+	border-bottom: 1px solid black;
 }
 
 .menu ul.dropit-submenu label:hover {
@@ -238,6 +239,6 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"]:checked + label {
-	background-color: #ccc !important;
+	background-color: #bbb !important;
 	color: black;
 }
