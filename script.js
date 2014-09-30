@@ -19,8 +19,8 @@ $.getJSON( "timers.json", function( data ) {
 		}
 		menuItem = '<li>'
 			  + '<label for="'+planetlnsp+'check">'
-			  + '<input type="checkbox" id="'+planetlnsp+'check" data-planet="'+planetlnsp+'" '+checked+'/>'
 			  + planetname
+			  + '<input type="checkbox" id="'+planetlnsp+'check" data-planet="'+planetlnsp+'" '+checked+'/>'
 			  + '</label>'
 			  + '</li>';
 
