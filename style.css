@@ -229,13 +229,13 @@ body {
 	display:none;
 }
 
-.menu ul.dropit-submenu input[type="checkbox"] + label {
+.menu ul.dropit-submenu input[type="checkbox"] + ul.dropit-submenu label {
 /*Style for checkbox normal*/
 	width:16px;
 	height:16px;
 	cursor: pointer;
 }
 
-.menu ul.dropit-submenu input[type="checkbox"]:checked + label, label.checked{
+.menu ul.dropit-submenu input[type="checkbox"]:checked + ul.dropit-submenu label, .menu ul.dropit-submenu label.checked{
 	background-color: green;
 }
