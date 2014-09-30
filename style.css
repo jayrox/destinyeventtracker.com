@@ -187,13 +187,21 @@ body {
 	animation-duration: 2s;
 }
 
-.colorpicker label {
-	border-radius: 50%;
-	width: 60px;
-	height: 60px; 
+ul.colorpicker > li > ul > li {
+    float: left;
+    padding: 5px;
 }
-.colorpicker li {
-	float: left;
+
+ul.colorpicker > li > ul > li:nth-child(3n+1) {
+    clear: both;
+}
+
+ul.colorpicker label {
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+    border: 1px solid black;
+    display: inline-block;
 }
 
 .bar_christi {
