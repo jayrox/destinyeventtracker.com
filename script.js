@@ -294,6 +294,7 @@ $.each( colors, function( key, color ) {
 	// Push new menu item to list
 	colorMenu.push( colorItem );
 });
+console.log(colorMenu);
 $( "<ul/>", {
 	class: "dropit-submenu",
 	html: colorMenu.join( "" )
