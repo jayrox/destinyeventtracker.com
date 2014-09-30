@@ -278,6 +278,16 @@ function updateAllEvents() {
 	};
 })(jQuery);
 
+(function($) {
+	$.fn.checkingColorPicker = function() {
+	color = $(this).data('color');
+	if ( this.prop('checked') ) {
+		$.cookie('color', color, { expires: 365, path: '/' });
+	}
+	console.log(color);
+	};
+})(jQuery);
+
 // Color Picker
 var colors = ["bar_christi", "bar_japaneselaurel", "bar_tropicalrainforest", "bar_java", 
       "bar_lochmara", "bar_blueribbon", "bar_toreabay", "bar_electricviolet", 
@@ -292,7 +302,7 @@ $.each( colors, function( key, color ) {
 		checked = "checked";
 	}
 	colorItem = '<li>'
-		  + '<input type="checkbox" id="'+color+'check" data-color="'+color+'" '+checked+'/>'
+		  + '<input type="radio" id="'+color+'check" data-color="'+color+'" '+checked+'/>'
 		  + '<label for="'+color+'check" class="'+color+'">&nbsp;</label>'
 		  + '</li>';
 
