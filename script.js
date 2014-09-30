@@ -281,3 +281,14 @@ function updateAllEvents() {
 $(document).ready(function() {
 	$('.menu').dropit();
 });
+
+//(function($) {
+	var colors = ["bar_christi", "bar_japaneselaurel", "bar_tropicalrainforest", "bar_java", 
+	      "bar_lochmara", "bar_blueribbon", "bar_toreabay", "bar_electricviolet", 
+	      "bar_violet", "bar_pinkflamingo", "bar_razzmatazz", "bar_carmine", "bar_red", 
+	      "bar_orange", "bar_orangepeel", "bar_pickledbean", "bar_kokoda", "bar_como", 
+	      "bar_bluebayoux", "bar_dovegray", "bar_taupe"];
+	$.each( colors, function( key, val ) {
+		console.log(key+": "+val);	
+	});
+//})(jQuery);
