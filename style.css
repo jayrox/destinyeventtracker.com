@@ -223,3 +223,18 @@ body {
 	color: #000;
 	text-decoration: none;
 }
+
+
+.menu input[type="checkbox"] {
+	display:none;
+}
+
+.menu input[type="checkbox"] + label {
+/*Style for checkbox normal*/
+	width:16px;
+	height:16px;
+}
+
+.menu input[type="checkbox"]:checked + label, label.checked{
+ background-color: green;
+}
