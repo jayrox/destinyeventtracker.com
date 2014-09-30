@@ -340,12 +340,16 @@ ul.colorpicker label {
 }
 
 
-input[type="checkbox"] {
+input[type="checkbox"], input[type="radio"] {
 	display:none;
 }
 
-input[type="checkbox"] + label {
+input[type="checkbox"] + label, input[type="radio"] + label {
 	cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+	border: 1px solid white !important;
 }
 
 input[type="checkbox"]:checked + label {
