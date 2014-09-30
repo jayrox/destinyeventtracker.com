@@ -233,12 +233,9 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label {
-/*Style for checkbox normal*/
-	width:16px;
-	height:16px;
 	cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label {
+li < input[type="checkbox"]:checked + label {
 	background-color: green !important;
 }
