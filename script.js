@@ -283,6 +283,7 @@ function updateAllEvents() {
 	color = $(this).data('color');
 	if ( this.prop('checked') ) {
 		$.cookie('color', color, { expires: 365, path: '/' });
+		$('.bar_progress').addClass(color);
 	}
 	console.log(color);
 	};
