@@ -274,7 +274,7 @@ function updateAllEvents() {
 		$('#'+planet).hide();
 		$.cookie(planet, false, { expires: 365, path: '/' });
 	}
-	
+	console.log(planet);
 	};
 })(jQuery);
 
@@ -299,7 +299,6 @@ $.each( colors, function( key, color ) {
 	// Push new menu item to list
 	colorMenu.push( colorItem );
 });
-console.log(colorMenu);
 $( "<ul/>", {
 	class: "dropit-submenu",
 	html: colorMenu.join( "" )
