@@ -28,6 +28,13 @@ body {
 	padding: 20px;
 }
 
+.bar_header {
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 300px;
+	margin-bottom: 1em;
+}
+
 #bar_menu ul {
 	list-style: none;
 }
