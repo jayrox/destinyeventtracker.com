@@ -222,7 +222,7 @@ body {
 }
 
 .menu ul.dropit-submenu label:hover {
-	background: #248fc1;
+	background: #248fc1 !important;
 	color: #000;
 	text-decoration: none;
 }
@@ -237,5 +237,5 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"]:checked + label {
-	background-color: green !important;
+	background-color: #ccc !important;
 }
