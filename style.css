@@ -210,16 +210,18 @@ body {
 	width: 300px;
 	overflow: hidden;
 }
-.menu ul.dropit-submenu input, .menu ul.dropit-submenu label {
+.menu ul.dropit-submenu label {
 	display: inline-block;
 	font-size: 1.5em;
 	line-height: 2em;
 	color: #7a868e;
 }
+
 .menu ul.dropit-submenu label {
 	width: 100%;
 }
-.menu ul.dropit-submenu input:hover, .menu ul.dropit-submenu label:hover {
+
+.menu ul.dropit-submenu label:hover {
 	background: #248fc1;
 	color: #000;
 	text-decoration: none;
@@ -238,5 +240,5 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"]:checked + label {
-	background-color: green;
+	background-color: green !important;
 }
