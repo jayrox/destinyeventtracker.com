@@ -328,12 +328,12 @@ ul.colorpicker label {
 	padding: 0 1em;
 }
 
-.menu ul.dropit-submenu label {
+.menu ul.dropit-submenu li {
 	width: 100%;
 	border-bottom: 1px solid black;
 }
 
-.menu ul.dropit-submenu label:last-child {
+.menu ul.dropit-submenu li:last-child {
 	border-bottom: 0;
 }
 
