@@ -281,20 +281,10 @@ function updateAllEvents() {
 (function($) {
 	$.fn.checkingColorPicker = function() {
 	color = $(this).data('color');
-	if ( this.prop('checked') ) {
-		colorCookie = $.cookie('color');
-		console.log("old color: "+colorCookie);
-		/*
-		if ( typeof colorCookie != 'undefined' && colorCookie != color ) {
-			$('div').removeClass(color);
-			console.log("remove color: "+color);
-		}
-		*/
+	//if ( this.prop('checked') ) {
 		$.cookie('color', color, { expires: 365, path: '/' });
-		//$('.bar_progress').addClass(color);
 		$('div.bar_progress').attr("class", "bar_progress "+color);
-	}
-	console.log(color);
+	//}
 	};
 })(jQuery);
 
