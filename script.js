@@ -294,7 +294,7 @@ $.each( colors, function( key, color ) {
 		checked = "checked";
 	}
 	colorItem = '<li>'
-		  + '<input type="radio" id="'+color+'check" data-color="'+color+'" '+checked+'/>'
+		  + '<input type="radio" name="color" id="'+color+'check" data-color="'+color+'" '+checked+'/>'
 		  + '<label for="'+color+'check" class="'+color+'">&nbsp;</label>'
 		  + '</li>';
 
