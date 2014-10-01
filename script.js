@@ -282,6 +282,10 @@ function updateAllEvents() {
 	$.fn.checkingColorPicker = function() {
 	color = $(this).data('color');
 	if ( this.prop('checked') ) {
+		colorCookie = $.cookie('color');
+		if ( typeof colorCookie != 'undefined' && colorCookie != color ) {
+			$('.bar_progress').removeClass(color);
+		}
 		$.cookie('color', color, { expires: 365, path: '/' });
 		$('.bar_progress').addClass(color);
 	}
