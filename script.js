@@ -284,12 +284,15 @@ function updateAllEvents() {
 	if ( this.prop('checked') ) {
 		colorCookie = $.cookie('color');
 		console.log("old color: "+colorCookie);
+		/*
 		if ( typeof colorCookie != 'undefined' && colorCookie != color ) {
-			$('div.bar_progress').removeClass(color);
+			$('div').removeClass(color);
 			console.log("remove color: "+color);
 		}
+		*/
 		$.cookie('color', color, { expires: 365, path: '/' });
-		$('.bar_progress').addClass(color);
+		//$('.bar_progress').addClass(color);
+		$('div.bar_progress').attr("class", "bar_progress "+color);
 	}
 	console.log(color);
 	};
