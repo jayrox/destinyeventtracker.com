@@ -158,7 +158,6 @@ function updateAllEvents() {
 
 		// Weekly
 		if (eventTypeData == 2 ) {
-			console.log("type: 2");
 			var eventDayStartData = parseInt(box.data('daystart'));
 			var eventOffsetData = parseInt(box.data('timestart'));
 			var eventDayStartData2 = parseInt(box.data('dayend'));
@@ -166,32 +165,23 @@ function updateAllEvents() {
 
 			var days = eventDayStartData2 - eventDayStartData;
 			var eventStart = moment().utc().startOf('week').add(eventDayStartData, 'd').add(eventOffsetData, 's');
-			console.log("start 1: "+eventStart);
 			if ( moment().utc() > eventStart )
 			{
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
-				console.log("start 2: "+eventStart);
 			}
-			
-			
-			
+
 			if ( days == 0 ) days = 7;
 			days = Math.abs(days);
-			console.log("days: "+days);
 
 			var eventComplete = moment(eventStart).utc();
 			eventComplete.add(30, 's');
 			
-			console.log("start: "+eventStart);
-
 			while(eventComplete < moment().utc()) {
 				eventStart.add(7, 'd');
 				eventComplete.add(7, 'd');
 			}
 
 			var percent = Math.round(((((days * 1440) - eventStart.diff(moment().utc(), 'minutes')) / (days * 1440)) * 100));
-			console.log("percent: "+percent)
-			console.log('-------');
 		}
 
 		// Daily
@@ -246,7 +236,8 @@ function updateAllEvents() {
 		} else {
 			countDown.html( eventStart.fromNow() );
 		}
-
+		
+		// Set progress percentage
 		$(box).data('percent', percent);
 		$(box).children(".bar_progress").css("width", percent+"%");
 	});
@@ -264,6 +255,7 @@ function updateAllEvents() {
 	setTimeout(updateAllEvents,30 * 1000);
 }
 
+// Planet hide/show
 (function($) {
 	$.fn.checking = function() {
 	planet = $(this).data('planet');
@@ -278,13 +270,13 @@ function updateAllEvents() {
 	};
 })(jQuery);
 
+
+// Color Picker
 (function($) {
 	$.fn.checkingColorPicker = function() {
-	color = $(this).data('color');
-	//if ( this.prop('checked') ) {
-		$.cookie('color', color, { expires: 365, path: '/' });
+		color = $(this).data('color');
 		$('div.bar_progress').attr("class", "bar_progress "+color);
-	//}
+		$.cookie('color', color, { expires: 365, path: '/' });
 	};
 })(jQuery);
 
@@ -314,6 +306,7 @@ $( "<ul/>", {
 	html: colorMenu.join( "" )
 }).appendTo( "ul.colorpicker > li" );
 
+// Create Dropdown menus
 $(document).ready(function() {
 	$('.menu').dropit();
 	$('.colorpicker').dropit();
