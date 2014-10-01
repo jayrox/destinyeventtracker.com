@@ -285,8 +285,8 @@ function updateAllEvents() {
 		colorCookie = $.cookie('color');
 		console.log("old color: "+colorCookie);
 		if ( typeof colorCookie != 'undefined' && colorCookie != color ) {
-			$('.bar_progress').removeClass(color);
-			console.log("remove color");
+			$('div.bar_progress').removeClass(color);
+			console.log("remove color: "+color);
 		}
 		$.cookie('color', color, { expires: 365, path: '/' });
 		$('.bar_progress').addClass(color);
