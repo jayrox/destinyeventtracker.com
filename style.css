@@ -333,6 +333,10 @@ ul.colorpicker label {
 	border-bottom: 1px solid black;
 }
 
+.menu ul.dropit-submenu label:last-child {
+	border-bottom: 0;
+}
+
 .menu ul.dropit-submenu label:hover {
 	background: #248fc1 !important;
 	color: #000;
