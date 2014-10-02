@@ -382,3 +382,8 @@ input[type="checkbox"]:checked + label {
 	background-color: #bbb !important;
 	color: black;
 }
+
+a {
+	color: white;
+}
+}
