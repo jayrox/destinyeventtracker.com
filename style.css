@@ -393,6 +393,7 @@ input[type="checkbox"]:checked + label {
 	font-size: 2em;
 	font-weight: 800;
 	text-decoration: none;
+	color: lightgray;
 }
 
 #info a {
