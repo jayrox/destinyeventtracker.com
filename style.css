@@ -387,6 +387,8 @@ input[type="checkbox"]:checked + label {
 	width: 100%;
 	font-weight: 800;
 	text-align: center;
+	color: white;
+	font-size: 3em;
 }
 
 #info a {
