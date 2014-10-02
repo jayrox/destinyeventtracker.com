@@ -35,6 +35,15 @@ body {
 	padding: 0 10px;
 }
 
+#bar_menu_container {
+	background-color: #222;
+	width: 100%;
+	border: 1px solid gray;
+	display: block;
+	float: left;
+	clear: both;
+}
+
 #bar_container {
 	clear: both;
 }
