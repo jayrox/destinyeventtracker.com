@@ -385,14 +385,14 @@ input[type="checkbox"]:checked + label {
 
 #report {
 	width: 100%;
-	font-weight: 800;
 	text-align: center;
-	font-size: 3em;
+	color: white;
 }
 
 #report a{
+	font-size: 2em;
+	font-weight: 800;
 	text-decoration: none;
-	color: white;
 }
 
 #info a {
