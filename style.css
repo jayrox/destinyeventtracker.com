@@ -396,6 +396,12 @@ input[type="checkbox"]:checked + label {
 	color: gray;
 }
 
+#about {
+	padding: 0 10px;
+	text-decoration: none;
+	color: white;
+}
+
 #info a {
 	float: right;
 	padding: 0 10px;
