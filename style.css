@@ -29,13 +29,13 @@ body {
 	padding: 20px;
 }
 
-.bar_menu, .bar_colorpicker {
+#bar_menu, #bar_colorpicker {
 	display: inline-block;
 	float: left;
 	padding: 0 10px;
 }
 
-.bar_container {
+#bar_container {
 	clear: both;
 }
 
