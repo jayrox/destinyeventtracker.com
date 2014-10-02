@@ -383,7 +383,10 @@ input[type="checkbox"]:checked + label {
 	color: black;
 }
 
-a {
+#info a {
+	float: right;
+	padding: 0 10px;
+	text-decoration: none;
 	color: white;
 }
-}
+
