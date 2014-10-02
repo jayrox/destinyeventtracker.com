@@ -200,6 +200,7 @@ body {
 .button {
 	text-decoration: none;
 	color: white;
+	padding: 3px 10px;
 }
 
 ul.colorpicker > li > ul > li {
