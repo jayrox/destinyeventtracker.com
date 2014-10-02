@@ -29,14 +29,15 @@ body {
 	padding: 20px;
 }
 
-/*
-.bar_header {
-	background-size: contain;
-	background-repeat: no-repeat;
-	height: 200px;
-	margin-bottom: 1em;
+.bar_menu, .bar_colorpicker {
+	display: inline-block;
+	float: left;
+	padding: 0 10px;
 }
-*/
+
+.bar_container {
+	clear: both;
+}
 
 #bar_menu ul {
 	list-style: none;
