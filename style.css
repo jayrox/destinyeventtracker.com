@@ -383,6 +383,12 @@ input[type="checkbox"]:checked + label {
 	color: black;
 }
 
+#report {
+	width: 100%;
+	font-weight: 800;
+	text-align: center;
+}
+
 #info a {
 	float: right;
 	padding: 0 10px;
