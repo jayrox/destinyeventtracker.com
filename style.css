@@ -188,6 +188,11 @@ body {
 	animation-duration: 2s;
 }
 
+.button {
+	text-decoration: none;
+	color: white;
+}
+
 ul.colorpicker > li > ul > li {
 	float: left;
 	padding: 5px;
