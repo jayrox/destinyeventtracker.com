@@ -356,7 +356,7 @@ ul.colorpicker label {
 	border-bottom: 0;
 }
 
-.menu ul.dropit-submenu label:hover {
+.menu ul.dropit-submenu label:hover, #bar_menu_container a {
 	background: #248fc1 !important;
 	color: #000;
 	text-decoration: none;
