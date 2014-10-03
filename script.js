@@ -163,15 +163,20 @@ function updateAllEvents() {
 			var eventDayStartData2 = parseInt(box.data('dayend'));
 			var eventOffsetData2 = parseInt(box.data('timeend'));
 
-			var days = eventDayStartData2 - eventDayStartData;
 			var eventStart = moment().utc().startOf('week').add(eventDayStartData, 'd').add(eventOffsetData, 's');
 			if ( moment().utc() > eventStart )
 			{
 				console.log('using second date');
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
+
+				if(eventDayStartData2 == 0) {
+					eventDayStartData2 = 8;
+				}
 			}
 			console.log("start: "+eventStart);
 
+			// Calculate duration day(s)
+			var days = eventDayStartData2 - eventDayStartData;
 			if ( days == 0 ) days = 7;
 			days = Math.abs(days);
 			console.log("days: "+days);
