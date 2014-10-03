@@ -168,7 +168,7 @@ function updateAllEvents() {
 			{
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
 				if(eventDayStartData2 == 0) {
-					eventDayStartData2 = 8;
+					eventDayStartData2 = 9;
 				}
 			}
 
@@ -209,11 +209,11 @@ function updateAllEvents() {
 			var percent = Math.round((((1440 - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
 		}
 		
-		console.log("percent: "+percent);
+		//console.log("percent: "+percent);
 
-		console.log(eventStart.format('h:mm'));
-		console.log(eventComplete.format('h:mm'));
-		console.log('-----');
+		//console.log(eventStart.format('h:mm'));
+		//console.log(eventComplete.format('h:mm'));
+		//console.log('-----');
 		
 		// 2 minute warning
 		var eventWarning = moment(eventStart).utc().subtract(120, 's');
