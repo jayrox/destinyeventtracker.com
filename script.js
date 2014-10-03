@@ -283,6 +283,7 @@ function updateAllEvents() {
 		color = $(this).data('color');
 		$('div.bar_progress').attr("class", "bar_progress "+color);
 		$.cookie('color', color, { expires: 365, path: '/' });
+		setTimeout(updateAllEvents, 200);
 	};
 })(jQuery);
 
