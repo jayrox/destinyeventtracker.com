@@ -252,7 +252,7 @@ function updateAllEvents() {
 		} else {
 			var uid = box.data('uid');
 			if (uid == "xur"){
-				countDown.html( "Leaves "+eventStart.fromNow() );
+				countDown.html( "leaves "+eventStart.fromNow() );
 			}else{
 				countDown.html( eventStart.fromNow() );	
 			}
