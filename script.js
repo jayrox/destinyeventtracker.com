@@ -170,8 +170,11 @@ function updateAllEvents() {
 				console.log(eventStart);
 				if(eventDayStartData2 == 0) {
 					eventDayStartData2 = 7;
+					var eventStart = moment().utc().day(eventDayStartData2).add(eventOffsetData2, 's');
+					console.log(eventStart);
 				}
 			}
+			console.log(eventStart);
 
 			// Calculate duration day(s)
 			var days = eventDayStartData2 - eventDayStartData;
