@@ -51,16 +51,21 @@ $.getJSON( "timers.json", function( data ) {
 			if (d_type == 1) {
 				d_offset = e_val.intervals[0].start;
 				d_duration = e_val.intervals[0].end - d_offset;
+				d_uid = e_val.intervals[0].uniqueId;
+
 				if (typeof e_val.intervals[1] != 'undefined') {
 					d_offset2 = e_val.intervals[1].start;
 					d_duration2 = e_val.intervals[1].end - d_offset2;
-				}
+					d_uid2 = e_val.intervals[1].uniqueId;
+			}
 				bar +='<div class="bar"'
 				    + ' data-type="'+d_type+'"'
 				    + ' data-offset="'+d_offset+'"'
 				    + ' data-duration="'+d_duration+'"'
+				    + ' data-uid="'+d_uid+'"'
 				    + ' data-offset2="'+d_offset2+'"'
 				    + ' data-duration2="'+d_duration2+'"'
+				    + ' data-uid2="'+d_uid2+'"'
 				    + ' data-percent=""'
 				    + '>';
 			}
@@ -71,12 +76,15 @@ $.getJSON( "timers.json", function( data ) {
 				day_end = e_val.departureDay;
 				time_start = e_val.arrivalTime;
 				time_end = e_val.departureTime;
+				d_uid = e_val.uniqueId;
+				
 				bar +='<div class="bar"'
 				    + ' data-type="'+d_type+'"'
 				    + ' data-daystart="'+day_start+'"'
 				    + ' data-dayend="'+day_end+'"'
 				    + ' data-timestart="'+time_start+'"'
 				    + ' data-timeend="'+time_end+'"'
+				    + ' data-uid="'+d_uid+'"'
 				    + ' data-percent=""'
 				    + '>';
 			}
@@ -85,11 +93,13 @@ $.getJSON( "timers.json", function( data ) {
 			if ( d_type == 3) {
 				d_offset = e_val.intervals[0].start;
 				d_duration = e_val.intervals[0].end - d_offset;
+				d_uid = e_val.intervals[0].uniqueId;
 
 				bar +='<div class="bar"'
 				    + ' data-type="'+d_type+'"'
 				    + ' data-offset="'+d_offset+'"'
 				    + ' data-duration="'+d_duration+'"'
+				    + ' data-uid="'+d_uid+'"'
 				    + ' data-percent=""'
 				    + '>';
 			}
@@ -237,10 +247,16 @@ function updateAllEvents() {
 		}
 
 		if (eventHappening) {
-			countDown.html( "In progress" );
+			countDown.html( "in progress" );
 			percent = 100;
 		} else {
-			countDown.html( eventStart.fromNow() );
+			var uid = box.data('uid');
+			if (uid == "xur"){
+				countDown.html( "Leaves "+eventStart.fromNow() );
+			}else{
+				countDown.html( eventStart.fromNow() );	
+			}
+			
 		}
 		
 		// Set progress percentage
