@@ -248,6 +248,7 @@ function updateAllEvents() {
 
 		if (eventHappening) {
 			countDown.html( "in progress" );
+			console.log(eventStart.fromNow());
 			percent = 100;
 		} else {
 			var uid = box.data('uid');
