@@ -167,18 +167,17 @@ function updateAllEvents() {
 			if ( moment().utc() > eventStart )
 			{
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
+				// Handle next sunday
 				if(eventDayStartData2 == 0) {
 					eventDayStartData2 = 8;
 					var eventStart = moment().utc().day(eventDayStartData2 - 1).add(eventOffsetData2, 's');
 				}
 			}
-			console.log(eventStart);
 
 			// Calculate duration day(s)
 			var days = eventDayStartData2 - eventDayStartData;
 			if ( days == 0 ) days = 7;
 			days = Math.abs(days);
-			console.log("days: "+days);
 
 			var eventComplete = moment(eventStart).utc();
 			eventComplete.add(30, 's');
@@ -189,9 +188,6 @@ function updateAllEvents() {
 			}
 
 			var percent = Math.round(((((days * 1440) - eventStart.diff(moment().utc(), 'minutes')) / (days * 1440)) * 100));
-			console.log(eventStart.diff(moment().utc(), 'minutes'));
-			console.log("percent: "+percent);
-			console.log('------');
 		}
 
 		// Daily
