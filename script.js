@@ -141,43 +141,29 @@ function updateAllEvents() {
 		if (eventTypeData == 1 ) {
 			var eventOffsetData = parseInt(box.data('offset'));
 			var eventDurationData = parseInt(box.data('duration'));
-			
 			var eventOffset2Data = parseInt(box.data('offset2'));
-			var eventDuration2Data = parseInt(box.data('duration2'));
-			
 			var eventRepeatData = 3600;
 			if ( eventOffset2Data > eventOffsetData ) {
 				eventRepeatData = eventOffset2Data - eventOffsetData;
 			}
+			var eventDuration2Data = parseInt(box.data('duration2'));
 			var eventHappening = false;
-			
+	
 			if ( eventOffsetData == 0 && eventDurationData == 0 ) {
 				return;
 			}
-			
 			// eventStart represents the closest start time
 			// get the start of the current hour
 			// add when the event starts
 			var eventStart = moment().utc().startOf('hour').add(eventOffsetData, 's');
-			var eventEnd = moment().utc().startOf('hour').add(eventOffsetData, 's').add(eventDurationData, 's');
-			var eventDuration = eventDurationData;
-			
-			if (  eventEnd  < moment().utc() ) {
-				var eventStart = moment().utc().startOf('hour').add(eventOffset2Data, 's');
-				var eventEnd = moment().utc().startOf('hour').add(eventOffset2Data, 's').add(eventDuration2Data, 's');
-				var eventDuration = eventDuration2Data;
-			}
-			
 			var eventComplete = moment(eventStart).utc();
-			eventComplete.add(eventDuration, 's');
-			
+			eventComplete.add(eventDurationData, 's');
+	
 			while(eventComplete < moment().utc()) {
 				eventStart.add(eventRepeatData, 's');
 				eventComplete.add(eventRepeatData, 's');
 			}
-			var percent = Math.round(((((eventRepeatData / 60) - eventStart.diff(moment().utc(), 'minutes')) / (eventRepeatData / 60)) * 100));
-			var remaining = eventEnd.diff(moment().utc(), 's');
-			var eventRemaining = moment(eventStart).utc().add(remaining, 's');
+			var percent = Math.round((((60 - eventStart.diff(moment().utc(), 'minutes')) / 60) * 100));
 		}
 
 		// Weekly
