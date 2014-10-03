@@ -401,6 +401,10 @@ input[type="checkbox"]:checked + label {
 	color: white;
 }
 
+#about a{
+	color:#56A0D3;
+}
+
 #info a {
 	float: right;
 	padding: 0 10px;
