@@ -173,6 +173,7 @@ function updateAllEvents() {
 					var eventStart = moment().utc().day(eventDayStartData2).add(eventOffsetData2, 's');
 					console.log(eventStart);
 				}
+				eventDayStartData2 = 8;
 			}
 			console.log(eventStart);
 
