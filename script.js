@@ -167,13 +167,10 @@ function updateAllEvents() {
 			if ( moment().utc() > eventStart )
 			{
 				var eventStart = moment().utc().startOf('week').add(eventDayStartData2, 'd').add(eventOffsetData2, 's');
-				console.log(eventStart);
 				if(eventDayStartData2 == 0) {
-					eventDayStartData2 = 7;
-					var eventStart = moment().utc().day(eventDayStartData2).add(eventOffsetData2, 's');
-					console.log(eventStart);
+					eventDayStartData2 = 8;
+					var eventStart = moment().utc().day(eventDayStartData2 - 1).add(eventOffsetData2, 's');
 				}
-				eventDayStartData2 = 8;
 			}
 			console.log(eventStart);
 
