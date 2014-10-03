@@ -155,23 +155,23 @@ body {
 .bar_progress.active {
 	-moz-animation-name: pulse;
 	-moz-animation-iteration-count: infinite;
-	-moz-animation-duration: 4s;
+	-moz-animation-duration: 5s;
 	
 	-ms-animation-name: pulse;
 	-ms-animation-iteration-count: infinite;
-	-ms-animation-duration: 4s;
+	-ms-animation-duration: 5s;
 	
 	-o-animation-name: pulse;
 	-o-animation-iteration-count: infinite;
-	-o-animation-duration: 4s;
+	-o-animation-duration: 5s;
 	
 	-webkit-animation-name: pulse;
 	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-duration: 4s;
+	-webkit-animation-duration: 5s;
 	
 	animation-name: pulse;
 	animation-iteration-count: infinite;
-	animation-duration: 4s;
+	animation-duration: 5s;
 }
 
 .bar_progress.warning
