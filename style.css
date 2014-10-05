@@ -35,6 +35,10 @@ body {
 	padding: 0 10px;
 }
 
+#bar_expando i {
+	padding: 10px;
+}
+
 #bar_menu_container {
 	background-color: #222;
 	width: 100%;
