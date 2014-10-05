@@ -5,6 +5,7 @@
 		<title>Destiny Event Tracker</title>
 		<link rel="stylesheet" href="style.css" type="text/css" />
 		<link rel="stylesheet" href="dropit.css" type="text/css" />
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<meta http-equiv="refresh" content="3600">
 		<!--
 		Complete source code for destinyeventtracker.com can be found:
@@ -33,6 +34,9 @@
 	    			</li>
 			</ul>
 			</div>
+			<div id="bar_expando">
+				<i class="fa fa-caret-square-o-down" title="Expand all descriptions"></i>
+			</div>
 			<div id="info"><a href="/info.html">?</a></div>
 		</div>
 		<div id="bar_container"></div>
@@ -49,6 +53,12 @@
 		
 		$(document).on("click", 'div.bar, div.bar > span', function(e) {
 			$('.bar_description', this).toggleClass("show");
+		});
+		
+		$(".fa-caret-square-o-down, .fa-caret-square-o-up").click(function(){
+			var $this = $(this);
+			$this.toggleClass("fa-caret-square-o-down fa-caret-square-o-up");
+			$('.bar_description').toggleClass("hide");
 		});
 		
 		$(document).on("change", '.menu input[type="checkbox"]', function(e) {
