@@ -16,7 +16,8 @@
                 "arrivalDay": 2,
                 "arrivalTime": 32400,
                 "departureDay": 2,
-                "departureTime": 32430
+                "departureTime": 32430,
+                "rarity": 1
             },
             {
                 "name": "Bounty Stock Refresh",
@@ -28,7 +29,8 @@
                     {
                         "uniqueId": "resetBounty1",
                         "start": 32400,
-                        "end": 32430
+                        "end": 32430,
+                        "rarity": 1
                     }
                 ]
             }
@@ -53,7 +55,8 @@
                 "arrivalDay": 5,
                 "arrivalTime": 32400,
                 "departureDay": 0,
-                "departureTime": 32400
+                "departureTime": 32400,
+                "rarity": 1
             }
         ]
     },
@@ -70,12 +73,14 @@
                     {
                         "uniqueId": "steppes1",
                         "start": 900,
-                        "end": 1500
+                        "end": 1500,
+                        "rarity": 3
                     },
                     {
                         "uniqueId": "steppes2",
                         "start": 2700,
-                        "end": 3300
+                        "end": 3300,
+                        "rarity": 3
                     }
                 ]
             },
@@ -91,12 +96,14 @@
                     {
                         "uniqueId": "moth1",
                         "start": 0,
-                        "end": 300
+                        "end": 300,
+                        "rarity": 2
                     },
                     {
                         "uniqueId": "moth2",
                         "start": 1800,
-                        "end": 2100
+                        "end": 2100,
+                        "rarity": 2
                     }
                 ]
             },
@@ -110,12 +117,14 @@
                     {
                         "uniqueId": "divide1",
                         "start": 900,
-                        "end": 1200
+                        "end": 1200,
+                        "rarity": 1
                     },
                     {
                         "uniqueId": "divide2",
                         "start": 2700,
-                        "end": 3000
+                        "end": 3000,
+                        "rarity": 1
                     }
                 ]
             },
@@ -129,7 +138,8 @@
                     {
                         "uniqueId": "rocket1",
                         "start": 900,
-                        "end": 1200
+                        "end": 1200,
+                        "rarity": 1
                     }
                 ]
             },
@@ -143,12 +153,14 @@
                     {
                         "uniqueId": "shore1",
                         "start": 300,
-                        "end": 600
+                        "end": 600,
+                        "rarity": 2
                     },
                     {
                         "uniqueId": "shore2",
                         "start": 2100,
-                        "end": 2400
+                        "end": 2400,
+                        "rarity": 2
                     }
                 ]
             },
@@ -163,12 +175,14 @@
                     {
                         "uniqueId": "skywatch1",
                         "start": 0,
-                        "end": 300
+                        "end": 300,
+                        "rarity": 1
                     },
                     {
                         "uniqueId": "skywatch2",
                         "start": 1800,
-                        "end": 2100
+                        "end": 2100,
+                        "rarity": 1
                     }
                 ]
             }
@@ -187,7 +201,8 @@
                     {
                         "uniqueId": "ember1",
                         "start": 1800,
-                        "end": 2100
+                        "end": 2100,
+                        "rarity": 2
                     }
                 ]
             },
@@ -201,7 +216,8 @@
                     {
                         "uniqueId": "ember2",
                         "start": 1800,
-                        "end": 2400
+                        "end": 2400,
+                        "rarity": 2
                     }
                 ]
             },
@@ -215,7 +231,8 @@
                     {
                         "uniqueId": "citadel1",
                         "start": 2100,
-                        "end": 2400
+                        "end": 2400,
+                        "rarity": 1
                     }
                 ]
             }
@@ -234,7 +251,8 @@
                     {
                         "uniqueId": "archer1",
                         "start": 2100,
-                        "end": 2400
+                        "end": 2400,
+                        "rarity": 2
                     }
                 ]
             },
@@ -248,7 +266,8 @@
                     {
                         "uniqueId": "hellmouth1",
                         "start": 2400,
-                        "end": 2700
+                        "end": 2700,
+                        "rarity": 2
                     }
                 ]
             },
@@ -262,7 +281,8 @@
                     {
                         "uniqueId": "anchorlight1",
                         "start": 0,
-                        "end": 300
+                        "end": 300,
+                        "rarity": 3
                     }
                 ]
             },
@@ -276,12 +296,14 @@
                     {
                         "uniqueId": "anchorlight2",
                         "start": 1800,
-                        "end": 2100
+                        "end": 2100,
+                        "rarity": 3
                     },
                     {
                         "uniqueId": "anchorlight3",
                         "start": 2700,
-                        "end": 3000
+                        "end": 3000,
+                        "rarity": 3
                     }
                 ]
             }
@@ -300,7 +322,8 @@
                     {
                         "uniqueId": "hollows1",
                         "start": 1800,
-                        "end": 2100
+                        "end": 2100,
+                        "rarity": 2
                     }
                 ]
             },
@@ -314,7 +337,8 @@
                     {
                         "uniqueId": "buried1",
                         "start": 2700,
-                        "end": 3000
+                        "end": 3000,
+                        "rarity": 2
                     }
                 ]
             },
@@ -329,12 +353,14 @@
                     {
                         "uniqueId": "barrens1",
                         "start": 0,
-                        "end": 300
+                        "end": 300,
+                        "rarity": 1
                     },
                     {
                         "uniqueId": "barrens2",
                         "start": 1800,
-                        "end": 2400
+                        "end": 2400,
+                        "rarity": 1
                     }
                 ]
             }
