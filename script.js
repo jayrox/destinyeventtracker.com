@@ -264,17 +264,13 @@ function updateAllEvents() {
 		}
 
 		if (eventHappening) {
-			//if ( typeof eventRemaining != 'undefined' ) {
-				var remaining = eventComplete.diff(moment().utc(), 's');
-				var eventRemaining = moment().utc().add(remaining, 's');
-				countDown.html( "in progress, ends " + eventRemaining.fromNow());
-			//}else {
-			//	countDown.html( "in progress" );		
-			//}
+			var remaining = eventComplete.diff(moment().utc(), 's');
+			var eventRemaining = moment().utc().add(remaining, 's');
+			countDown.html( "in progress, ends " + eventRemaining.fromNow());
 			percent = 100;
 		} else {
 			var uid = box.data('uid');
-			if (uid == "xur"){
+			if (uid == "xur" && moment().day() < eventDayStartData && moment().day() > eventDayStartData2){
 				countDown.html( "leaves "+eventStart.fromNow() );
 			}else{
 				countDown.html( eventStart.fromNow() );	
