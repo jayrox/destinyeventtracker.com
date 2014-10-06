@@ -109,7 +109,7 @@ body {
 }
 
 .bar_header, .bar_location, .bar_description, .bar_timer {
-	z-index: 2;
+	z-index: 3;
 }
 
 .cent {
@@ -200,6 +200,31 @@ body {
 	animation-name: pulse;
 	animation-iteration-count: infinite;
 	animation-duration: 2s;
+}
+
+.rarity {
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.rarity:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-right: 50px solid transparent;
+}
+
+.common:after {
+	border-bottom: 50px solid green;
+}
+.uncommon:after {
+	border-bottom: 50px solid yellow;
+}
+.rare:after {
+	border-bottom: 50px solid red;
 }
 
 .button {
