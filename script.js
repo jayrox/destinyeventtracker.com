@@ -271,9 +271,6 @@ function updateAllEvents() {
 		} else {
 			var uid = box.data('uid');
 			if (uid == "xur" && moment().day() > eventDayStartData && moment().day() < eventDayStartData2){
-				console.log("day: "+moment().day());
-				console.log("start: "+eventDayStartData);
-				console.log("end: "+eventDayStartData2);
 				countDown.html( "leaves "+eventStart.fromNow() );
 			}else{
 				countDown.html( eventStart.fromNow() );	
