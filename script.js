@@ -46,12 +46,14 @@ $.getJSON( "timers.json", function( data ) {
 			d_offset = d_offset2 = 0;
 			d_duration = d_duration2 = 0;
 			d_type = e_val.type;
+			d_rarity = 1;
 
 			// Hourly
 			if (d_type == 1) {
 				d_offset = e_val.intervals[0].start;
 				d_duration = e_val.intervals[0].end - d_offset;
 				d_uid = e_val.intervals[0].uniqueId;
+				d_rarity = e_val.intervals[0].rarity;
 
 				if (typeof e_val.intervals[1] != 'undefined') {
 					d_offset2 = e_val.intervals[1].start;
@@ -77,6 +79,7 @@ $.getJSON( "timers.json", function( data ) {
 				time_start = e_val.arrivalTime;
 				time_end = e_val.departureTime;
 				d_uid = e_val.uniqueId;
+				d_rarity = e_val.rarity;
 				
 				bar +='<div class="bar"'
 				    + ' data-type="'+d_type+'"'
@@ -94,6 +97,7 @@ $.getJSON( "timers.json", function( data ) {
 				d_offset = e_val.intervals[0].start;
 				d_duration = e_val.intervals[0].end - d_offset;
 				d_uid = e_val.intervals[0].uniqueId;
+				d_rarity = e_val.intervals[0].rarity;
 
 				bar +='<div class="bar"'
 				    + ' data-type="'+d_type+'"'
@@ -103,11 +107,25 @@ $.getJSON( "timers.json", function( data ) {
 				    + ' data-percent=""'
 				    + '>';
 			}
+			
+			rarity = "";
+			switch(d_rarity) {
+				case 3:
+					rarity = "rare";
+					break;
+				case 2:
+					rarity = "uncommon";
+					break;
+				case 1:
+				default:
+					rarity = "common";
+			}
 
 			bar +=' <div class="bar_progress '+bar_color+'"></div>';
 			bar +='	<span class="bar_location">'+e_val.name+'</span>';
 			bar +='	<span class="bar_description">'+bar_description+'</span>';
 			bar +='	<span class="bar_timer">&nbsp;</span>';
+			bar +=' <div class="rarity '+rarity+'"></div>';
 			bar +='</div>';
 		});
 		bar +='</div></div>';
