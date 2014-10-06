@@ -270,7 +270,7 @@ function updateAllEvents() {
 			percent = 100;
 		} else {
 			var uid = box.data('uid');
-			if (uid == "xur" && moment().day() > eventDayStartData && moment().day() < eventDayStartData2){
+			if (uid == "xur" && moment().day() >= eventDayStartData && moment().day() <= eventDayStartData2){
 				countDown.html( "leaves "+eventStart.fromNow() );
 			}else{
 				countDown.html( eventStart.fromNow() );	
