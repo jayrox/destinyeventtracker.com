@@ -203,28 +203,51 @@ body {
 }
 
 .rarity {
-	z-index: 2;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.rarity:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-right: 51px solid transparent;
+}
+
+.common:before {
+    border-bottom: 51px solid black;
+}
+.uncommon:before {
+    border-bottom: 51px solid black;
+}
+.rare:before {
+    border-bottom: 51px solid black;
 }
 
 .rarity:after {
-	content: "";
-	display: block;
-	width: 0;
-	height: 0;
-	border-right: 40px solid transparent;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0px;
+    left: 0px;
+    border-right: 50px solid transparent;
 }
 
 .common:after {
-	border-bottom: 40px solid green;
+    border-bottom: 50px solid green;
 }
 .uncommon:after {
-	border-bottom: 40px solid yellow;
+    border-bottom: 50px solid yellow;
 }
 .rare:after {
-	border-bottom: 40px solid red;
+    border-bottom: 50px solid red;
 }
 
 .button {
