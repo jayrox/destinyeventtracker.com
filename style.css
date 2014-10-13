@@ -296,88 +296,137 @@ ul.colorpicker label {
 	border: 1px solid white;
 }
 
-.bar_christi {
-	background-color: #4EB00D;
+/* Lime: #A4C400; RGB(164, 196, 0) */
+.bar_lime {
+	background-color: #A4C400;
 }
 
+/* Green: #60A917; RGB(96, 169, 23) */
+/* Old: #4EB00D */
+.bar_christi {
+	background-color: #60A917;
+}
+
+/* Emerald: #008A00; RGB(0, 138, 0) */
+/* Old: #007C00 */
 .bar_japaneselaurel {
-	background-color: #007C00;
+	background-color: #008A00;
 }
 
 .bar_tropicalrainforest {
 	background-color: #007558;
 }
 
+/* Teal: #00ABA9; RGB(0, 171, 169) */
+/* Old: #22B5AD */
 .bar_java {
-	background-color: #22B5AD;
+	background-color: #00ABA9;
 }
 
+/* Cyan: #1BA1E2; RGB(27, 161, 226) */
+/* Old: #0082D6 */
 .bar_lochmara {
-	background-color: #0082D6;
+	background-color: #1BA1E2;
 }
 
+/* Cobalt: #0050EF; RGB(0, 80, 239) */
+/* Old: #1B45FB */
 .bar_blueribbon, .bar_blue {
-	background-color: #1B45FB;
+	background-color: #0050EF;
 }
 
 .bar_toreabay {
 	background-color: #093693;
 }
 
+/* Indigo: #6A00FF; RGB(106, 0, 255) */
+/* Old: #6F00FF */
 .bar_electricviolet {
-	background-color: #6F00FF;
+	background-color: #6A00FF;
 }
 
+/* Violet: #AA00FF; RGB(170, 0, 255) */
+/* Old: #B100FE */
 .bar_violet {
-	background-color: #B100FE;
+	background-color: #AA00FF;
 }
 
+/* Pink: #F472D0; RGB(244, 114, 208) */
+/* Old: #FF65DD */
 .bar_pinkflamingo {
-	background-color: #FF65DD;
+	background-color: #F472D0;
 }
 
+/* Magenta: #D80073; RGB(216, 0, 115) */
+/* Old: #DF0172 */
 .bar_razzmatazz {
-	background-color: #DF0172;
+	background-color: #D80073;
 }
 
+/* Crimson: #A20025; RGB(162, 0, 37) */
+/* Old: #A70016 */
 .bar_carmine {
-	background-color: #A70016;
+	background-color: #A20025;
 }
 
+/* Red: #E51400; RGB(229, 20, 0) */
+/* Old: #DF0D00 */
 .bar_red {
-	background-color: #DF0D00;
+	background-color: #E51400;
 }
 
+/* Orange: #FA6800; RGB(250, 104, 0) */
+/* Old: #FF5518 */
 .bar_orange {
-	background-color: #FF5518;
+	background-color: #FA6800;
 }
 
+/* Amber: #F0A30A; RGB(240, 163, 10) */
+/* Old: #FF9A00 */
 .bar_orangepeel {
-	background-color: #FF9A00;
+	background-color: #F0A30A;
 }
 
+/* Yellow: #E3C800; RGB(227, 200, 0) */
+.bar_yellow {
+	background-color: #E3C800;
+}
+
+/* Brown: #825A2C; RGB(130, 90, 44) */
+/* Old: #6F4821 */
 .bar_pickledbean {
-	background-color: #6F4821;
+	background-color: #825A2C;
 }
 
 .bar_kokoda {
 	background-color: #717054;
 }
 
+/* Olive: #6D8764; RGB(109, 135, 100) */
+/* Old: #517261 */
 .bar_como {
-	background-color: #517261;
+	background-color: #6D8764;
 }
 
+/* Steel: #647687; RGB(100, 118, 135) */
+/* Old: #50646F */
 .bar_bluebayoux {
-	background-color: #50646F;
+	background-color: #647687;
+}
+
+/* Mauve: #76608A; RGB(118, 96, 138) */
+.bar_mauve {
+	background-color: #76608A;
 }
 
 .bar_dovegray {
 	background-color: #6B6B6B;
 }
 
+/* Taupe: #87794E; RGB(135, 121, 78) */
+/* Old: #4B3E35 */
 .bar_taupe {
-	background-color: #4B3E35;
+	background-color: #87794E;
 }
 
 .menu ul { display: none; } /* Hide before plugin loads */
