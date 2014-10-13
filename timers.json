@@ -5,7 +5,6 @@
             {
                 "uniqueId": "reset",
                 "name": "Weekly Reset",
-
                 "type": 2,
                 "validDays": [
                     2
@@ -28,7 +27,6 @@
             {
                 "uniqueId": "xur",
                 "name": "Xur, Agent of the Nine",
-
                 "type": 2,
                 "validDays": [
                     5,
@@ -45,8 +43,7 @@
                 "departureTime": 32400,
                 "rarity": 1
             },
-
-			{
+            {
                 "name": "Bounty Stock Reset",
                 "type": 3,
                 "subEvents": [
@@ -56,85 +53,36 @@
                     {
                         "uniqueId": "resetBounty1",
                         "start": 32400,
-
                         "end": 32430,
                         "rarity": 1
                     }
                 ]
-
             }
-
         ]
     },
     {
         "name": "Earth",
         "events": [
             {
-
-
                 "name": "The Steppes",
                 "type": 1,
                 "subEvents": [
-
-
                     "Defeat Extraction Crew"
                 ],
                 "intervals": [
                     {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         "uniqueId": "steppes1",
                         "start": 900,
                         "end": 1500,
                         "rarity": 3
                     },
                     {
-
-
-
                         "uniqueId": "steppes2",
                         "start": 2700,
                         "end": 3300,
                         "rarity": 3
                     }
                 ]
-
-
-
-
-
-
             },
             {
                 "name": "Mothyards",
@@ -148,14 +96,12 @@
                     {
                         "uniqueId": "moth1",
                         "start": 0,
-
                         "end": 300,
                         "rarity": 2
                     },
                     {
                         "uniqueId": "moth2",
                         "start": 1740,
-
                         "end": 2040,
                         "rarity": 2
                     }
@@ -171,14 +117,12 @@
                     {
                         "uniqueId": "divide1",
                         "start": 960,
-
                         "end": 1260,
                         "rarity": 1
                     },
                     {
                         "uniqueId": "divide2",
                         "start": 2760,
-
                         "end": 3060,
                         "rarity": 1
                     }
@@ -194,7 +138,6 @@
                     {
                         "uniqueId": "rocket1",
                         "start": 900,
-
                         "end": 1200,
                         "rarity": 1
                     }
@@ -210,14 +153,12 @@
                     {
                         "uniqueId": "shore1",
                         "start": 300,
-
                         "end": 600,
                         "rarity": 2
                     },
                     {
                         "uniqueId": "shore2",
                         "start": 2220,
-
                         "end": 2520,
                         "rarity": 2
                     }
@@ -227,21 +168,18 @@
                 "name": "Skywatch",
                 "type": 1,
                 "subEvents": [
-
-                    "Defend Warsat",
+                    "Defend Warsat"
                 ],
                 "intervals": [
                     {
                         "uniqueId": "skywatch1",
                         "start": 0,
-
                         "end": 300,
                         "rarity": 1
                     },
                     {
                         "uniqueId": "skywatch2",
                         "start": 1800,
-
                         "end": 2100,
                         "rarity": 1
                     }
@@ -262,14 +200,12 @@
                     {
                         "uniqueId": "ember1",
                         "start": 2100,
-
                         "end": 2400,
                         "rarity": 2
                     }
                 ]
             },
-
-			{
+            {
                 "name": "The Citadel",
                 "type": 1,
                 "subEvents": [
@@ -279,20 +215,14 @@
                     {
                         "uniqueId": "citadel1",
                         "start": 600,
-
                         "end": 900,
-						"rarity": 1
+                        "rarity": 1
                     },
                     {
                         "uniqueId": "citadel2",
                         "start": 2700,
-
                         "end": 3000,
-						"rarity": 1
-
-
-
-
+                        "rarity": 1
                     }
                 ]
             },
@@ -302,21 +232,18 @@
                 "subEvents": [
                     "Prevent Vex Sacrifices"
                 ],
-                 "intervals": [
+                "intervals": [
                     {
                         "uniqueId": "ishtar1",
                         "start": 300,
-
                         "end": 600,
-						"rarity": 1
+                        "rarity": 1
                     },
                     {
                         "uniqueId": "ishtar2",
-
                         "start": 2100,
-
                         "end": 2400,
-						"rarity": 1						
+                        "rarity": 1
                     }
                 ]
             }
@@ -335,16 +262,14 @@
                     {
                         "uniqueId": "archer1",
                         "start": 300,
-
                         "end": 600,
-						"rarity": 2
+                        "rarity": 2
                     },
                     {
                         "uniqueId": "archer2",
                         "start": 1560,
-
                         "end": 1860,
-						"rarity": 2
+                        "rarity": 2
                     }
                 ]
             },
@@ -353,13 +278,12 @@
                 "type": 1,
                 "subEvents": [
                     "Defeat Extraction Crews",
-					"Defend the Warsat"
+                    "Defend the Warsat"
                 ],
                 "intervals": [
                     {
                         "uniqueId": "hellmouth1",
                         "start": 2280,
-
                         "end": 2580,
                         "rarity": 2
                     }
@@ -375,13 +299,11 @@
                     {
                         "uniqueId": "anchorlight1",
                         "start": 480,
-
                         "end": 780,
                         "rarity": 3
                     }
                 ]
-
-            },
+            }
         ]
     },
     {
@@ -402,7 +324,7 @@
                     }
                 ]
             },
-			{
+            {
                 "name": "The Barrens",
                 "type": 1,
                 "subEvents": [
@@ -413,13 +335,13 @@
                         "uniqueId": "barrens1",
                         "start": 180,
                         "end": 480,
-						"rarity": 1
+                        "rarity": 1
                     },
                     {
                         "uniqueId": "barrens2",
                         "start": 1860,
                         "end": 2160,
-						"rarity": 1
+                        "rarity": 1
                     }
                 ]
             },
@@ -433,7 +355,6 @@
                     {
                         "uniqueId": "buried1",
                         "start": 1500,
-
                         "end": 1800,
                         "rarity": 2
                     }
@@ -450,14 +371,12 @@
                     {
                         "uniqueId": "scabland1",
                         "start": 600,
-
                         "end": 900,
                         "rarity": 1
                     },
                     {
                         "uniqueId": "scabland2",
                         "start": 3000,
-
                         "end": 3300,
                         "rarity": 1
                     }
