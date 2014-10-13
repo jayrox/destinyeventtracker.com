@@ -341,11 +341,11 @@ function updateAllEvents() {
 })(jQuery);
 
 // Color Picker
-var colors = ["bar_christi", "bar_japaneselaurel", "bar_tropicalrainforest", "bar_java", 
+var colors = ["bar_lime", "bar_christi", "bar_japaneselaurel", "bar_tropicalrainforest", "bar_java", 
       "bar_lochmara", "bar_blueribbon", "bar_toreabay", "bar_electricviolet", 
       "bar_violet", "bar_pinkflamingo", "bar_razzmatazz", "bar_carmine", "bar_red", 
-      "bar_orange", "bar_orangepeel", "bar_pickledbean", "bar_kokoda", "bar_como", 
-      "bar_bluebayoux", "bar_dovegray", "bar_taupe"];
+      "bar_orange", "bar_orangepeel", "bar_yellow", "bar_pickledbean", "bar_kokoda", "bar_como", 
+      "bar_bluebayoux", "bar_mauve", "bar_dovegray", "bar_taupe"];
 colorMenu = [];
 colorCookie = $.cookie('color');
 $.each( colors, function( key, color ) {
