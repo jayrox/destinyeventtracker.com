@@ -5,6 +5,7 @@
             {
                 "uniqueId": "reset",
                 "name": "Weekly Reset",
+
                 "type": 2,
                 "validDays": [
                     2
@@ -18,21 +19,6 @@
                 "departureDay": 2,
                 "departureTime": 32430,
                 "rarity": 1
-            },
-            {
-                "name": "Bounty Stock Reset",
-                "type": 3,
-                "subEvents": [
-                    "New Bounties Available"
-                ],
-                "intervals": [
-                    {
-                        "uniqueId": "resetBounty1",
-                        "start": 32400,
-                        "end": 32430,
-                        "rarity": 1
-                    }
-                ]
             }
         ]
     },
@@ -42,6 +28,7 @@
             {
                 "uniqueId": "xur",
                 "name": "Xur, Agent of the Nine",
+
                 "type": 2,
                 "validDays": [
                     5,
@@ -57,32 +44,97 @@
                 "departureDay": 0,
                 "departureTime": 32400,
                 "rarity": 1
+            },
+
+			{
+                "name": "Bounty Stock Reset",
+                "type": 3,
+                "subEvents": [
+                    "New Bounties Available"
+                ],
+                "intervals": [
+                    {
+                        "uniqueId": "resetBounty1",
+                        "start": 32400,
+
+                        "end": 32430,
+                        "rarity": 1
+                    }
+                ]
+
             }
+
         ]
     },
     {
         "name": "Earth",
         "events": [
             {
+
+
                 "name": "The Steppes",
                 "type": 1,
                 "subEvents": [
+
+
                     "Defeat Extraction Crew"
                 ],
                 "intervals": [
                     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         "uniqueId": "steppes1",
                         "start": 900,
                         "end": 1500,
                         "rarity": 3
                     },
                     {
+
+
+
                         "uniqueId": "steppes2",
                         "start": 2700,
                         "end": 3300,
                         "rarity": 3
                     }
                 ]
+
+
+
+
+
+
             },
             {
                 "name": "Mothyards",
@@ -96,13 +148,15 @@
                     {
                         "uniqueId": "moth1",
                         "start": 0,
+
                         "end": 300,
                         "rarity": 2
                     },
                     {
                         "uniqueId": "moth2",
-                        "start": 1800,
-                        "end": 2100,
+                        "start": 1740,
+
+                        "end": 2040,
                         "rarity": 2
                     }
                 ]
@@ -116,14 +170,16 @@
                 "intervals": [
                     {
                         "uniqueId": "divide1",
-                        "start": 900,
-                        "end": 1200,
+                        "start": 960,
+
+                        "end": 1260,
                         "rarity": 1
                     },
                     {
                         "uniqueId": "divide2",
-                        "start": 2700,
-                        "end": 3000,
+                        "start": 2760,
+
+                        "end": 3060,
                         "rarity": 1
                     }
                 ]
@@ -138,6 +194,7 @@
                     {
                         "uniqueId": "rocket1",
                         "start": 900,
+
                         "end": 1200,
                         "rarity": 1
                     }
@@ -153,13 +210,15 @@
                     {
                         "uniqueId": "shore1",
                         "start": 300,
+
                         "end": 600,
                         "rarity": 2
                     },
                     {
                         "uniqueId": "shore2",
-                        "start": 2100,
-                        "end": 2400,
+                        "start": 2220,
+
+                        "end": 2520,
                         "rarity": 2
                     }
                 ]
@@ -168,19 +227,21 @@
                 "name": "Skywatch",
                 "type": 1,
                 "subEvents": [
+
                     "Defend Warsat",
-                    "Fallen and Hive War"
                 ],
                 "intervals": [
                     {
                         "uniqueId": "skywatch1",
                         "start": 0,
+
                         "end": 300,
                         "rarity": 1
                     },
                     {
                         "uniqueId": "skywatch2",
                         "start": 1800,
+
                         "end": 2100,
                         "rarity": 1
                     }
@@ -195,34 +256,21 @@
                 "name": "Ember Caves",
                 "type": 1,
                 "subEvents": [
-                    "Defeat Extraction Crew"
-                ],
-                "intervals": [
-                    {
-                        "uniqueId": "ember1",
-                        "start": 1800,
-                        "end": 2100,
-                        "rarity": 2
-                    }
-                ]
-            },
-            {
-                "name": "Ember Caves",
-                "type": 1,
-                "subEvents": [
                     "Defeat Winter Walker"
                 ],
                 "intervals": [
                     {
-                        "uniqueId": "ember2",
-                        "start": 1800,
+                        "uniqueId": "ember1",
+                        "start": 2100,
+
                         "end": 2400,
                         "rarity": 2
                     }
                 ]
             },
-            {
-                "name": "Citadel or Ishtar Cliffs",
+
+			{
+                "name": "The Citadel",
                 "type": 1,
                 "subEvents": [
                     "Prevent Vex Sacrifices"
@@ -230,9 +278,45 @@
                 "intervals": [
                     {
                         "uniqueId": "citadel1",
+                        "start": 600,
+
+                        "end": 900,
+						"rarity": 1
+                    },
+                    {
+                        "uniqueId": "citadel2",
+                        "start": 2700,
+
+                        "end": 3000,
+						"rarity": 1
+
+
+
+
+                    }
+                ]
+            },
+            {
+                "name": "Ishtar Cliffs",
+                "type": 1,
+                "subEvents": [
+                    "Prevent Vex Sacrifices"
+                ],
+                 "intervals": [
+                    {
+                        "uniqueId": "ishtar1",
+                        "start": 300,
+
+                        "end": 600,
+						"rarity": 1
+                    },
+                    {
+                        "uniqueId": "ishtar2",
+
                         "start": 2100,
+
                         "end": 2400,
-                        "rarity": 1
+						"rarity": 1						
                     }
                 ]
             }
@@ -250,9 +334,17 @@
                 "intervals": [
                     {
                         "uniqueId": "archer1",
-                        "start": 2100,
-                        "end": 2400,
-                        "rarity": 2
+                        "start": 300,
+
+                        "end": 600,
+						"rarity": 2
+                    },
+                    {
+                        "uniqueId": "archer2",
+                        "start": 1560,
+
+                        "end": 1860,
+						"rarity": 2
                     }
                 ]
             },
@@ -260,13 +352,15 @@
                 "name": "Hellmouth",
                 "type": 1,
                 "subEvents": [
-                    "Defeat Extraction Crews"
+                    "Defeat Extraction Crews",
+					"Defend the Warsat"
                 ],
                 "intervals": [
                     {
                         "uniqueId": "hellmouth1",
-                        "start": 2400,
-                        "end": 2700,
+                        "start": 2280,
+
+                        "end": 2580,
                         "rarity": 2
                     }
                 ]
@@ -280,33 +374,14 @@
                 "intervals": [
                     {
                         "uniqueId": "anchorlight1",
-                        "start": 0,
-                        "end": 300,
+                        "start": 480,
+
+                        "end": 780,
                         "rarity": 3
                     }
                 ]
+
             },
-            {
-                "name": "Anchor of Light",
-                "type": 1,
-                "subEvents": [
-                    "Destroy the Iron Walker"
-                ],
-                "intervals": [
-                    {
-                        "uniqueId": "anchorlight2",
-                        "start": 1800,
-                        "end": 2100,
-                        "rarity": 3
-                    },
-                    {
-                        "uniqueId": "anchorlight3",
-                        "start": 2700,
-                        "end": 3000,
-                        "rarity": 3
-                    }
-                ]
-            }
         ]
     },
     {
@@ -321,9 +396,30 @@
                 "intervals": [
                     {
                         "uniqueId": "hollows1",
-                        "start": 1800,
-                        "end": 2100,
+                        "start": 3000,
+                        "end": 3300,
                         "rarity": 2
+                    }
+                ]
+            },
+			{
+                "name": "The Barrens",
+                "type": 1,
+                "subEvents": [
+                    "Defend the Warsat"
+                ],
+                "intervals": [
+                    {
+                        "uniqueId": "barrens1",
+                        "start": 180,
+                        "end": 480,
+						"rarity": 1
+                    },
+                    {
+                        "uniqueId": "barrens2",
+                        "start": 1860,
+                        "end": 2160,
+						"rarity": 1
                     }
                 ]
             },
@@ -336,30 +432,33 @@
                 "intervals": [
                     {
                         "uniqueId": "buried1",
-                        "start": 2700,
-                        "end": 3000,
+                        "start": 1500,
+
+                        "end": 1800,
                         "rarity": 2
                     }
                 ]
             },
             {
-                "name": "The Barrens",
+                "name": "Scablands",
                 "type": 1,
                 "subEvents": [
                     "Defend the Warsat",
-                    "Eliminate Axis Minotaur"
+                    "Eliminate the Target"
                 ],
                 "intervals": [
                     {
-                        "uniqueId": "barrens1",
-                        "start": 0,
-                        "end": 300,
+                        "uniqueId": "scabland1",
+                        "start": 600,
+
+                        "end": 900,
                         "rarity": 1
                     },
                     {
-                        "uniqueId": "barrens2",
-                        "start": 1800,
-                        "end": 2400,
+                        "uniqueId": "scabland2",
+                        "start": 3000,
+
+                        "end": 3300,
                         "rarity": 1
                     }
                 ]
