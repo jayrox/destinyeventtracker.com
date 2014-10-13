@@ -297,135 +297,161 @@ ul.colorpicker label {
 }
 
 /* Lime: #A4C400; RGB(164, 196, 0) */
-.bar_lime {
+.bar_lime,
+.bar_lime:hover {
 	background-color: #A4C400;
 }
 
 /* Green: #60A917; RGB(96, 169, 23) */
 /* Old: #4EB00D */
-.bar_christi {
+.bar_christi,
+.bar_christi:hover {
 	background-color: #60A917;
 }
 
 /* Emerald: #008A00; RGB(0, 138, 0) */
 /* Old: #007C00 */
-.bar_japaneselaurel {
+.bar_japaneselaurel,
+.bar_japaneselaurel:hover {
 	background-color: #008A00;
 }
 
-.bar_tropicalrainforest {
+.bar_tropicalrainforest,
+.bar_tropicalrainforest:hover {
 	background-color: #007558;
 }
 
 /* Teal: #00ABA9; RGB(0, 171, 169) */
 /* Old: #22B5AD */
-.bar_java {
+.bar_java,
+.bar_java:hover {
 	background-color: #00ABA9;
 }
 
 /* Cyan: #1BA1E2; RGB(27, 161, 226) */
 /* Old: #0082D6 */
-.bar_lochmara {
+.bar_lochmara,
+.bar_lochmara:hover {
 	background-color: #1BA1E2;
 }
 
 /* Cobalt: #0050EF; RGB(0, 80, 239) */
 /* Old: #1B45FB */
-.bar_blueribbon, .bar_blue {
+.bar_blueribbon,
+.bar_blueribbon:hover,
+.bar_blue,
+.bar_blue:hover {
 	background-color: #0050EF;
 }
 
-.bar_toreabay {
+.bar_toreabay,
+.bar_toreabay:hover {
 	background-color: #093693;
 }
 
 /* Indigo: #6A00FF; RGB(106, 0, 255) */
 /* Old: #6F00FF */
-.bar_electricviolet {
+.bar_electricviolet,
+.bar_electricviolet:hover {
 	background-color: #6A00FF;
 }
 
 /* Violet: #AA00FF; RGB(170, 0, 255) */
 /* Old: #B100FE */
-.bar_violet {
+.bar_violet,
+.bar_violet:hover {
 	background-color: #AA00FF;
 }
 
 /* Pink: #F472D0; RGB(244, 114, 208) */
 /* Old: #FF65DD */
-.bar_pinkflamingo {
+.bar_pinkflamingo,
+.bar_pinkflamingo:hover {
 	background-color: #F472D0;
 }
 
 /* Magenta: #D80073; RGB(216, 0, 115) */
 /* Old: #DF0172 */
-.bar_razzmatazz {
+.bar_razzmatazz,
+.bar_razzmatazz:hover {
 	background-color: #D80073;
 }
 
 /* Crimson: #A20025; RGB(162, 0, 37) */
 /* Old: #A70016 */
-.bar_carmine {
+.bar_carmine,
+.bar_carmine:hover {
 	background-color: #A20025;
 }
 
 /* Red: #E51400; RGB(229, 20, 0) */
 /* Old: #DF0D00 */
-.bar_red {
+.bar_red,
+.bar_red:hover {
 	background-color: #E51400;
 }
 
 /* Orange: #FA6800; RGB(250, 104, 0) */
 /* Old: #FF5518 */
-.bar_orange {
+.bar_orange,
+.bar_orange:hover {
 	background-color: #FA6800;
 }
 
 /* Amber: #F0A30A; RGB(240, 163, 10) */
 /* Old: #FF9A00 */
-.bar_orangepeel {
+.bar_orangepeel,
+.bar_orangepeel:hover {
 	background-color: #F0A30A;
 }
 
 /* Yellow: #E3C800; RGB(227, 200, 0) */
-.bar_yellow {
+.bar_yellow,
+.bar_yellow:hover {
 	background-color: #E3C800;
 }
 
 /* Brown: #825A2C; RGB(130, 90, 44) */
 /* Old: #6F4821 */
-.bar_pickledbean {
+.bar_pickledbean,
+.bar_pickledbean:hover {
 	background-color: #825A2C;
 }
 
-.bar_kokoda {
+.bar_kokoda,
+.bar_kokoda:hover {
 	background-color: #717054;
 }
 
 /* Olive: #6D8764; RGB(109, 135, 100) */
 /* Old: #517261 */
-.bar_como {
+.bar_como,
+.bar_como:hover {
 	background-color: #6D8764;
 }
 
 /* Steel: #647687; RGB(100, 118, 135) */
 /* Old: #50646F */
-.bar_bluebayoux {
+.bar_bluebayoux,
+.bar_bluebayoux:hover {
 	background-color: #647687;
 }
 
 /* Mauve: #76608A; RGB(118, 96, 138) */
-.bar_mauve {
+.bar_mauve,
+.bar_mauve:hover {
 	background-color: #76608A;
 }
 
-.bar_dovegray {
+.bar_dovegray,
+.bar_dovegray:hover {
 	background-color: #6B6B6B;
 }
 
 /* Taupe: #87794E; RGB(135, 121, 78) */
 /* Old: #4B3E35 */
-.bar_taupe {
+.bar_taupe,
+.bar_taupe:hover {
 	background-color: #87794E;
 }
 
@@ -461,7 +487,7 @@ ul.colorpicker label {
 	border-bottom: 0;
 }
 
-.menu ul.dropit-submenu label:hover, #bar_menu_container a:hover {
+.menu ul.dropit-submenu label:hover {
 	background: #248fc1 !important;
 	color: white;
 	text-decoration: none;
