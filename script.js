@@ -258,8 +258,8 @@ function updateAllEvents() {
 		
 		console.log("percent: "+percent);
 
-		console.log(eventStart.format('h:mm'));
-		console.log(eventComplete.format('h:mm'));
+		console.log(eventStart.format('YYMMDD HH:mm:ss Z'));
+		console.log(eventComplete.format('YYMMDD HH:mm:ss Z'));
 		console.log('-----');
 		
 		// 2 minute warning
@@ -340,6 +340,12 @@ function updateAllEvents() {
 	};
 })(jQuery);
 
+// Check for user selected color, set if undefined
+colorCookie = $.cookie('color');
+if ( typeof colorCookie == 'undefined' ) {
+	$.cookie('color', 'bar_blueribbon', { expires: 365, path: '/' });
+}
+
 // Color Picker
 var colors = ["bar_lime", "bar_christi", "bar_japaneselaurel", "bar_tropicalrainforest", "bar_java", 
       "bar_lochmara", "bar_blueribbon", "bar_toreabay", "bar_electricviolet", 
@@ -347,7 +353,6 @@ var colors = ["bar_lime", "bar_christi", "bar_japaneselaurel", "bar_tropicalrain
       "bar_orange", "bar_orangepeel", "bar_yellow", "bar_pickledbean", "bar_kokoda", "bar_como", 
       "bar_bluebayoux", "bar_mauve", "bar_dovegray", "bar_taupe"];
 colorMenu = [];
-colorCookie = $.cookie('color');
 $.each( colors, function( key, color ) {
 	checked = "";
 	if ( typeof colorCookie != 'undefined' && colorCookie == color ) {
@@ -372,3 +377,14 @@ $(document).ready(function() {
 	$('.colorpicker').dropit();
 });
 
+// Make the button hover colors match the bars.
+$('.button').hover(
+  function () {
+	colorCookie = $.cookie('color');
+    $(this).addClass(colorCookie);
+  },
+  function () {
+	colorCookie = $.cookie('color');
+    $(this).removeClass(colorCookie);
+  }
+);
