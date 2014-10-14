@@ -44,7 +44,7 @@
                 "rarity": 1
             },
             {
-                "name": "Bounty Stock Reset",
+                "name": "Bounty Stock Refresh",
                 "type": 3,
                 "subEvents": [
                     "New Bounties Available"
