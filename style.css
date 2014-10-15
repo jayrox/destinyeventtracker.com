@@ -299,40 +299,46 @@ ul.colorpicker label {
 /* Lime: #A4C400; RGB(164, 196, 0) */
 .bar_lime,
 .bar_lime:hover {
-	background-color: #A4C400;
+	color: #000 !important;
+	background-color: #A4C400 !important;
 }
 
 /* Green: #60A917; RGB(96, 169, 23) */
 /* Old: #4EB00D */
 .bar_christi,
 .bar_christi:hover {
-	background-color: #60A917;
+	color: #fff !important;
+	background-color: #60A917 !important;
 }
 
 /* Emerald: #008A00; RGB(0, 138, 0) */
 /* Old: #007C00 */
 .bar_japaneselaurel,
 .bar_japaneselaurel:hover {
-	background-color: #008A00;
+	color: #fff !important;
+	background-color: #008A00 !important;
 }
 
 .bar_tropicalrainforest,
 .bar_tropicalrainforest:hover {
-	background-color: #007558;
+	color: #fff !important;
+	background-color: #007558 !important;
 }
 
 /* Teal: #00ABA9; RGB(0, 171, 169) */
 /* Old: #22B5AD */
 .bar_java,
 .bar_java:hover {
-	background-color: #00ABA9;
+	color: #fff !important;
+	background-color: #00ABA9 !important;
 }
 
 /* Cyan: #1BA1E2; RGB(27, 161, 226) */
 /* Old: #0082D6 */
 .bar_lochmara,
 .bar_lochmara:hover {
-	background-color: #1BA1E2;
+	color: #fff !important;
+	background-color: #1BA1E2 !important;
 }
 
 /* Cobalt: #0050EF; RGB(0, 80, 239) */
@@ -341,118 +347,136 @@ ul.colorpicker label {
 .bar_blueribbon:hover,
 .bar_blue,
 .bar_blue:hover {
-	background-color: #0050EF;
+	color: #fff !important;
+	background-color: #0050EF !important;
 }
 
 .bar_toreabay,
 .bar_toreabay:hover {
-	background-color: #093693;
+	color: #fff !important;
+	background-color: #093693 !important;
 }
 
 /* Indigo: #6A00FF; RGB(106, 0, 255) */
 /* Old: #6F00FF */
 .bar_electricviolet,
 .bar_electricviolet:hover {
-	background-color: #6A00FF;
+	color: #fff !important;
+	background-color: #6A00FF !important;
 }
 
 /* Violet: #AA00FF; RGB(170, 0, 255) */
 /* Old: #B100FE */
 .bar_violet,
 .bar_violet:hover {
-	background-color: #AA00FF;
+	color: #fff !important;
+	background-color: #AA00FF !important;
 }
 
 /* Pink: #F472D0; RGB(244, 114, 208) */
 /* Old: #FF65DD */
 .bar_pinkflamingo,
 .bar_pinkflamingo:hover {
-	background-color: #F472D0;
+	color: #fff !important;
+	background-color: #F472D0 !important;
 }
 
 /* Magenta: #D80073; RGB(216, 0, 115) */
 /* Old: #DF0172 */
 .bar_razzmatazz,
 .bar_razzmatazz:hover {
-	background-color: #D80073;
+	color: #fff !important;
+	background-color: #D80073 !important;
 }
 
 /* Crimson: #A20025; RGB(162, 0, 37) */
 /* Old: #A70016 */
 .bar_carmine,
 .bar_carmine:hover {
-	background-color: #A20025;
+	color: #fff !important;
+	background-color: #A20025 !important;
 }
 
 /* Red: #E51400; RGB(229, 20, 0) */
 /* Old: #DF0D00 */
 .bar_red,
 .bar_red:hover {
-	background-color: #E51400;
+	color: #fff !important;
+	background-color: #E51400 !important;
 }
 
 /* Orange: #FA6800; RGB(250, 104, 0) */
 /* Old: #FF5518 */
 .bar_orange,
 .bar_orange:hover {
-	background-color: #FA6800;
+	color: #fff !important;
+	background-color: #FA6800 !important;
 }
 
 /* Amber: #F0A30A; RGB(240, 163, 10) */
 /* Old: #FF9A00 */
 .bar_orangepeel,
 .bar_orangepeel:hover {
-	background-color: #F0A30A;
+	color: #fff !important;
+	background-color: #F0A30A !important;
 }
 
 /* Yellow: #E3C800; RGB(227, 200, 0) */
 .bar_yellow,
 .bar_yellow:hover {
-	background-color: #E3C800;
+	color: #000 !important;
+	background-color: #E3C800 !important;
 }
 
 /* Brown: #825A2C; RGB(130, 90, 44) */
 /* Old: #6F4821 */
 .bar_pickledbean,
 .bar_pickledbean:hover {
-	background-color: #825A2C;
+	color: #fff !important;
+	background-color: #825A2C !important;
 }
 
 .bar_kokoda,
 .bar_kokoda:hover {
-	background-color: #717054;
+	color: #fff !important;
+	background-color: #717054 !important;
 }
 
 /* Olive: #6D8764; RGB(109, 135, 100) */
 /* Old: #517261 */
 .bar_como,
 .bar_como:hover {
-	background-color: #6D8764;
+	color: #fff !important;
+	background-color: #6D8764 !important;
 }
 
 /* Steel: #647687; RGB(100, 118, 135) */
 /* Old: #50646F */
 .bar_bluebayoux,
 .bar_bluebayoux:hover {
-	background-color: #647687;
+	color: #fff !important;
+	background-color: #647687 !important;
 }
 
 /* Mauve: #76608A; RGB(118, 96, 138) */
 .bar_mauve,
 .bar_mauve:hover {
-	background-color: #76608A;
+	color: #fff !important;
+	background-color: #76608A !important;
 }
 
 .bar_dovegray,
 .bar_dovegray:hover {
-	background-color: #6B6B6B;
+	color: #fff !important;
+	background-color: #6B6B6B !important;
 }
 
 /* Taupe: #87794E; RGB(135, 121, 78) */
 /* Old: #4B3E35 */
 .bar_taupe,
 .bar_taupe:hover {
-	background-color: #87794E;
+	color: #fff !important;
+	background-color: #87794E !important;
 }
 
 .menu ul { display: none; } /* Hide before plugin loads */
@@ -487,11 +511,13 @@ ul.colorpicker label {
 	border-bottom: 0;
 }
 
+/*
 .menu ul.dropit-submenu label:hover {
 	background: #248fc1 !important;
 	color: white;
 	text-decoration: none;
 }
+*/
 
 
 input[type="checkbox"], input[type="radio"] {
@@ -507,7 +533,7 @@ input[type="radio"]:checked + label {
 }
 
 input[type="checkbox"]:checked + label {
-	background-color: #bbb !important;
+	background-color: #bbb;
 	color: black;
 }
 
@@ -539,4 +565,3 @@ input[type="checkbox"]:checked + label {
 	text-decoration: none;
 	color: white;
 }
-
