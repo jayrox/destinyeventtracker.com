@@ -19,7 +19,7 @@ $.getJSON( "timers.json", function( data ) {
 		}
 		menuItem = '<li>'
 			  + '<input type="checkbox" id="'+planetlnsp+'check" data-planet="'+planetlnsp+'" '+checked+'/>'
-			  + '<label for="'+planetlnsp+'check">'
+			  + '<label for="'+planetlnsp+'check" class="button">'
 			  + planetname
 			  + '</label>'
 			  + '</li>';
@@ -378,13 +378,14 @@ $(document).ready(function() {
 });
 
 // Make the button hover colors match the bars.
-$('.button').hover(
-  function () {
-	colorCookie = $.cookie('color');
+$(document).on("mouseenter", ".button", function() {
+    colorCookie = $.cookie('color');
     $(this).addClass(colorCookie);
-  },
-  function () {
-	colorCookie = $.cookie('color');
+	console.log(this);
+});
+
+$(document).on("mouseleave", ".button", function() {
+    colorCookie = $.cookie('color');
     $(this).removeClass(colorCookie);
-  }
-);
+	console.log(this);
+});
