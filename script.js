@@ -379,13 +379,11 @@ $(document).ready(function() {
 
 // Make the button hover colors match the bars.
 $(document).on("mouseenter", ".button", function() {
-    colorCookie = $.cookie('color');
-    $(this).addClass(colorCookie);
-	console.log(this);
+	colorCookie = $.cookie('color');
+	$(this).addClass(colorCookie);
 });
 
 $(document).on("mouseleave", ".button", function() {
-    colorCookie = $.cookie('color');
-    $(this).removeClass(colorCookie);
-	console.log(this);
+	colorCookie = $.cookie('color');
+	$(this).removeClass(colorCookie);
 });
