@@ -116,14 +116,14 @@
                 "intervals": [
                     {
                         "uniqueId": "divide1",
-                        "start": 960,
-                        "end": 1260,
+                        "start": 600,
+                        "end": 900,
                         "rarity": 1
                     },
                     {
                         "uniqueId": "divide2",
-                        "start": 2760,
-                        "end": 3060,
+                        "start": 2400,
+                        "end": 2700,
                         "rarity": 1
                     }
                 ]
