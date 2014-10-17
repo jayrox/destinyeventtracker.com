@@ -89,20 +89,22 @@ body {
 }
 
 .bar_location {
+	display: block;
+	margin-bottom: 10px;
 	position: relative;
 }
 
 .bar_description {
 	display: none;
+	margin: -10px 0 10px 0;
 	position: relative;
-	margin-bottom: 10px;
 }
 
 .bar_timer {
+	display: inline-block;
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
-	display: inline-block;
 	text-align: right;
 }
 
@@ -119,10 +121,10 @@ body {
 }
 
 .cent {
+	position: absolute;
 	height: 200px;
 	width: 200px;
 	margin: auto;
-	position: absolute;
 	top: 50%;
 	left: 50%;
 	font-size: 3em;
