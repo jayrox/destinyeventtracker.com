@@ -95,6 +95,7 @@ body {
 .bar_description {
 	display: none;
 	position: relative;
+	margin-bottom: 10px;
 }
 
 .bar_timer {
