@@ -125,7 +125,7 @@ $.getJSON( "timers.json", function( data ) {
 			bar +='	<span class="bar_location">'+e_val.name+'</span>';
 			bar +='	<span class="bar_description">'+bar_description+'</span>';
 			bar +='	<span class="bar_timer">&nbsp;</span>';
-			bar +=' <div class="rarity '+rarity+'"></div>';
+			bar +=' <div class="rarity '+rarity+'" title="'+rarity+'"></div>';
 			bar +='</div>';
 		});
 		bar +='</div></div>';
