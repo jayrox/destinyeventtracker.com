@@ -151,6 +151,7 @@ $.getJSON( "timers.json", function( data ) {
 });
 	
 function updateAllEvents() {
+	console.log("start update timers");
 	$('.bar').each(function() {
 		var box = $(this);
 		var countDown = box.find('.bar_timer');
@@ -310,9 +311,11 @@ function updateAllEvents() {
 			return percentB - percentA;
 		}).appendTo($(this));
 	});
-
+	
+	console.log("end update timers");
 	// Auto update bars every 30 seconds
 	setTimeout(updateAllEvents,30 * 1000);
+	console.log("end timeout");
 }
 
 // Planet hide/show
