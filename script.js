@@ -154,7 +154,7 @@ $.getJSON( "timers.json", function( data ) {
 	}, 25)
 });
 	
-function updateAllEvents(setTimer = true) {
+function updateAllEvents(setTimer) {
 	console.log("start update timers");
 	$('.bar').each(function() {
 		var box = $(this);
@@ -318,7 +318,7 @@ function updateAllEvents(setTimer = true) {
 	
 	console.log("end update timers");
 	console.log('------');
-	if (setTimer) {
+	if ( typeof setTimer == 'undefined' ) {
 		// Auto update bars every 30 seconds
 		setTimeout(updateAllEvents,30 * 1000);
 		console.log("end timeout");
