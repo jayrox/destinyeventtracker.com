@@ -258,11 +258,11 @@ function updateAllEvents() {
 			var percent = Math.round((((1440 - eventStart.diff(moment().utc(), 'minutes')) / 1440) * 100));
 		}
 		
-		console.log("percent: "+percent);
+		//console.log("percent: "+percent);
 
-		console.log(eventStart.format('YYMMDD HH:mm:ss Z'));
-		console.log(eventComplete.format('YYMMDD HH:mm:ss Z'));
-		console.log('-----');
+		//console.log(eventStart.format('YYMMDD HH:mm:ss Z'));
+		//console.log(eventComplete.format('YYMMDD HH:mm:ss Z'));
+		//console.log('-----');
 		
 		// 2 minute warning
 		var eventWarning = moment(eventStart).utc().subtract(120, 's');
@@ -313,6 +313,7 @@ function updateAllEvents() {
 	});
 	
 	console.log("end update timers");
+	console.log('------');
 	// Auto update bars every 30 seconds
 	setTimeout(updateAllEvents,30 * 1000);
 	console.log("end timeout");
