@@ -147,7 +147,7 @@ $.getJSON( "timers.json", function( data ) {
 		class: "dropit-submenu",
 		html: menu.join( "" )
 	}).appendTo( "ul.menu > li" );
-	setTimeout(updateAllEvents, 50);
+	setTimeout(updateAllEvents, 25);
 });
 	
 function updateAllEvents() {
