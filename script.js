@@ -317,6 +317,7 @@ function updateAllEvents() {
 	// Auto update bars every 30 seconds
 	setTimeout(updateAllEvents,30 * 1000);
 	console.log("end timeout");
+	console.log('------------');
 }
 
 // Planet hide/show
