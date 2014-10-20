@@ -147,10 +147,14 @@ $.getJSON( "timers.json", function( data ) {
 		class: "dropit-submenu",
 		html: menu.join( "" )
 	}).appendTo( "ul.menu > li" );
-	setTimeout(updateAllEvents, 25);
+	
+	// Build initial bars
+	setTimeout(function() {
+    		updateAllEvents(false);
+	}, 25)
 });
 	
-function updateAllEvents() {
+function updateAllEvents(setTimer = true) {
 	console.log("start update timers");
 	$('.bar').each(function() {
 		var box = $(this);
@@ -314,9 +318,12 @@ function updateAllEvents() {
 	
 	console.log("end update timers");
 	console.log('------');
-	// Auto update bars every 30 seconds
-	setTimeout(updateAllEvents,30 * 1000);
-	console.log("end timeout");
+	if (setTimer) {
+		// Auto update bars every 30 seconds
+		setTimeout(updateAllEvents,30 * 1000);
+		console.log("end timeout");
+	}
+	
 	console.log('------------');
 }
 
