@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -7,11 +7,11 @@
 		<link rel="stylesheet" href="dropit.css" type="text/css" />
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<meta http-equiv="refresh" content="3600">
-		<link rel="canonical" href="http://destinyeventtracker.com/">
+		<meta name="viewport" content="width=device-width">
 		<!--
 		Complete source code for destinyeventtracker.com can be found:
 		https://github.com/jayrox/destinyeventtracker.com/
-		
+
 		Suggestions and corrections are always appreciated.
 		-->
 	</head>
@@ -23,16 +23,16 @@
 		<div id="bar_menu_container">
 			<div id="bar_menu">
 			<ul class="menu dropit">
-	    			<li class="dropit-trigger">
-	        		<a href="#" class="button">Planet Select</a>
-	    			</li>
+					<li class="dropit-trigger">
+					<a href="#" class="button">Planet Select</a>
+					</li>
 			</ul>
 			</div>
 			<div id="bar_colorpicker">
 			<ul class="colorpicker dropit">
-	    			<li class="dropit-trigger">
-	        		<a href="#" class="button">Color Picker</a>
-	    			</li>
+					<li class="dropit-trigger">
+					<a href="#" class="button">Color Picker</a>
+					</li>
 			</ul>
 			</div>
 			<div id="bar_expando">
@@ -43,25 +43,25 @@
 		<div id="bar_container"></div>
 	</div>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="jquery.cookie.js"></script>
-	<script src="moment.js"></script>
-	<script src="dropit.js"></script>
-	<script src="script.js"></script>
+	<script src="/jquery.cookie.js"></script>
+	<script src="/moment.js"></script>
+	<script src="/dropit.js"></script>
+	<script src="/script.js"></script>
 	<script>
 		$( document ).ready(function() {
-			setTimeout(updateAllEvents, 500);
+			setTimeout(updateAllEvents, 1000);
 		});
-		
+
 		$(document).on("click", 'div.bar, div.bar > span', function(e) {
 			$('.bar_description', this).toggleClass("show");
 		});
-		
+
 		$(document).on("click", '.fa-caret-square-o-down, .fa-caret-square-o-up', function(e) {
 			var $this = $(this);
 			$this.toggleClass("fa-caret-square-o-down fa-caret-square-o-up");
 			$('span.bar_description').toggleClass("show");
 		});
-		
+
 		$(document).on("change", '.menu input[type="checkbox"]', function(e) {
 			$(this).checking();
 		});
@@ -71,14 +71,12 @@
 		});
 	</script>
 	<script>
-  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
-		  ga('create', 'UA-55408100-1', 'auto');
-		  ga('send', 'pageview');
-
+		ga('create', 'UA-55408100-1', 'auto');
+		ga('send', 'pageview');
 	</script>
 	</body>
 </html>
