@@ -4,7 +4,6 @@ if (typeof colorCookie === 'undefined') {
 	$.cookie('color', 'bar_blueribbon', { expires: 365, path: '/' });
 }
 
-
 function updateAllEvents(setTimer) {
 	"use strict";
 	$('.bar').each(function () {
