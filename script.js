@@ -359,7 +359,7 @@ $.getJSON("timers.json", function (data) {
 
 // Check for user selected color, set if undefined
 var colorCookie = $.cookie('color');
-if (colorCookie === 'undefined') {
+if (typeof colorCookie === 'undefined') {
 	$.cookie('color', 'bar_blueribbon', { expires: 365, path: '/' });
 }
 
