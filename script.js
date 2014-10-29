@@ -204,7 +204,7 @@ $.getJSON("timers.json", function (data) {
 		// Prgressbar color
 		bar_color = "bar_blueribbon";
 		colorCookie = $.cookie('color');
-		if (colorCookie !== 'undefined') {
+		if (typeof colorCookie !== 'undefined') {
 			bar_color = colorCookie;
 		}
 
