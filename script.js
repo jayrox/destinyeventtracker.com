@@ -1,3 +1,10 @@
+// Check for user selected color, set if undefined
+var colorCookie = $.cookie('color');
+if (typeof colorCookie === 'undefined') {
+	$.cookie('color', 'bar_blueribbon', { expires: 365, path: '/' });
+}
+
+
 function updateAllEvents(setTimer) {
 	"use strict";
 	$('.bar').each(function () {
@@ -202,11 +209,7 @@ $.getJSON("timers.json", function (data) {
 		menu.push(menuItem);
 
 		// Prgressbar color
-		bar_color = "bar_blueribbon";
-		colorCookie = $.cookie('color');
-		if (typeof colorCookie !== 'undefined') {
-			bar_color = colorCookie;
-		}
+		bar_color = $.cookie('color');
 
 		$.each(val.events, function (dummy, e_val) {
 			// Create description
@@ -356,12 +359,6 @@ $.getJSON("timers.json", function (data) {
 		updateAllEvents();
 	};
 }(jQuery));
-
-// Check for user selected color, set if undefined
-var colorCookie = $.cookie('color');
-if (typeof colorCookie === 'undefined') {
-	$.cookie('color', 'bar_blueribbon', { expires: 365, path: '/' });
-}
 
 // Color Picker
 var  colors, colorMenu, colorItem;
