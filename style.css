@@ -55,7 +55,7 @@ body {
 	clear: both;
 }
 
-#bar_menu ul , #legend ul{
+#bar_menu ul {
 	list-style: none;
 }
 
@@ -95,7 +95,6 @@ body {
 .bar_description {
 	display: none;
 	position: relative;
-	margin-bottom: 10px;
 }
 
 .bar_timer {
@@ -520,16 +519,14 @@ ul.colorpicker label {
 	border-bottom: 0;
 }
 
-.tooltip {
-	display:none;
-	position:absolute;
-	border:1px solid #333;
-	background-color:#161616;
-	border-radius:5px;
-	padding:5px;
-	color:#fff;
-	z-index: 5;
+/*
+.menu ul.dropit-submenu label:hover {
+	background: #248fc1 !important;
+	color: white;
+	text-decoration: none;
 }
+*/
+
 
 input[type="checkbox"], input[type="radio"] {
 	display:none;
@@ -539,13 +536,26 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 	cursor: pointer;
 }
 
+input[type="checkbox"]:checked + label {
+	background-color: #3A3A3A;
+	color: #fff;
+}
+
 input[type="radio"]:checked + label {
 	border: 1px solid white !important;
 }
 
-input[type="checkbox"]:checked + label {
-	background-color: #3A3A3A;
-	color: #fff;
+input[type="radio"]:checked + label:after {
+	position: relative;
+	z-index: 100;
+	top: 15px;
+	left: 13px;
+	content: "\f05d";
+	font-family: FontAwesome;
+	font-size: 2em;
+	
+	color: white;
+	opacity: 0.5;
 }
 
 #report {
@@ -560,14 +570,10 @@ input[type="checkbox"]:checked + label {
 	color: gray;
 }
 
-#about, #legend {
+#about {
 	padding: 0 10px;
 	text-decoration: none;
 	color: white;
-}
-
-#legend li {
-	width: 50%;
 }
 
 #about a{
