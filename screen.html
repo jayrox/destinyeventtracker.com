@@ -1,26 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-  <title>Destiny Event Tracker - Screen Dimensions</title>
-  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-  <div id="main" role="main">
-    <span id="dims" class="cent"></span>
-  </div>
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script>
-    $( window ).resize(function() {
-      w = $("#main").width();
-      h = $("#main").height();
-      $( "#dims" ).text( "w: "+w+" h: "+h );
-      });
-    $( document ).ready(function() {
-      w = $("#main").width();
-      h = $("#main").height();
-      $( "#dims" ).text( "w: "+w+" h: "+h );
-      });
-  </script>
-  </body>
+	<head>
+		<title>Destiny Event Tracker - Screen Dimensions</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+	<div id="main" role="main">
+	<span id="dims" class="cent"></span>
+	</div>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$( window ).resize(function() {
+			w = $("#main").width();
+			h = $("#main").height();
+			$( "#dims" ).text( "w: "+w+" h: "+h );
+		});
+		$( document ).ready(function() {
+			w = $("#main").width();
+			h = $("#main").height();
+			$( "#dims" ).text( "w: "+w+" h: "+h );
+		});
+	</script>
+	</body>
 </html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.appcache">
 	<head>
 		<meta charset="utf-8">
 		<title>Destiny Event Tracker</title>
-		<link rel="stylesheet" href="style.css" type="text/css" />
-		<link rel="stylesheet" href="dropit.css" type="text/css" />
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" href="css/dropit.css" type="text/css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
 		<meta http-equiv="refresh" content="3600">
 		<!--
 		Complete source code for destinyeventtracker.com can be found:
@@ -41,11 +41,11 @@
 		</div>
 		<div id="bar_container"></div>
 	</div>
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="jquery.cookie.js"></script>
-	<script src="moment.js"></script>
-	<script src="dropit.js"></script>
-	<script src="script.js"></script>
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/dropit.js"></script>
+	<script src="js/script.js"></script>
 	<script>
 		$( document ).ready(function() {
 			setTimeout(updateAllEvents, 1000);
