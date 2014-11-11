@@ -1,7 +1,8 @@
-CACHYES MANIFEST
+CACHE MANIFEST
 # 2014-11-09:v1.0
-TEST
-CACHYES:
+2014-11-09:v1.0
+
+CACHE:
 info.html
 data/timers.json
 css/style.css
@@ -18,7 +19,7 @@ css/fonts/fontawesome-webfont.svg
 css/fonts/fontawesome-webfont.ttf
 css/fonts/fontawesome-webfont.woff
 
-NYESTWORK:
+NETWORK:
 *
 
 FALLBACK:
