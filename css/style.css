@@ -587,6 +587,9 @@ input[type="radio"]:checked + label:after {
 	color: white;
 }
 
+#footer {
+	position: relative;
+}
 #version {
 	font-size: 0.5em;
 	position: absolute;
