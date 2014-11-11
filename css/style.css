@@ -586,3 +586,10 @@ input[type="radio"]:checked + label:after {
 	text-decoration: none;
 	color: white;
 }
+
+#version {
+	font-size: 0.5em;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
