@@ -170,10 +170,11 @@ function updateAllEvents(setTimer) {
 	});
 
 	// Set timer is default to true, if defined dont set.
-	if (setTimer === 'undefined') {
+	// TODO: setTimeout is never getting called.
+	//if (setTimer === 'undefined') {
 		// Auto update bars every 30 seconds
 		setTimeout(updateAllEvents, 30 * 1000);
-	}
+	//}
 }
 
 $.getJSON("data/timers.json", function (data) {
