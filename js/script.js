@@ -7,7 +7,7 @@ if (typeof colorCookie === 'undefined') {
 function updateAllEvents(setTimer) {
 	//"use strict";
 	$('.bar').each(function () {
-		console.log("update bars")
+		console.log("updateAllEvents")
 		var box, countDown, eventTypeData, eventOffsetData, eventDurationData, eventOffset2Data, eventDuration2Data, eventRepeatData,
 			eventHappening, eventStart, eventEnd, eventDuration, eventComplete, percent, eventDayStartData, eventDayStartData2,
 			eventOffsetData2, days, eventWarning, eventWarningEnd, remaining, eventRemaining, uid;
@@ -177,9 +177,11 @@ function updateAllEvents(setTimer) {
 }
 
 $.getJSON("data/timers.json", function (data) {
-	"use strict";
+	console.log("get timers")
+	//"use strict";
 	var menu = [];
 	$.each(data, function (dummy, val) {
+		console.log("build timers")
 		var bars, bar, planetname, planetlnsp, planetCookie, displayPlanet, checked, menuItem, bar_description, bar_color,
 			colorCookie, d_uid, d_uid2, d_offset, d_duration, d_offset2, d_duration2, d_type, d_rarity, day_start, day_end,
 			time_start, time_end, rarity, displayClass;
@@ -328,6 +330,7 @@ $.getJSON("data/timers.json", function (data) {
 
 	// Build initial bars
 	setTimeout(function () {
+		console.log("initial build timers")
 		updateAllEvents(false);
 	}, 25);
 });
