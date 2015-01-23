@@ -5,8 +5,9 @@ if (typeof colorCookie === 'undefined') {
 }
 
 function updateAllEvents(setTimer) {
-	"use strict";
+	//"use strict";
 	$('.bar').each(function () {
+		console.log("update bars")
 		var box, countDown, eventTypeData, eventOffsetData, eventDurationData, eventOffset2Data, eventDuration2Data, eventRepeatData,
 			eventHappening, eventStart, eventEnd, eventDuration, eventComplete, percent, eventDayStartData, eventDayStartData2,
 			eventOffsetData2, days, eventWarning, eventWarningEnd, remaining, eventRemaining, uid;
